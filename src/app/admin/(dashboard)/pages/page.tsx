@@ -9,6 +9,10 @@ interface IContent {
   type: string;
 }
 
+import axios from 'axios';
+
+// ... (existing imports and interface)
+
 export default function PagesAdmin() {
   const [contents, setContents] = useState<IContent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -24,20 +28,26 @@ export default function PagesAdmin() {
 
   const fetchContents = async () => {
     try {
-      const res = await fetch('/api/admin/content');
-      const data = await res.json();
-      setContents(data);
+      const res = await axios.get('/api/admin/content');
+      const data = res.data;
+      if (Array.isArray(data)) {
+        setContents(data);
+      } else {
+        console.error('Received non-array data:', data);
+        setContents([]);
+      }
       setLoading(false);
     } catch (error) {
       console.error('Error fetching content:', error);
       setLoading(false);
+      setContents([]); 
     }
   };
 
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this content?')) return;
     try {
-      await fetch(`/api/admin/content/${id}`, { method: 'DELETE' });
+      await axios.delete(`/api/admin/content/${id}`);
       fetchContents();
     } catch (error) {
       console.error('Error deleting content:', error);
@@ -47,15 +57,9 @@ export default function PagesAdmin() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/admin/content', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      if (res.ok) {
-        setFormData({ key: '', value: '', type: 'text' });
-        fetchContents();
-      }
+      await axios.post('/api/admin/content', formData);
+      setFormData({ key: '', value: '', type: 'text' });
+      fetchContents();
     } catch (error) {
       console.error('Error adding content:', error);
     }

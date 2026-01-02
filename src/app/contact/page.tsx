@@ -6,6 +6,10 @@ import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
+import axios from "axios";
+
+// ... (existing imports)
+
 const ContactPage = () => {
   const [status, setStatus] = React.useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -23,18 +27,9 @@ const ContactPage = () => {
     };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      
-      if (res.ok) {
-        setStatus("success");
-        (e.target as HTMLFormElement).reset();
-      } else {
-        setStatus("error");
-      }
+      await axios.post("/api/contact", data);
+      setStatus("success");
+      (e.target as HTMLFormElement).reset();
     } catch (err) {
       console.error(err);
       setStatus("error");

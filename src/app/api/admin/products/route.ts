@@ -1,52 +1,67 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/dbConnect';
-import Product from '@/models/Product';
-import { writeFile } from 'fs/promises';
-import path from 'path';
+import axios from 'axios';
 
-export async function GET() {
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+
+export async function GET(request: Request) {
   try {
-    await dbConnect();
-    const products = await Product.find({}).sort({ order: 1 });
-    return NextResponse.json(products);
+    const cookieHeader = request.headers.get('cookie');
+    const { searchParams } = new URL(request.url);
+    const subcategoryId = searchParams.get('subcategoryId');
+    const featured = searchParams.get('featured');
+    
+    const params: any = { includeInactive: 'true' };
+    if (subcategoryId) {
+      params.subcategoryId = subcategoryId;
+    }
+    if (featured) {
+      params.featured = featured;
+    }
+    
+    const response = await axios.get(`${BACKEND_URL}/api/products`, {
+      params,
+      headers: {
+        'Cookie': cookieHeader || '',
+      },
+      validateStatus: () => true,
+    });
+
+    if (response.status !== 200) {
+      return NextResponse.json(response.data, { status: response.status });
+    }
+
+    return NextResponse.json(response.data.data || []);
   } catch (error) {
+    console.error('Get products error:', error);
     return NextResponse.json({ error: 'Failed to fetch products' }, { status: 500 });
   }
 }
 
 export async function POST(request: Request) {
   try {
-    await dbConnect();
-    const formData = await request.formData();
-    
-    const title = formData.get('title') as string;
-    const category = formData.get('category') as string;
-    const subCategory = formData.get('subCategory') as string;
-    const links = JSON.parse(formData.get('links') as string);
-    const image = formData.get('image') as File | null;
+    const cookieHeader = request.headers.get('cookie');
 
-    let imagePath = '';
-    if (image) {
-      const bytes = await image.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-      
-      const filename = Date.now() + '-' + image.name.replace(/\s+/g, '_');
-      const publicPath = path.join(process.cwd(), 'public', 'uploads', filename);
-      await writeFile(publicPath, buffer);
-      imagePath = '/uploads/' + filename;
+    if (!cookieHeader) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
     }
 
-    const product = await Product.create({
-      title,
-      category,
-      subCategory,
-      links,
-      image: imagePath
+    const body = await request.json();
+    
+    const response = await axios.post(`${BACKEND_URL}/api/products`, body, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Cookie': cookieHeader,
+      },
+      validateStatus: () => true,
     });
 
-    return NextResponse.json(product, { status: 201 });
+    if (response.status !== 200) {
+      return NextResponse.json(response.data, { status: response.status });
+    }
+
+    return NextResponse.json(response.data.data, { status: 201 });
   } catch (error) {
-    console.error('Error in products POST:', error);
+    console.error('Create product error:', error);
     return NextResponse.json({ error: 'Failed to create product' }, { status: 500 });
   }
 }

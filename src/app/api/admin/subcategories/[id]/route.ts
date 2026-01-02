@@ -11,7 +11,7 @@ export async function GET(
     const { id } = await params;
     const cookieHeader = request.headers.get('cookie');
     
-    const response = await axios.get(`${BACKEND_URL}/api/categories/${id}`, {
+    const response = await axios.get(`${BACKEND_URL}/api/subcategories/${id}`, {
       headers: {
         'Cookie': cookieHeader || '',
       },
@@ -24,8 +24,8 @@ export async function GET(
 
     return NextResponse.json(response.data.data);
   } catch (error) {
-    console.error('Get category error:', error);
-    return NextResponse.json({ error: 'Failed to fetch category' }, { status: 500 });
+    console.error('Get subcategory error:', error);
+    return NextResponse.json({ error: 'Failed to fetch subcategory' }, { status: 500 });
   }
 }
 
@@ -43,7 +43,7 @@ export async function PATCH(
 
     const body = await request.json();
     
-    const response = await axios.patch(`${BACKEND_URL}/api/categories/${id}`, body, {
+    const response = await axios.patch(`${BACKEND_URL}/api/subcategories/${id}`, body, {
       headers: {
         'Content-Type': 'application/json',
         'Cookie': cookieHeader,
@@ -57,8 +57,8 @@ export async function PATCH(
 
     return NextResponse.json(response.data.data);
   } catch (error) {
-    console.error('Update category error:', error);
-    return NextResponse.json({ error: 'Failed to update category' }, { status: 500 });
+    console.error('Update subcategory error:', error);
+    return NextResponse.json({ error: 'Failed to update subcategory' }, { status: 500 });
   }
 }
 
@@ -74,7 +74,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
     }
     
-    const response = await axios.delete(`${BACKEND_URL}/api/categories/${id}`, {
+    const response = await axios.delete(`${BACKEND_URL}/api/subcategories/${id}`, {
       headers: {
         'Cookie': cookieHeader,
       },
@@ -85,9 +85,9 @@ export async function DELETE(
       return NextResponse.json(response.data, { status: response.status });
     }
 
-    return NextResponse.json({ message: 'Category deleted' });
+    return NextResponse.json({ message: 'Subcategory deleted' });
   } catch (error) {
-    console.error('Delete category error:', error);
-    return NextResponse.json({ error: 'Failed to delete category' }, { status: 500 });
+    console.error('Delete subcategory error:', error);
+    return NextResponse.json({ error: 'Failed to delete subcategory' }, { status: 500 });
   }
 }

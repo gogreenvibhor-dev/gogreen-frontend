@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 
+import axios from "axios";
+
+// ... (existing imports)
+
 const ContactForm = () => {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -19,18 +23,9 @@ const ContactForm = () => {
     };
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      
-      if (res.ok) {
-        setStatus("success");
-        (e.target as HTMLFormElement).reset();
-      } else {
-        setStatus("error");
-      }
+      await axios.post("/api/contact", data);
+      setStatus("success");
+      (e.target as HTMLFormElement).reset();
     } catch (err) {
       console.error(err);
       setStatus("error");

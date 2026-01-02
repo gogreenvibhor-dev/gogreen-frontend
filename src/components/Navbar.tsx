@@ -1,11 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import axios from "axios";
+
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [categories, setCategories] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('/api/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Error fetching categories for navbar:', error);
+      }
+    };
+    fetchCategories();
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 main-navbar py-2">
@@ -56,12 +71,20 @@ const Navbar = () => {
                   <b>Products</b> <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
                 </button>
                 <div className="lg:absolute left-0 mt-0 w-48 bg-light border-none rounded shadow-xl hidden group-hover:block z-50">
-                  <Link href="/dripirri" className="dropdown-item"><b>Drip Irrigation</b></Link>
-                  <Link href="/sprinkler" className="dropdown-item"><b>Sprinkler Irrigation</b></Link>
-                  <Link href="/rainsprinkler" className="dropdown-item"><b>Rain Sprinkler</b></Link>
-                  <Link href="/landscape" className="dropdown-item"><b>Landscape Irrigation</b></Link>
-                  <Link href="/economical" className="dropdown-item"><b>Economical Irrigation</b></Link>
-                  <Link href="/vidhi-kit" className="dropdown-item"><b>Vidhi Kit</b></Link>
+                  {categories.length > 0 ? (
+                    categories.map((cat) => (
+                      <Link key={cat._id} href={`/${cat.slug}`} className="dropdown-item"><b>{cat.name}</b></Link>
+                    ))
+                  ) : (
+                    <>
+                      <Link href="/dripirri" className="dropdown-item"><b>Drip Irrigation</b></Link>
+                      <Link href="/sprinkler" className="dropdown-item"><b>Sprinkler Irrigation</b></Link>
+                      <Link href="/rainsprinkler" className="dropdown-item"><b>Rain Sprinkler</b></Link>
+                      <Link href="/landscape" className="dropdown-item"><b>Landscape Irrigation</b></Link>
+                      <Link href="/economical" className="dropdown-item"><b>Economical Irrigation</b></Link>
+                      <Link href="/vidhi-kit" className="dropdown-item"><b>Vidhi Kit</b></Link>
+                    </>
+                  )}
                 </div>
               </div>
 

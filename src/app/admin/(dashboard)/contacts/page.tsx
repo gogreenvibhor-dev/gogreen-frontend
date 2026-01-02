@@ -12,6 +12,10 @@ interface IContact {
   createdAt: string;
 }
 
+import axios from 'axios';
+
+// ... (existing imports and interface)
+
 export default function ContactsAdmin() {
   const [contacts, setContacts] = useState<IContact[]>([]);
   const [loading, setLoading] = useState(true);
@@ -22,9 +26,8 @@ export default function ContactsAdmin() {
 
   const fetchContacts = async () => {
     try {
-      const res = await fetch('/api/admin/contacts');
-      const data = await res.json();
-      setContacts(data);
+      const res = await axios.get('/api/admin/contacts');
+      setContacts(res.data);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching contacts:', error);
@@ -34,11 +37,7 @@ export default function ContactsAdmin() {
 
   const handleStatusChange = async (id: string, status: string) => {
     try {
-      await fetch(`/api/admin/contacts/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status })
-      });
+      await axios.patch(`/api/admin/contacts/${id}`, { status });
       fetchContacts();
     } catch (error) {
       console.error('Error updating contact status:', error);
@@ -48,7 +47,7 @@ export default function ContactsAdmin() {
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this contact?')) return;
     try {
-      await fetch(`/api/admin/contacts/${id}`, { method: 'DELETE' });
+      await axios.delete(`/api/admin/contacts/${id}`);
       fetchContacts();
     } catch (error) {
       console.error('Error deleting contact:', error);

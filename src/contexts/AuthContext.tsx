@@ -1,7 +1,8 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User, UserRole } from '@/types/auth';
+import axios from 'axios';
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
 interface AuthContextType {
   user: User | null;
@@ -26,16 +27,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const checkAuth = async () => {
     try {
-      const response = await fetch('/api/admin/auth/me', {
-        credentials: 'include'
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data);
-      } else {
-        setUser(null);
-      }
+      const response = await axios.get('/api/admin/auth/me');
+      setUser(response.data);
     } catch (error) {
       console.error('Auth check failed:', error);
       setUser(null);
@@ -45,30 +38,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const login = async (email: string, password: string) => {
-    const response = await fetch('/api/admin/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-      credentials: 'include'
-    });
-
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.error || 'Login failed');
+    try {
+      const response = await axios.post('/api/admin/auth/login', { email, password });
+      setUser(response.data.user);
+    } catch (error: any) {
+      throw new Error(error.response?.data?.error || 'Login failed');
     }
-
-    const data = await response.json();
-    setUser(data.user);
   };
 
   const logout = async () => {
     try {
-      await fetch('/api/admin/auth/logout', {
-        method: 'POST',
-        credentials: 'include'
-      });
+      await axios.post('/api/admin/auth/logout');
     } finally {
       setUser(null);
     }
