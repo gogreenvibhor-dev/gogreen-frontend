@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { User, UserRole } from '@/types/auth'; // Ensure types/auth exists or create it
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
+import { Eye, EyeOff } from 'lucide-react';
 
 interface UserFormProps {
   initialData?: User;
@@ -20,6 +21,7 @@ export default function UserForm({ initialData, onSuccess, onCancel, isEditing =
     role: initialData?.role || UserRole.EDITOR,
     isActive: initialData?.isActive ?? true,
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -87,14 +89,28 @@ export default function UserForm({ initialData, onSuccess, onCancel, isEditing =
       {!isEditing && (
         <div>
           <label className="block text-sm font-medium text-gray-700">Password</label>
-          <input
-            type="password"
-            required={!isEditing}
-            minLength={6}
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm p-2 border"
-          />
+          <div className="relative mt-1">
+            <input
+              type={showPassword ? "text" : "password"}
+              required={!isEditing}
+              minLength={6}
+              value={formData.password}
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              className="block w-full pr-10 rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm p-2 border"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? (
+                <EyeOff className="h-5 w-5" />
+              ) : (
+                <Eye className="h-5 w-5" />
+              )}
+            </button>
+          </div>
         </div>
       )}
 

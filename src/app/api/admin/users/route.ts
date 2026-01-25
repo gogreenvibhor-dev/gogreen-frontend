@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
@@ -7,9 +7,13 @@ export async function GET(request: Request) {
   try {
     const cookieHeader = request.headers.get('cookie');
 
-    const response = await axios.get(`${BACKEND_URL}/api/posts`, {
+    if (!cookieHeader) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+    }
+
+    const response = await axios.get(`${BACKEND_URL}/api/users`, {
       headers: {
-        'Cookie': cookieHeader || '',
+        'Cookie': cookieHeader,
       },
       validateStatus: () => true,
     });
@@ -20,12 +24,12 @@ export async function GET(request: Request) {
 
     return NextResponse.json(response.data);
   } catch (error) {
-    console.error('Error fetching content:', error);
-    return NextResponse.json({ error: 'Failed to fetch content' }, { status: 500 });
+    console.error('Error fetching users:', error);
+    return NextResponse.json({ error: 'Failed to fetch users' }, { status: 500 });
   }
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const cookieHeader = request.headers.get('cookie');
 
@@ -34,21 +38,21 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    
-    const response = await axios.post(`${BACKEND_URL}/api/posts`, body, {
+
+    const response = await axios.post(`${BACKEND_URL}/api/users`, body, {
       headers: {
         'Cookie': cookieHeader,
       },
       validateStatus: () => true,
     });
 
-    if (response.status !== 200 && response.status !== 201) {
+    if (response.status !== 200) {
       return NextResponse.json(response.data, { status: response.status });
     }
 
     return NextResponse.json(response.data);
   } catch (error) {
-    console.error('Error creating content:', error);
-    return NextResponse.json({ error: 'Failed to save content' }, { status: 500 });
+    console.error('Error creating user:', error);
+    return NextResponse.json({ error: 'Failed to create user' }, { status: 500 });
   }
 }

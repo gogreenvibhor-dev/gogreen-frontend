@@ -21,11 +21,36 @@ export const metadata: Metadata = {
   keywords: ["irrigation", "drip irrigation", "sprinkler", "agriculture", "Vidhi Enterprises"],
 };
 
-export default function RootLayout({
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
+
+async function getGlobalSettings() {
+  try {
+    // Determine backend URL - usage of env var or default
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
+    const res = await fetch(`${backendUrl}/settings`, {
+      next: { tags: ["global-settings"] },
+      cache: "force-cache", 
+    });
+    
+    if (!res.ok) return null;
+    
+    // API returns { success: true, data: { ... } }
+    const json = await res.json();
+    return json.success ? json.data : null;
+  } catch (error) {
+    console.error("Failed to fetch global settings:", error);
+    return null;
+  }
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const settings = await getGlobalSettings();
+  const whatsappNumber = settings?.whatsapp_number;
+
   return (
     <html lang="en">
       <head>
@@ -38,6 +63,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfairDisplay.variable} antialiased`}
       >
         <TanStackProvider>{children}</TanStackProvider>
+        <WhatsAppFloatingButton phoneNumber={whatsappNumber} />
       </body>
     </html>
   );

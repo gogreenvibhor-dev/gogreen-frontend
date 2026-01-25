@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import { notFound } from "next/navigation";
 import { productData } from "@/data/product-data";
 import { countryData } from "@/data/country-data";

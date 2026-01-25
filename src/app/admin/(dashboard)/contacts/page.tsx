@@ -24,9 +24,12 @@ export default function ContactsAdmin() {
     fetchContacts();
   }, []);
 
+  // Check if env var is defined, otherwise fallback to localhost:3001
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+
   const fetchContacts = async () => {
     try {
-      const res = await axios.get('/api/admin/contacts');
+      const res = await axios.get(`${API_URL}/contact`, { withCredentials: true });
       setContacts(res.data);
       setLoading(false);
     } catch (error) {
@@ -37,7 +40,7 @@ export default function ContactsAdmin() {
 
   const handleStatusChange = async (id: string, status: string) => {
     try {
-      await axios.patch(`/api/admin/contacts/${id}`, { status });
+      await axios.patch(`${API_URL}/contact/${id}`, { status }, { withCredentials: true });
       fetchContacts();
     } catch (error) {
       console.error('Error updating contact status:', error);
@@ -47,7 +50,7 @@ export default function ContactsAdmin() {
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this contact?')) return;
     try {
-      await axios.delete(`/api/admin/contacts/${id}`);
+      await axios.delete(`${API_URL}/contact/${id}`, { withCredentials: true });
       fetchContacts();
     } catch (error) {
       console.error('Error deleting contact:', error);

@@ -8,10 +8,12 @@ import axios from "axios";
 
 const ContactForm = () => {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
     
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -23,12 +25,14 @@ const ContactForm = () => {
     };
 
     try {
-      await axios.post("/api/contact", data);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
+      await axios.post(`${apiUrl}/contact`, data);
       setStatus("success");
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
       setStatus("error");
+      setErrorMessage(err.response?.data?.message || "Something went wrong. Please try again.");
     }
   };
 
@@ -110,7 +114,7 @@ const ContactForm = () => {
                 )}
                 {status === "error" && (
                   <div className="mt-4 text-red-600 font-bold animate-fadeIn">
-                    Oops! Something went wrong. Please try again.
+                    {errorMessage}
                   </div>
                 )}
               </div>
