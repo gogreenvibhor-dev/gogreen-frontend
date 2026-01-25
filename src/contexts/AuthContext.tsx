@@ -30,7 +30,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const response = await axios.get('/api/admin/auth/me');
       setUser(response.data);
     } catch (error) {
-      console.error('Auth check failed:', error);
+      // 401 is expected when not authenticated, don't log it as an error
+      if (axios.isAxiosError(error) && error.response?.status !== 401) {
+        console.error('Auth check failed:', error);
+      }
       setUser(null);
     } finally {
       setIsLoading(false);
