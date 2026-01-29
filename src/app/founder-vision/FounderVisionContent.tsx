@@ -57,7 +57,7 @@ export default function FounderVision() {
           </div>
           <div className={styles.photoPlaceholder}>
             <Image
-              src="/img/dada-ji.png"
+              src="https://d170mw2nhcb1v0.cloudfront.net/img/dada-ji.png"
               alt="Late Shri Dhirendar Kumar Jain"
               width={300}
               height={340}

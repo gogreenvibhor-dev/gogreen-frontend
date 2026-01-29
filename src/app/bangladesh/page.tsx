@@ -12,11 +12,11 @@ export default function Bangladesh() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-whitesmoke">
       <Navbar />
       <PageHeader
         title="Bangladesh"
-        backgroundImage="/img/head-eco.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -108,7 +108,7 @@ export default function Bangladesh() {
             <div className="lg:w-1/3 flex justify-center items-center lg:sticky lg:top-24">
               <div className="relative w-full max-w-sm">
                 <Image
-                  src="/img/Bangladesh.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Bangladesh.png"
                   alt="Bangladesh Map"
                   width={400}
                   height={400}

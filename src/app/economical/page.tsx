@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const products = [
   {
     title: "Drip Tubing & Fittings",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Low Thickness Plain Laterals", url: "/low-thickness-plain" },
       { name: "Thin Wall Drip Line Cylindrical", url: "/thinwall-dripline" },
@@ -17,7 +17,7 @@ const products = [
   },
   {
     title: "Vidhi Rain Pipe & Fittings",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Vidhi Rain Pipe", url: "/rain-pipe" },
       { name: "Vidhi Rain Pipe Fittings", url: "/rain-pipe-fittings" },
@@ -25,14 +25,14 @@ const products = [
   },
   {
     title: "Lay Flat Pipes",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Lay Flat Pipe", url: "/layflat-pipe" },
     ],
   },
   {
     title: "Eco Sprinklers",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Eco Rotating Sprinkler", url: "/eco-sprinkler" },
       { name: "Riser Pipes", url: "/riser-pipes-eco" },
@@ -40,7 +40,7 @@ const products = [
   },
   {
     title: "EcoAcre Pro",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "EcoAcre Pro", url: "/ecoacre-pro" },
     ],
@@ -53,7 +53,7 @@ const EconomicalPage = () => {
       <Navbar />
       <PageHeader 
         title="Economical Irrigation" 
-        backgroundImage="/img/head-eco.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

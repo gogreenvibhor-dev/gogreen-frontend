@@ -40,7 +40,7 @@ export default function Header() {
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/company/vidhi_enterprises/"
+              href="https://in.linkedin.com/company/vidhi_enterprises"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin-in"></i>

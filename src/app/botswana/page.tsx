@@ -16,7 +16,7 @@ export default function Botswana() {
       <Navbar />
       <PageHeader
         title="Botswana"
-        backgroundImage="/img/head-eco.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -108,7 +108,7 @@ export default function Botswana() {
             <div className="lg:w-1/3 flex justify-center items-center lg:sticky lg:top-24">
               <div className="relative w-full max-w-sm">
                 <Image
-                  src="/img/Botswana.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Botswana.png"
                   alt="Botswana Map"
                   width={400}
                   height={400}

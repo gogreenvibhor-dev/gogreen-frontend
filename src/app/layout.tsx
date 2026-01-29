@@ -16,9 +16,84 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Vidhi Enterprises | Precision Irrigation Solutions Since 1983",
-  description: "Trusted manufacturer of Drip, Sprinkler & Micro Irrigation Products. Engineering Smart Irrigation Solutions for a Greener Tomorrow.",
-  keywords: ["irrigation", "drip irrigation", "sprinkler", "agriculture", "Vidhi Enterprises"],
+  metadataBase: new URL('https://vidhienterprises.com'),
+  title: {
+    default: "Vidhi Enterprises - ISO Certified Drip Irrigation & Sprinkler Manufacturer Since 1983",
+    template: "%s | Vidhi Enterprises"
+  },
+  description: "Leading manufacturer & exporter of drip irrigation systems, sprinklers, HDPE pipes & micro-irrigation products. ISO-certified quality serving 50+ countries. Trusted agricultural irrigation solutions since 1983.",
+  keywords: [
+    "drip irrigation manufacturer",
+    "sprinkler irrigation systems",
+    "HDPE pipes manufacturer India",
+    "micro irrigation solutions",
+    "agricultural irrigation equipment",
+    "drip irrigation exporter",
+    "brass sprinklers manufacturer",
+    "irrigation fittings supplier",
+    "drip emitters manufacturer",
+    "online drippers supplier",
+    "inline driplines",
+    "irrigation accessories India",
+    "fertigation equipment",
+    "greenhouse irrigation systems",
+    "orchard irrigation solutions",
+    "water-efficient irrigation",
+    "precision irrigation equipment",
+    "ISO certified irrigation company",
+    "UV-stabilized irrigation products",
+    "virgin raw material irrigation"
+  ],
+  authors: [{ name: "Vidhi Enterprises" }],
+  creator: "Vidhi Enterprises",
+  publisher: "Vidhi Enterprises",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://vidhienterprises.com",
+    siteName: "Vidhi Enterprises",
+    title: "Vidhi Enterprises - Leading Drip Irrigation & Sprinkler Systems Manufacturer",
+    description: "ISO-certified manufacturer of drip irrigation, sprinklers & HDPE pipes serving 50+ countries since 1983. Trusted by farmers worldwide.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vidhi Enterprises - Irrigation Systems Manufacturer"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vidhi Enterprises - Drip Irrigation Manufacturer",
+    description: "Leading manufacturer of drip irrigation systems, sprinklers & agricultural irrigation equipment since 1983.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-site-verification-code",
+    yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
+    // other: "your-other-verification-code",
+  },
+  category: "Agriculture & Irrigation",
 };
 
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
@@ -68,6 +143,10 @@ export default async function RootLayout({
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#0f4c81" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body
         className={`${inter.variable} ${playfairDisplay.variable} antialiased`}

@@ -87,7 +87,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/img/vidhi_logo-removebg-preview.png"
+              src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png"
               width={120}
               height={100}
               className="logo-img"
@@ -258,7 +258,7 @@ const Navbar = () => {
               {/* Right Logo (Colored) */}
               <Link href="/" className="hidden lg:flex items-center ml-4">
                 <Image
-                  src="/img/logo-olored.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png"
                   width={80}
                   height={60}
                   className="h-14 w-auto"

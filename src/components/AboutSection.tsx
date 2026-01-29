@@ -23,7 +23,7 @@ const AboutSection = () => {
             className="lg:w-1/4 w-full"
           >
             <Image 
-              src="/img/Thank you vidhi.png" 
+              src="https://d170mw2nhcb1v0.cloudfront.net/img/Thank_you_vidhi.png" 
               alt="About Us" 
               width={400}
               height={500}

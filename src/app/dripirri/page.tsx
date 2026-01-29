@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const products = [
   {
     title: "Drip Tubing",
-    image: "/img/DI-1.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-1.png",
     links: [
       { name: "Plain Lateral/ Polytubes", url: "/plain-lateral" },
       { name: "Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC", url: "/cylendrical-dripline" },
@@ -16,7 +16,7 @@ const products = [
   },
   {
     title: "Emitting Devices",
-    image: "/img/DI-2.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-2.png",
     links: [
       { name: "Online PC Dripper/Emitters", url: "/onlinepc-dripper-emitter" },
       { name: "Online Emitters/Dripper NPC TurboKey", url: "/online-emitters" },
@@ -34,14 +34,14 @@ const products = [
   },
   {
     title: "Drip Fittings",
-    image: "/img/DI-3.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-3.png",
     links: [
       { name: "Drip Lateral Fittings", url: "/drip-lateral-fiiting" },
     ],
   },
   {
     title: "Filtration",
-    image: "/img/DI-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-4.png",
     links: [
       { name: "Y-Type Filter", url: "/Y-Type-filter" },
       { name: "T-Type Filter", url: "/T-Type-filter" },
@@ -50,14 +50,14 @@ const products = [
   },
   {
     title: "Fertigation Devices",
-    image: "/img/DI-5.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-5.png",
     links: [
       { name: "Ventury Injector", url: "/ventury-injector" },
     ],
   },
   {
     title: "Control Valves & ACC",
-    image: "/img/DI-6.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-6.png",
     links: [
       { name: "Air Release Valve", url: "/air-release" },
       { name: "Single Union Ball Valve", url: "/single-union" },
@@ -74,7 +74,7 @@ const DripIrrigationPage = () => {
       <Navbar />
       <PageHeader 
         title="Drip Irrigation" 
-        backgroundImage="/img/Drip-header.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-header.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

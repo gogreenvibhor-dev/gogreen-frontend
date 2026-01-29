@@ -43,7 +43,7 @@ const ContactPage = () => {
       <Navbar />
       <PageHeader 
         title="Contact Us" 
-        backgroundImage="/img/Drip-header.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-header.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact", active: true }

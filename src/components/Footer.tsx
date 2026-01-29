@@ -75,7 +75,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2, backgroundColor: "rgb(28, 158, 28)" }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                href="https://www.instagram.com/vidhi_enter_delhi/"
+                href="https://www.instagram.com/vidhi_enterprises_delhi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full"
@@ -87,7 +87,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2, backgroundColor: "rgb(28, 158, 28)" }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                href="https://www.linkedin.com/company/vidhi_enterprises/"
+                href="https://in.linkedin.com/company/vidhi_enterprises"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 flex items-center justify-center rounded-full"

@@ -36,7 +36,7 @@ const StatsSection = () => {
   return (
     <section 
       className="relative py-24 bg-fixed bg-cover bg-center text-white"
-      style={{ backgroundImage: "url('/img/design-4.png')" }}
+      style={{ backgroundImage: "url('https://d170mw2nhcb1v0.cloudfront.net/img/design-4.png')" }}
     >
       <div className="absolute inset-0 bg-primary/80"></div>
       <div className="container mx-auto px-4 relative z-10">

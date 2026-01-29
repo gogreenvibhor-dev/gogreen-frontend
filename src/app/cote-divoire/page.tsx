@@ -16,7 +16,7 @@ export default function CoteDIvoire() {
       <Navbar />
       <PageHeader
         title="Côte d'Ivoire"
-        backgroundImage="/img/head-eco.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -107,7 +107,7 @@ export default function CoteDIvoire() {
             <div className="lg:w-1/3 flex justify-center items-center lg:sticky lg:top-24">
               <div className="relative w-full max-w-sm">
                 <Image
-                  src="/img/Côte d'Ivoire.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Côted'Ivoire.png"
                   alt="Côte d'Ivoire Map"
                   width={400}
                   height={400}

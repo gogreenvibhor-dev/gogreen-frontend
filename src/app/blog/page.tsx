@@ -56,9 +56,7 @@ function extractTextFromContent(content: any): string {
   return preview.length > 150 ? preview.slice(0, 150) + '...' : preview;
 }
 
-// Default placeholder image
-const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1602526218489-dc8b0d3f28b2?auto=format&fit=crop&w=800&q=80";
-
+// Default placeholder image  
 const BlogPage = async () => {
   const posts = await getPosts();
   
@@ -97,7 +95,7 @@ const BlogPage = async () => {
                 <div key={post.id} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image
-                      src={DEFAULT_IMAGE}
+                      src=""
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"

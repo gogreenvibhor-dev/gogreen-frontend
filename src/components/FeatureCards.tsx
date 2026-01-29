@@ -7,17 +7,17 @@ import { motion } from "framer-motion";
 const FeatureCards = () => {
   const features = [
     {
-      icon: "/img/few Logo.png",
+      icon: "https://d170mw2nhcb1v0.cloudfront.net/img/few Logo.png",
       title: "100+ Reliable Products for Small & Large Farms",
       description: "Builds instant credibility and trust",
     },
     {
-      icon: "/img/2.png",
+      icon: "https://d170mw2nhcb1v0.cloudfront.net/img/2.png",
       title: "Quality You Can Rely On",
       description: "Simple, strong, and customer-focused",
     },
     {
-      icon: "/img/3.png",
+      icon: "https://d170mw2nhcb1v0.cloudfront.net/img/3.png",
       title: "Innovation Meets Integrity",
       description: "Shows modern, forward-thinking values with honesty",
     },

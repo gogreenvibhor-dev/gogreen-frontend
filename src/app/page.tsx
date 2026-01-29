@@ -7,30 +7,211 @@ import ProductGrid from "@/components/ProductGrid";
 import GlobalPresenceMap from "@/components/GlobalPresenceMap";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vidhi Enterprises - Leading Drip Irrigation & Sprinkler System Manufacturer | ISO Certified",
+  description: "Vidhi Enterprises: Premier manufacturer of drip irrigation systems, sprinklers, HDPE pipes, filters & micro-irrigation since 1983. Serving 50+ countries with ISO-certified quality products. Trusted by farmers worldwide.",
+  keywords: [
+    "drip irrigation manufacturer",
+    "sprinkler irrigation systems",
+    "HDPE pipes manufacturer India",
+    "micro irrigation solutions",
+    "drip irrigation systems exporter",
+    "precision irrigation equipment",
+    "agricultural irrigation manufacturer",
+    "inline drippers supplier",
+    "online emitters manufacturer",
+    "irrigation filters India",
+    "fertigation equipment",
+    "drip lateral pipes",
+    "brass sprinklers manufacturer",
+    "plastic sprinklers supplier",
+    "rain guns manufacturer",
+    "irrigation valves India",
+    "greenhouse irrigation systems",
+    "landscape irrigation solutions",
+    "water management systems",
+    "ISO certified irrigation company"
+  ],
+  authors: [{ name: "Vidhi Enterprises" }],
+  creator: "Vidhi Enterprises",
+  publisher: "Vidhi Enterprises",
+  openGraph: {
+    title: "Vidhi Enterprises - ISO Certified Drip Irrigation & Sprinkler Manufacturer Since 1983",
+    description: "Leading manufacturer & exporter of drip irrigation systems, sprinklers, HDPE pipes & precision irrigation products. Trusted across 50+ countries since 1983.",
+    url: "https://vidhienterprises.com",
+    siteName: "Vidhi Enterprises",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vidhi Enterprises - Drip Irrigation & Sprinkler Systems Manufacturer"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vidhi Enterprises - Drip Irrigation Manufacturer Since 1983",
+    description: "ISO-certified manufacturer of drip irrigation, sprinklers, HDPE pipes & micro-irrigation solutions serving global agriculture.",
+    images: ["/og-home.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  alternates: {
+    canonical: "https://vidhienterprises.com"
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code"
+  }
+};
 
 export default function Home() {
+  // Structured Data for Organization and Website
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vidhi Enterprises",
+    "alternateName": "Vidhi Irrigation",
+    "description": "Leading manufacturer and exporter of drip irrigation systems, sprinklers, HDPE pipes, and precision irrigation solutions since 1983",
+    "foundingDate": "1983",
+    "url": "https://vidhienterprises.com",
+    "logo": "https://vidhienterprises.com/logo.png",
+    "image": "https://vidhienterprises.com/og-home.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "Sales",
+      "availableLanguage": ["English", "Hindi"]
+    }],
+    "sameAs": [
+      "https://www.linkedin.com/company/vidhi-enterprises",
+      "https://www.facebook.com/vidhienterprises"
+    ],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "India"
+      },
+      {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      {
+        "@type": "Country",
+        "name": "Qatar"
+      },
+      {
+        "@type": "Country",
+        "name": "Saudi Arabia"
+      },
+      {
+        "@type": "Country",
+        "name": "Oman"
+      },
+      {
+        "@type": "Country",
+        "name": "Kenya"
+      },
+      {
+        "@type": "Country",
+        "name": "Tanzania"
+      },
+      {
+        "@type": "Country",
+        "name": "Nepal"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Irrigation Products",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Drip Irrigation Systems"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Sprinkler Systems"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "HDPE Pipes and Fittings"
+          }
+        }
+      ]
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vidhi Enterprises",
+    "url": "https://vidhienterprises.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vidhienterprises.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
-    <main className="min-h-screen">
-      <Navbar />
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      
+      <main className="min-h-screen" itemScope itemType="https://schema.org/WebPage">
+        <Navbar />
       <HeroCarousel />
       <FeatureCards />
       <AboutSection />
       <StatsSection />
       
       {/* Why Choose Us Section - Integrated into About/Features or added here */}
-      <section className="py-20 bg-whitesmoke">
+      <section className="py-20 bg-whitesmoke" aria-labelledby="why-choose-us">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <p className="text-primary font-bold text-xl mb-4">Why Choosing Us!</p>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                Few Reasons Why People Choosing Us!
+              <p className="text-primary font-bold text-xl mb-4">Why Choose Vidhi Enterprises!</p>
+              <h2 id="why-choose-us" className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                Leading ISO-Certified Irrigation Manufacturer - Trusted Since 1983
               </h2>
               <p className="text-secondary text-lg font-bold mb-8">
-                Every product undergoes strict quality checks and is manufactured to meet domestic and export standards, 
-                ensuring long-lasting performance trusted by farmers and importers alike.
+                Every <strong>drip irrigation system</strong>, <strong>sprinkler</strong>, and <strong>HDPE pipe</strong> undergoes rigorous quality checks and is manufactured to meet ISO and international export standards, 
+                ensuring long-lasting performance trusted by farmers, distributors, and importers across 50+ countries worldwide.
               </p>
-              <button className="btn-primary-custom btn-ripple text-white py-4 px-10 rounded font-bold shadow-lg transition">
+              <button className="btn-primary-custom btn-ripple text-white py-4 px-10 rounded font-bold shadow-lg transition" aria-label="Explore more about Vidhi Enterprises irrigation products">
                 Explore More
               </button>
             </div>
@@ -66,5 +247,6 @@ export default function Home() {
       <ContactForm />
       <Footer />
     </main>
+    </>
   );
 }

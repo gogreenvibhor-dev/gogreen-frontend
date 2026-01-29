@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
+import Image from "next/image";
 export const metadata: Metadata = {
   title: "Vidhi Enterprises - Iran Irrigation Solutions",
   description: "Vidhi Enterprises exports drip systems, impact sprinklers, filters and HDPE lines suited for Iran's arid agriculture and orchards.",
@@ -65,7 +65,7 @@ export default function Iran() {
               </div>
               <Link href="/contact" className="nav-item nav-link"><b>Contact Us</b></Link>
               <Link href="/" className="navbar-brand d-flex align-items-center ps-4 mt-3 mt-lg-0">
-                <img src="/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
               </Link>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function Iran() {
       </nav>
 
       {/* Page Header */}
-      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(/img/head-eco.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container text-center py-5">
           <h1 className="display-3 text-white mb-4">Iran</h1>
           <nav aria-label="breadcrumb">

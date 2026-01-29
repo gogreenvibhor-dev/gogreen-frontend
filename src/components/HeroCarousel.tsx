@@ -6,31 +6,31 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image: "/img/C1.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C1.png",
     text: "“Engineering Smart Irrigation Solutions for a Greener Tomorrow”",
   },
   {
-    image: "/img/C11.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C11.png",
     text: "“Delivering Precision Watering Systems That Grow More with Less”",
   },
   {
-    image: "/img/C3.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C3.png",
     text: "“Trusted Manufacturer of Drip, Sprinkler & Micro Irrigation Products”",
   },
   {
-    image: "/img/C4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C4.png",
     text: "“Empowering Farmers Through Advanced Water-Saving Technologies”",
   },
   {
-    image: "/img/C5.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C5.png",
     text: "“Quality Irrigation Components Designed for Durability and Performance”",
   },
   {
-    image: "/img/C6.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C6.png",
     text: "“Smart Irrigation Made Simple — Because Every Drop Counts”",
   },
   {
-    image: "/img/C9.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/C9.png",
     text: "“Building a Sustainable World, One Drop at a Time”",
   },
 ];

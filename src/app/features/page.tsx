@@ -14,7 +14,7 @@ export default function Features() {
       <Navbar />
       <PageHeader
         title="Features"
-        backgroundImage="/img/3.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/3.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -61,7 +61,7 @@ export default function Features() {
       {/* Feature End */}
 
       {/* Facts Start */}
-      <div className="container-fluid py-20 my-20 bg-cover bg-fixed relative" style={{ backgroundImage: "url('/img/carousel-1.jpg')" }}>
+      <div className="container-fluid py-20 my-20 bg-cover bg-fixed relative" style={{ backgroundImage: "url('https://d170mw2nhcb1v0.cloudfront.net/img/carousel-1.jpg')" }}>
         <div className="absolute inset-0 bg-primary/60"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Vidhi Enterprises - Guinea Irrigation Solutions",
@@ -65,7 +66,7 @@ export default function Guinea() {
               </div>
               <Link href="/contact" className="nav-item nav-link"><b>Contact Us</b></Link>
               <Link href="/" className="navbar-brand d-flex align-items-center ps-4 mt-3 mt-lg-0">
-                <img src="/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
               </Link>
             </div>
           </div>
@@ -73,7 +74,7 @@ export default function Guinea() {
       </nav>
 
       {/* Page Header */}
-      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(/img/head-eco.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container text-center py-5">
           <h1 className="display-3 text-white mb-4">Guinea</h1>
           <nav aria-label="breadcrumb">
@@ -149,7 +150,7 @@ export default function Guinea() {
                 </div>
                 <div className="col-md-6 mt-5" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <div className="image_2 mt-5">
-                    <img src="/img/Guinea.png" alt="Guinea" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Guinea.png" alt="Guinea" />
                   </div>
                 </div>
               </div>
