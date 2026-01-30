@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const products = [
   {
     title: "Brass Impact Sprinklers",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Brass Full Circle Sprinklers", url: "/full-circle" },
       { name: "Brass Part Circle Sprinklers", url: "/part-circle" },
@@ -15,21 +15,21 @@ const products = [
   },
   {
     title: "Metal Sprinklers",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Aluminium Sprinklers", url: "/aluminium-spri" },
     ],
   },
   {
     title: "Plastic Impact Sprinklers",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Plastic Full Circle Sprinklers", url: "/plastci-full-circle" },
     ],
   },
   {
     title: "Sprinkler Accessories",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Service Saddles", url: "/service-saddles" },
       { name: "Mini Sprinkler Accessories", url: "/mini-sprinkler-accessories" },
@@ -44,7 +44,7 @@ const SprinklerPage = () => {
       <Navbar />
       <PageHeader 
         title="Sprinkler Irrigation" 
-        backgroundImage="/img/C1.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/C1.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

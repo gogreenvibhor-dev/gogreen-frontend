@@ -10,7 +10,7 @@ const TeamPage = () => {
       <Navbar />
       <PageHeader 
         title="Our Team" 
-        backgroundImage="/img/12.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/12.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Pages", href: "#" },

@@ -24,11 +24,11 @@ export default function FlatDripline() {
   ];
 
   const tableImages = [
-    "/img/drip-table-7.png",
-    "/img/drip-table-8.png",
-    "/img/drip-table-9.png",
-    "/img/drip-table-10.png",
-    "/img/drip-table-11.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-7.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-8.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-9.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-10.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-11.png",
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function FlatDripline() {
       <Navbar />
       <PageHeader
         title="Flat Dripline PC & NON-PC"
-        backgroundImage="/img/drip-head-3.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-3.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -53,7 +53,7 @@ export default function FlatDripline() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-3.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-3.jpg"
                   alt="Flat Dripline"
                   width={750}
                   height={700}

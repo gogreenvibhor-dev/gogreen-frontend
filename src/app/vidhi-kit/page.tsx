@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const products = [
   {
     title: "Vidhi Kits",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Vidhi Drip Kit", url: "/vidhi-dripkit" },
       { name: "EcoAcre Pro", url: "/ecoacre-vidhi-kit" },
@@ -15,7 +15,7 @@ const products = [
   },
   {
     title: "Vertical Garden",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Vertical Garden Pots /Hanging Pot", url: "/vertical-garden" },
     ],
@@ -28,7 +28,7 @@ const VidhiKitPage = () => {
       <Navbar />
       <PageHeader 
         title="Vidhi Kit" 
-        backgroundImage="/img/vidhikit-head.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/vidhikit-head.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

@@ -41,7 +41,7 @@ export default function LandscapeConnector() {
       <Navbar />
       <PageHeader
         title="2-Way / 4-Way Connector"
-        backgroundImage="/img/land-head-5.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/land-head-5.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -59,7 +59,7 @@ export default function LandscapeConnector() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Land-6.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Land-6.png"
                   alt="2-Way Connector"
                   width={600}
                   height={700}
@@ -95,7 +95,7 @@ export default function LandscapeConnector() {
               <div className="relative group lg:hidden mb-8">
                  <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                   <Image
-                    src="/img/Land-7.png"
+                    src="https://d170mw2nhcb1v0.cloudfront.net/img/Land-7.png"
                     alt="4-Way Connector"
                     width={600}
                     height={700}
@@ -124,14 +124,14 @@ export default function LandscapeConnector() {
               </div>
 
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 max-w-sm mx-auto lg:mx-0">
-                <Image src="/img/Model-36.png" alt="Application Diagram" width={400} height={300} className="w-full h-auto" />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-36.png" alt="Application Diagram" width={400} height={300} className="w-full h-auto" />
               </div>
             </div>
 
             <div className="order-1 lg:order-2 relative group hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Land-7.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Land-7.png"
                   alt="4-Way Connector"
                   width={600}
                   height={700}

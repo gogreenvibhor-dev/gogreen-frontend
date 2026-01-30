@@ -10,7 +10,7 @@ const FilterGuidePage = () => {
       
       <PageHeader 
         title="How to Choose the Right Irrigation Filter"
-        backgroundImage="/img/9.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/9.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

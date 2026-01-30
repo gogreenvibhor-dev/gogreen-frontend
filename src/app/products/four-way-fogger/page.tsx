@@ -29,7 +29,7 @@ export default function FourWayFogger() {
       <Navbar />
       <PageHeader
         title="4-Way Fogger"
-        backgroundImage="/img/drip-head-16.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-16.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -46,7 +46,7 @@ export default function FourWayFogger() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-19.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-19.jpg"
                   alt="4-Way Fogger"
                   width={600}
                   height={700}
@@ -89,10 +89,10 @@ export default function FourWayFogger() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                  <Image src="/img/drip-table-21.png" alt="Application 1" width={400} height={300} className="w-full h-auto" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-21.png" alt="Application 1" width={400} height={300} className="w-full h-auto" />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                  <Image src="/img/drip-table-16.png" alt="Application 2" width={400} height={300} className="w-full h-auto" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png" alt="Application 2" width={400} height={300} className="w-full h-auto" />
                 </div>
               </div>
             </div>

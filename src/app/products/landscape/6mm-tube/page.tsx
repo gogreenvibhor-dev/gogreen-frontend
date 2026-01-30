@@ -25,7 +25,7 @@ export default function SixMmTube() {
       <Navbar />
       <PageHeader
         title="6 mm SPAGETTY/ DISTRIBUTOR PIPES / CONNECTING TUBE"
-        backgroundImage="/img/land-head-8.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/land-head-8.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -42,7 +42,7 @@ export default function SixMmTube() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Land-10.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Land-10.png"
                   alt="6 mm Spagetty Tube"
                   width={600}
                   height={700}
@@ -73,7 +73,7 @@ export default function SixMmTube() {
 
               <div className="mt-8">
                 <a 
-                  href="/pdf/AM pdf.pdf" 
+                  href="https://d170mw2nhcb1v0.cloudfront.net/pdf/AM pdf.pdf" 
                   target="_blank" 
                   className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
                 >

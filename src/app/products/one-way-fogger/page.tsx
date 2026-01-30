@@ -29,7 +29,7 @@ export default function OneWayFogger() {
       <Navbar />
       <PageHeader
         title="1-Way-Fogger"
-        backgroundImage="/img/drip-head-15.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-15.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -46,7 +46,7 @@ export default function OneWayFogger() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-18.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-18.jpg"
                   alt="1-Way Fogger"
                   width={550}
                   height={650}
@@ -88,10 +88,10 @@ export default function OneWayFogger() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                  <Image src="/img/drip-table-15.png" alt="Application 1" width={400} height={300} className="w-full h-auto" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-15.png" alt="Application 1" width={400} height={300} className="w-full h-auto" />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                  <Image src="/img/drip-table-16.png" alt="Application 2" width={400} height={300} className="w-full h-auto" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png" alt="Application 2" width={400} height={300} className="w-full h-auto" />
                 </div>
               </div>
             </div>

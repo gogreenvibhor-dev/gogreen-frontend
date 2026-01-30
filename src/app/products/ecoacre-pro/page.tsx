@@ -29,7 +29,7 @@ export default function EcoAcrePro() {
       <Navbar />
       <PageHeader
         title="EcoAcre Pro"
-        backgroundImage="/img/eco-head-10.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-10.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -46,7 +46,7 @@ export default function EcoAcrePro() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Eco-23.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Eco-23.png"
                   alt="EcoAcre Pro Kit"
                   width={700}
                   height={700}

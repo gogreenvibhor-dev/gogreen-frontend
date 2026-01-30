@@ -34,7 +34,7 @@ export default function AirReleaseValve() {
       <Navbar />
       <PageHeader
         title="Air Release Valve"
-        backgroundImage="/img/drip-head-41.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-41.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -52,7 +52,7 @@ export default function AirReleaseValve() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-50.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-50.png"
                   alt="Air Release Valve Plastic"
                   width={600}
                   height={700}
@@ -89,7 +89,7 @@ export default function AirReleaseValve() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-51.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-51.png"
                   alt="Air Release Valve Aluminum"
                   width={600}
                   height={700}
