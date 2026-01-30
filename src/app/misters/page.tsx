@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
+import Image from "next/image"; 
 export const metadata: Metadata = {
   title: "Misters - Drip Irrigation Products | Vidhi Enterprises",
   description: "High-quality misters for controlled environment agriculture. UV-stabilized with fine misting uniformity, ideal for greenhouses, nurseries, and shade houses.",
@@ -18,7 +18,7 @@ export default function Misters() {
         <div className="container-fluid px-0">
           <div className="d-flex w-100 align-items-center justify-content-between flex-wrap flex-lg-nowrap">
             <Link href="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5 mb-2 mb-lg-0">
-              <img src="/img/vidhi_logo-removebg-preview.png" className="ps-4 logo-img img-fluid" alt="Vidhi Enterprises Logo" />
+              <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" className="ps-4 logo-img img-fluid" alt="Vidhi Enterprises Logo" />
             </Link>
             <form className="d-flex mx-auto my-2 my-lg-0 flex-grow-1" role="search" style={{ maxWidth: '400px', minWidth: '180px', width: '100%' }}>
               <div className="input-group input-group-lg shadow-sm search-bar-rounded position-relative" style={{ width: '100%' }}>
@@ -65,7 +65,7 @@ export default function Misters() {
               </div>
               <Link href="/contact" className="nav-item nav-link"><b>Contact Us</b></Link>
               <Link href="/" className="navbar-brand d-flex align-items-center ps-4 mt-3 mt-lg-0">
-                <img src="/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
               </Link>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function Misters() {
       </nav>
 
       {/* Page Header */}
-      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(/img/drip-head-13.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-13.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container text-center py-5">
           <h1 className="display-3 text-white mb-4">Misters</h1>
           <nav aria-label="breadcrumb">
@@ -101,7 +101,7 @@ export default function Misters() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <img src="/img/Drip-14.png" style={{ width: '600px', height: '700px' }} alt="Misters" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-14.png" style={{ width: '600px', height: '700px' }} alt="Misters" />
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Misters() {
             <div className="row" style={{ marginTop: '-130px' }}>
               <div className="col-md-6 mt-5">
                 <div className="image_2">
-                  <img src="/img/Drip-15.jpg" style={{ width: '600px', height: '600px' }} alt="Misters Application" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-15.jpg" style={{ width: '600px', height: '600px' }} alt="Misters Application" />
                 </div>
               </div>
               <div className="col-md-6 mt-5">
@@ -137,10 +137,10 @@ export default function Misters() {
                 </p>
                 <hr style={{ border: '1px solid darkgreen' }} />
                 <div className="image_2 text-center mt-5">
-                  <img src="/img/drip-table-14.png" alt="Misters Table" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-14.png" alt="Misters Table" />
                 </div>
                 <div className="image_2 text-center">
-                  <img src="/img/Model-39.png" alt="Misters Model" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-39.png" alt="Misters Model" />
                 </div>
               </div>
             </div>

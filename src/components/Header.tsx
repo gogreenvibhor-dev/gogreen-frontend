@@ -58,7 +58,7 @@ export default function Header() {
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
-              href="https://www.youtube.com/@VidhiEnterprisesNewDelhi"
+              href="https://www.youtube.com/@vidhi_enterprises"
               aria-label="YouTube"
             >
               <i className="fab fa-youtube"></i>

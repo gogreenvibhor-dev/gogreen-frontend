@@ -27,7 +27,7 @@ export default function DoubleUnionLandscape() {
       <Navbar />
       <PageHeader
         title="Double Union Ball Valve"
-        backgroundImage="/img/drip-head-42.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-42.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -44,7 +44,7 @@ export default function DoubleUnionLandscape() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-43.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-43.png"
                   alt="Double Union Ball Valve"
                   width={600}
                   height={700}

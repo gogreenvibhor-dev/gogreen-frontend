@@ -29,7 +29,7 @@ export default function EcoRotatingSprinkler() {
       <Navbar />
       <PageHeader
         title="Eco Rotating Sprinkler"
-        backgroundImage="/img/eco-head-8.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-8.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -46,7 +46,7 @@ export default function EcoRotatingSprinkler() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Eco-21.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Eco-21.png"
                   alt="Eco Rotating Sprinkler"
                   width={600}
                   height={700}
@@ -71,7 +71,7 @@ export default function EcoRotatingSprinkler() {
               <div className="mt-8 flex justify-center lg:justify-start">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 max-w-sm">
                   <Image 
-                    src="/img/Model-64.png" 
+                    src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-64.png" 
                     alt="Model Diagram" 
                     width={400} 
                     height={300} 

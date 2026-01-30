@@ -100,7 +100,7 @@ export default function InlineDrip() {
               <div className="col-md-6">
                 <div className="box_main mt-5">
                   <div className="image_2">
-                    <img src="/img/Land-2.png" style={{ width: '700px', height: '700px' }} alt="Brown Drip Tubing" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Land-2.png" width={700} height={700} alt="Brown Drip Tubing" />
                   </div>
                 </div>
               </div>

@@ -137,7 +137,7 @@ export default async function ProductPage({
 
   const mainImage = product.images && product.images.length > 0 
     ? product.images[0] 
-    : '/img/default-product.png';
+    : 'https://d170mw2nhcb1v0.cloudfront.net/img/default-product.png';
 
   return (
     <main className="min-h-screen">

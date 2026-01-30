@@ -24,7 +24,7 @@ export default function DripFittingsLandscape() {
         "Used for connecting sub mains to laterals.",
         "Used along with grommet to prevent leakage."
       ],
-      img: "/img/Land-11.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-11.png"
     },
     {
       title: "RUBBER GROMMET/RUBBER WASHER/GTO",
@@ -36,7 +36,7 @@ export default function DripFittingsLandscape() {
         "Durable and resistant to harsh weather conditions.",
         "Maintains consistent performance for long-term irrigation use."
       ],
-      img: "/img/Land-12.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-12.png"
     },
     {
       title: "RUBBER HOLE CLOSER/DUMMY",
@@ -48,7 +48,7 @@ export default function DripFittingsLandscape() {
         "Easy to install and remove without damaging the pipe.",
         "Durable and reusable for long-term use."
       ],
-      img: "/img/Land-13.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-13.png"
     },
     {
       title: "STRAIGHT CONNECTOR/JOINTER",
@@ -60,7 +60,7 @@ export default function DripFittingsLandscape() {
         "Easy to install and remove without special tools.",
         "Provides long-lasting durability and high performance."
       ],
-      img: "/img/Land-14.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-14.png"
     },
     {
       title: "ELBOW CONNECTOR",
@@ -73,8 +73,8 @@ export default function DripFittingsLandscape() {
         "Ensures leak proof joint",
         "No need for any adhesive"
       ],
-      img: "/img/land-34.png",
-      modelImg: "/img/Model-51.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/land-34.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-51.png"
     },
     {
       title: "TEE CONNECTOR",
@@ -85,8 +85,8 @@ export default function DripFittingsLandscape() {
         "Provides smooth water flow with minimal pressure loss.",
         "Ideal for drip irrigation layouts requiring lateral divisions."
       ],
-      img: "/img/land-35.png",
-      modelImg: "/img/Model-46.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/land-35.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-46.png"
     },
     {
       title: "CROSS",
@@ -98,7 +98,7 @@ export default function DripFittingsLandscape() {
         "Provides a tight, leak-proof connection.",
         "Easy to install and suitable for all irrigation systems."
       ],
-      img: "/img/Land-15.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-15.png"
     },
     {
       title: "END CAP 8 TYPE",
@@ -110,8 +110,8 @@ export default function DripFittingsLandscape() {
         "Used for flushing of lateral.",
         "Made from 100% virgin raw material for long life."
       ],
-      img: "/img/land-16.png",
-      modelImg: "/img/Model-47.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/land-16.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-47.png"
     },
     {
       title: "INSERT TYPE (END PLUG)",
@@ -123,8 +123,8 @@ export default function DripFittingsLandscape() {
         "Easy to install and remove for cleaning or maintenance.",
         "Durable design ensures long service life."
       ],
-      img: "/img/land-17.png",
-      modelImg: "/img/Model-48.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/land-17.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-48.png"
     },
     {
       title: "LATERAL VALVE",
@@ -136,7 +136,7 @@ export default function DripFittingsLandscape() {
         "Facilitates repair and maintenance without stopping the main line.",
         "Enables efficient water distribution in drip systems."
       ],
-      img: "/img/Drip-54.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-54.png"
     },
     {
       title: "DRIP COUPLER",
@@ -150,7 +150,7 @@ export default function DripFittingsLandscape() {
         "Ideal for extending pipe length or repairing broken sections.",
         "Ensures long-lasting and reliable performance in the field."
       ],
-      img: "/img/Land-18.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-18.png"
     },
     {
       title: "DRIP ELBOW",
@@ -164,7 +164,7 @@ export default function DripFittingsLandscape() {
         "Suitable for both above-ground and underground installations.",
         "Ensures smooth water flow with minimal friction loss."
       ],
-      img: "/img/Land-19.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-19.png"
     },
     {
       title: "DRIP TEE",
@@ -178,7 +178,7 @@ export default function DripFittingsLandscape() {
         "Divides or combines water flow between different lines",
         "Maintains uniform water pressure across branches."
       ],
-      img: "/img/Land-20.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-20.png"
     },
     {
       title: "GOOF PLUG/SNAPPING",
@@ -189,7 +189,7 @@ export default function DripFittingsLandscape() {
         "Easy to insert and remove without special tools.",
         "Ensures clean and professional maintenance of drip systems."
       ],
-      img: "/img/Land-21.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-21.png"
     },
     {
       title: "LOCATION STAKE",
@@ -203,8 +203,8 @@ export default function DripFittingsLandscape() {
         "Provides stable and efficient irrigation system operation.",
         "Available in two models: LS01 and LS02."
       ],
-      img: "/img/land-22.png",
-      modelImg: "/img/Model-49.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/land-22.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-49.png"
     },
     {
       title: "MICRO TUBE STAKE/NAILS",
@@ -216,7 +216,7 @@ export default function DripFittingsLandscape() {
         "Easy to install and suitable for all soil types.",
         "Provides long-lasting stability and efficient irrigation performance."
       ],
-      img: "/img/Land-23.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-23.png"
     },
     {
       title: "RATCHET CLAMP",
@@ -229,8 +229,8 @@ export default function DripFittingsLandscape() {
         "Lightweight and reusable, ideal for repeated applications.",
         "Prevents pipe slippage or leakage under pressure."
       ],
-      img: "/img/Land-24.png",
-      modelImg: "/img/Model-50.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-24.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-50.png"
     },
     {
       title: "LATERAL PUNCH/S PUNCH",
@@ -241,7 +241,7 @@ export default function DripFittingsLandscape() {
         "Ergonomic design provides comfortable grip and easy handling.",
         "Essential tool for quick and efficient drip irrigation setup."
       ],
-      img: "/img/Land-25.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-25.png"
     },
     {
       title: "PLYER PUNCH/HAND PUNCH",
@@ -253,7 +253,7 @@ export default function DripFittingsLandscape() {
         "Enables fast and efficient installation accessories.",
         "Lightweight, portable, and easy to use in field conditions."
       ],
-      img: "/img/Land-26.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-26.png"
     },
     {
       title: "PUNCH (FOR PVC/ HDPE PIPE)/ DRILL BIT",
@@ -266,7 +266,7 @@ export default function DripFittingsLandscape() {
         "Enables fast and efficient pipeline installation.",
         "Suitable for use in drip irrigation systems."
       ],
-      img: "/img/Land-27.png"
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-27.png"
     }
   ];
 
@@ -275,7 +275,7 @@ export default function DripFittingsLandscape() {
       <Navbar />
       <PageHeader
         title="Drip Fittings"
-        backgroundImage="/img/land-head-9.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/land-head-9.png"
         breadcrumbs={breadcrumbs}
       />
 

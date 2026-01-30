@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Lay Flat Pipe - Economical Irrigation Solutions | Vidhi Enterprises",
@@ -18,7 +19,7 @@ export default function LayFlatPipe() {
         <div className="container-fluid px-0">
           <div className="d-flex w-100 align-items-center justify-content-between flex-wrap flex-lg-nowrap">
             <Link href="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5 mb-2 mb-lg-0">
-              <img src="/img/vidhi_logo-removebg-preview.png" className="ps-4 logo-img img-fluid" alt="Vidhi Enterprises Logo" />
+              <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" className="ps-4 logo-img img-fluid" alt="Vidhi Enterprises Logo" width={150} height={60} />
             </Link>
             <form className="d-flex mx-auto my-2 my-lg-0 flex-grow-1" role="search" style={{ maxWidth: '400px', minWidth: '180px', width: '100%' }}>
               <div className="input-group input-group-lg shadow-sm search-bar-rounded position-relative" style={{ width: '100%' }}>
@@ -65,7 +66,7 @@ export default function LayFlatPipe() {
               </div>
               <Link href="/contact" className="nav-item nav-link"><b>Contact Us</b></Link>
               <Link href="/" className="navbar-brand d-flex align-items-center ps-4 mt-3 mt-lg-0">
-                <img src="/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
               </Link>
             </div>
           </div>
@@ -73,7 +74,7 @@ export default function LayFlatPipe() {
       </nav>
 
       {/* Page Header */}
-      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(/img/eco-head-7.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="container-fluid page-header py-5 mb-5 mt-2" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-7.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container text-center py-5">
           <h1 className="display-1 text-green mb-4">Lay Flat Pipe</h1>
           <nav aria-label="breadcrumb">
@@ -99,7 +100,7 @@ export default function LayFlatPipe() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <img src="/img/Eco-20.png" style={{ width: '600px', height: '700px' }} alt="Lay Flat Pipe" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Eco-20.png" style={{ width: '600px', height: '700px' }} alt="Lay Flat Pipe" />
                   </div>
                 </div>
               </div>

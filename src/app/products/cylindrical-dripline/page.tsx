@@ -24,11 +24,11 @@ export default function CylindricalDripline() {
   ];
 
   const tables = [
-    "/img/drip-table-2.png",
-    "/img/drip-table-3.png",
-    "/img/drip-table-4.png",
-    "/img/drip-table-5.png",
-    "/img/drip-table-6.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-2.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-3.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-4.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-5.png",
+    "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-6.png",
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function CylindricalDripline() {
       <Navbar />
       <PageHeader
         title="Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC"
-        backgroundImage="/img/drip-head-2.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-2.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -53,7 +53,7 @@ export default function CylindricalDripline() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-2.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-2.jpg"
                   alt="Cylindrical Dripline"
                   width={700}
                   height={700}

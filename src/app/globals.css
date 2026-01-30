@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     @apply fixed top-0 left-0 w-full h-full -z-10;
     @apply pointer-events-none opacity-5;
-    background: url("/img/vidhi_logo-removebg-preview.png") center center no-repeat;
+    background: url("https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png") center center no-repeat;
     background-size: 500px;
   }
 

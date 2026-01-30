@@ -27,7 +27,7 @@ export default function AdjustableBubbler() {
       <Navbar />
       <PageHeader
         title="Adjustable Bubbler With Filter And Take (0-420 LPH)"
-        backgroundImage="/img/drip-head-8.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-8.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -44,7 +44,7 @@ export default function AdjustableBubbler() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-9.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-9.png"
                   alt="Adjustable Bubbler"
                   width={500}
                   height={500}
@@ -72,7 +72,7 @@ export default function AdjustableBubbler() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-10.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-10.png"
                   alt="Adjustable Bubbler Application"
                   width={500}
                   height={500}
@@ -92,12 +92,12 @@ export default function AdjustableBubbler() {
               </div>
               
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 max-w-sm mx-auto lg:mx-0">
-                <Image src="/img/Model-35.png" alt="Model Diagram" width={400} height={300} className="w-full h-auto" />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-35.png" alt="Model Diagram" width={400} height={300} className="w-full h-auto" />
               </div>
 
               <div className="pt-4">
                 <a 
-                  href="/pdf/AM pdf.pdf" 
+                  href="https://d170mw2nhcb1v0.cloudfront.net/pdf/AM%20pdf.pdf" 
                   target="_blank" 
                   className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
                 >

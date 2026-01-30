@@ -27,7 +27,7 @@ export default function DoubleUnionBallValve() {
       <Navbar />
       <PageHeader
         title="Double Union Ball Valve"
-        backgroundImage="/img/drip-head-42.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-42.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -44,7 +44,7 @@ export default function DoubleUnionBallValve() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-43.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-43.png"
                   alt="Double Union Ball Valve"
                   width={600}
                   height={700}
@@ -77,7 +77,7 @@ export default function DoubleUnionBallValve() {
 
               <div className="pt-4">
                 <a 
-                  href="/pdf/AM pdf.pdf" 
+                  href="https://d170mw2nhcb1v0.cloudfront.net/pdf/AMpdf.pdf" 
                   target="_blank" 
                   className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
                 >

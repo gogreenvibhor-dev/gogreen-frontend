@@ -40,7 +40,7 @@ export default function AluminiumSprinkler() {
       <Navbar />
       <PageHeader
         title="Aluminium Sprinkler"
-        backgroundImage="/img/Spri-head-3.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-3.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -58,7 +58,7 @@ export default function AluminiumSprinkler() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Spri-9.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-9.png"
                   alt="Aluminium Sprinkler 3N"
                   width={600}
                   height={700}
@@ -104,7 +104,7 @@ export default function AluminiumSprinkler() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Spri-10.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-10.png"
                   alt="Aluminium Sprinkler 2N"
                   width={600}
                   height={700}
@@ -135,7 +135,7 @@ export default function AluminiumSprinkler() {
               
                <div className="mt-8">
                  <Image
-                  src="/img/metaltable-2n.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/metaltable-2n.png"
                   alt="Technical Data 2N"
                   width={600}
                   height={300}
@@ -147,7 +147,7 @@ export default function AluminiumSprinkler() {
 
           <div className="mt-12 text-center">
             <a 
-              href="/pdf/AM pdf.pdf" 
+              href="https://d170mw2nhcb1v0.cloudfront.net/pdf/AM%20pdf.pdf" 
               target="_blank" 
               className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
             >

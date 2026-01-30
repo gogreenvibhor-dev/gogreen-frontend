@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const products = [
   {
     title: "Brown Drip Tubing",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Plain Lateral/ Polytubes", url: "/plain-drip" },
       { name: "Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC", url: "/inline-drip" },
@@ -15,7 +15,7 @@ const products = [
   },
   {
     title: "Emitting Devices",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Online Emitters PC", url: "/online-landscape" },
       { name: "Online Emitters NPC TurboKey Drippers", url: "/online-turbokey-lands" },
@@ -27,14 +27,14 @@ const products = [
   },
   {
     title: "Drip Fittings & Accessories",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Drip Fittings", url: "/drip-fitting-landscape" },
     ],
   },
   {
     title: "Control Valves & ACC",
-    image: "/img/DI-6.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-6.png",
     links: [
       { name: "Air Release Valve", url: "/air-realease-landscape" },
       { name: "Single Union Ball Valve", url: "/single-union-landscape" },
@@ -45,7 +45,7 @@ const products = [
   },
   {
     title: "Accessories For Pop Ups",
-    image: "/img/icon/icon-4.png",
+    image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
       { name: "Valve Box", url: "/valve-box" },
       { name: "Saddles", url: "/saddles" },
@@ -61,7 +61,7 @@ const LandscapePage = () => {
       <Navbar />
       <PageHeader 
         title="Landscape Irrigation" 
-        backgroundImage="/img/12.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/12.png"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },

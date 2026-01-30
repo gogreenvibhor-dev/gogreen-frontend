@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -46,10 +47,10 @@ export default function Leader() {
       {/* Navbar Start */}
       <nav className="navbar navbar-expand-lg p-2 xm-5 navbar-light sticky-top p-2" style={{ backgroundColor: 'rgb(212, 240, 212)' }}>
         <Link href="/" className="navbar-brand d-flex align-items-center">
-          <img 
-            src="/img/vidhi_logo-removebg-preview.png" 
-            height="100px" 
-            width="120px" 
+          <Image 
+            src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" 
+            height={100} 
+            width={120} 
             className="ps-4"
             style={{ marginTop: '3px' }}
             alt="Vidhi Enterprises Logo"
@@ -91,7 +92,7 @@ export default function Leader() {
       </nav>
 
       {/* Page Header */}
-      <div className="container-fluid page-header py-5 mb-5" style={{ backgroundImage: 'url(/img/carousel-1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="container-fluid page-header py-5 mb-5" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/carousel-1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container text-center py-5">
           <h1 className="display-3 text-white mb-4">Features</h1>
           <nav aria-label="breadcrumb">
@@ -152,7 +153,7 @@ export default function Leader() {
       </div>
 
       {/* Facts Start */}
-      <div className="container-fluid facts my-5 py-5" style={{ backgroundImage: 'url(/img/carousel-1.jpg)', backgroundAttachment: 'fixed', backgroundPosition: 'center' }}>
+      <div className="container-fluid facts my-5 py-5" style={{ backgroundImage: 'url(https://d170mw2nhcb1v0.cloudfront.net/img/carousel-1.jpg)', backgroundAttachment: 'fixed', backgroundPosition: 'center' }}>
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-sm-6 col-lg-3 text-center">
@@ -226,8 +227,8 @@ export default function Leader() {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-lg-3 col-md-6 me-3">
-              <img 
-                src="/img/vidhi_logo-removebg-preview.png"
+              <Image
+                src= "https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png"
                 style={{ width: '220px', height: '220px', marginLeft: '-15px' }} 
                 alt="Vidhi Enterprises Logo"
               />

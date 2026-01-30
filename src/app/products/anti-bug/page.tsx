@@ -26,7 +26,7 @@ export default function AntiBug() {
       <Navbar />
       <PageHeader
         title="Anti Bug Cup"
-        backgroundImage="/img/drip-head-12.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-12.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -43,7 +43,7 @@ export default function AntiBug() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-13.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-13.jpg"
                   alt="Anti Bug Cup"
                   width={600}
                   height={700}
@@ -76,7 +76,7 @@ export default function AntiBug() {
 
               <div className="mt-8">
                 <Image
-                  src="/img/Model-38.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-38.png"
                   alt="Model Diagram"
                   width={400}
                   height={300}

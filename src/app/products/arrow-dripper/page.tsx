@@ -25,7 +25,7 @@ export default function ArrowDripper() {
       <Navbar />
       <PageHeader
         title="Pot Dripper/Arrow Dripper"
-        backgroundImage="/img/drip-head-10.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-10.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -42,7 +42,7 @@ export default function ArrowDripper() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-11.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-11.jpg"
                   alt="Pot Dripper/Arrow Dripper"
                   width={600}
                   height={700}
@@ -75,7 +75,7 @@ export default function ArrowDripper() {
 
               <div className="mt-8">
                 <Image
-                  src="/img/Model-37.png"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-37.png"
                   alt="Model Diagram"
                   width={400}
                   height={300}

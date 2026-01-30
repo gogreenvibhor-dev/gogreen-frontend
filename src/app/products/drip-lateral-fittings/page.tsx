@@ -25,8 +25,8 @@ export default function DripLateralFittings() {
         "Used along with grommet to prevent leakage.",
         "Available Sizes: 12mm, 16mm & 16mm×12mm"
       ],
-      img: "/img/Drip-23.jpg",
-      modelImg: "/img/Model-1.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-23.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-1.png",
       pdf: true
     },
     {
@@ -40,8 +40,8 @@ export default function DripLateralFittings() {
         "Maintains consistent performance for long-term irrigation use.",
         "Available Sizes: 12mm & 16mm"
       ],
-      img: "/img/Drip-24.jpg",
-      modelImg: "/img/Model-2.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-24.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-2.png",
       pdf: true
     },
     {
@@ -55,8 +55,8 @@ export default function DripLateralFittings() {
         "Durable and reusable for long-term use.",
         "Available Sizes: 12mm & 16mm"
       ],
-      img: "/img/Drip-25.jpg",
-      modelImg: "/img/Model-3.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-25.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-3.png",
       pdf: true
     },
     {
@@ -70,8 +70,8 @@ export default function DripLateralFittings() {
         "Provides long-lasting durability and high performance.",
         "Available Sizes: 5.5mm, 8mm, 12mm, 16mm, 16×½\", 16×¾\" & 16×12mm"
       ],
-      img: "/img/Drip-26.png",
-      modelImg: "/img/Model-10.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-26.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-10.png",
       pdf: true
     },
     {
@@ -86,8 +86,8 @@ export default function DripLateralFittings() {
         "No need for any adhesive",
         "Available Sizes: 5.5mm, 12mm, 16mm, 16×12mm, 16×½\" & 16×¾\""
       ],
-      img: "/img/Drip-52.png",
-      modelImg: "/img/Model-4.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-52.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-4.png",
       pdf: true
     },
     {
@@ -100,8 +100,8 @@ export default function DripLateralFittings() {
         "Ideal for drip irrigation layouts requiring lateral divisions.",
         "Available Sizes: 12mm, 16mm & 16×12mm"
       ],
-      img: "/img/Drip-53.png",
-      modelImg: "/img/Model-5.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-53.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-5.png",
       pdf: true
     },
     {
@@ -115,8 +115,8 @@ export default function DripLateralFittings() {
         "Easy to install and suitable for all irrigation systems.",
         "Available Sizes: 12mm & 16mm"
       ],
-      img: "/img/Drip-27.png",
-      modelImg: "/img/Model-6.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-27.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-6.png",
       pdf: true
     },
     {
@@ -130,8 +130,8 @@ export default function DripLateralFittings() {
         "Made from 100% virgin raw material for long life.",
         "Available Sizes: 12mm & 16mm"
       ],
-      img: "/img/Drip-45.jpg",
-      modelImg: "/img/Model-7.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-45.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-7.png",
       pdf: true
     },
     {
@@ -145,8 +145,8 @@ export default function DripLateralFittings() {
         "Durable design ensures long service life.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Drip-46.jpg",
-      modelImg: "/img/Model-8.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-46.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-8.png",
       pdf: true
     },
     {
@@ -162,8 +162,8 @@ export default function DripLateralFittings() {
         "Ensures reliable performance and long service life of the system.",
         "Available Sizes: 12mm, 16mm & 16×½\""
       ],
-      img: "/img/Drip-54.png",
-      modelImg: "/img/Model-9.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-54.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-9.png",
       pdf: true
     },
     {
@@ -179,8 +179,8 @@ export default function DripLateralFittings() {
         "Ensures long-lasting and reliable performance in the field.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Land-18.png",
-      modelImg: "/img/Model-11.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-18.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-11.png",
       pdf: true
     },
     {
@@ -196,8 +196,8 @@ export default function DripLateralFittings() {
         "Ensures smooth water flow with minimal friction loss.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Land-19.png",
-      modelImg: "/img/Model-12.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-19.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-12.png",
       pdf: true
     },
     {
@@ -213,8 +213,8 @@ export default function DripLateralFittings() {
         "Maintains uniform water pressure across branches.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Land-20.png",
-      modelImg: "/img/Model-13.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Land-20.png",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-13.png",
       pdf: true
     },
     {
@@ -227,8 +227,8 @@ export default function DripLateralFittings() {
         "Ensures clean and professional maintenance of drip systems.",
         "Available Sizes: 4mm"
       ],
-      img: "/img/Drip-28.jpg",
-      modelImg: "/img/Model-14.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-28.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-14.png",
       pdf: true
     },
     {
@@ -243,8 +243,8 @@ export default function DripLateralFittings() {
         "Provides stable and efficient irrigation system operation.",
         "Available in two models: VLS01 and VLS02."
       ],
-      img: "/img/Drip-29.jpg",
-      modelImg: "/img/Model-15.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-29.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-15.png",
       pdf: true
     },
     {
@@ -258,8 +258,8 @@ export default function DripLateralFittings() {
         "Provides long-lasting stability and efficient irrigation performance.",
         "Available Sizes: 5.5mm"
       ],
-      img: "/img/Drip-30.jpg",
-      modelImg: "/img/Model-16.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-30.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-16.png",
       pdf: true
     },
     {
@@ -274,8 +274,8 @@ export default function DripLateralFittings() {
         "Prevents pipe slippage or leakage under pressure.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Drip-31.jpg",
-      modelImg: "/img/Model-17.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-31.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-17.png",
       pdf: true
     },
     {
@@ -288,8 +288,8 @@ export default function DripLateralFittings() {
         "Essential tool for quick and efficient drip irrigation setup.",
         "Available Sizes: 4mm"
       ],
-      img: "/img/Drip-32.jpg",
-      modelImg: "/img/Model-18.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-32.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-18.png",
       pdf: true
     },
     {
@@ -303,8 +303,8 @@ export default function DripLateralFittings() {
         "Lightweight, portable, and easy to use in field conditions.",
         "Available Sizes: 4mm"
       ],
-      img: "/img/Drip-33.jpg",
-      modelImg: "/img/Model-19.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-33.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-19.png",
       pdf: true
     },
     {
@@ -319,8 +319,8 @@ export default function DripLateralFittings() {
         "Suitable for use in drip irrigation systems.",
         "Available Sizes: 16mm"
       ],
-      img: "/img/Drip-34.jpg",
-      modelImg: "/img/Model-20.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-34.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-20.png",
       pdf: true
     },
     {
@@ -336,8 +336,8 @@ export default function DripLateralFittings() {
         "Durable and long-lasting for repeated agricultural use.",
         "Available Sizes: 16mm, 20mm, 25mm, 32mm"
       ],
-      img: "/img/Drip-35.jpg",
-      modelImg: "/img/Model-21.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-35.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-21.png",
       pdf: true
     },
     {
@@ -352,8 +352,8 @@ export default function DripLateralFittings() {
         "Simple to install and remove without special tools.",
         "Enhances efficiency and durability of the drip irrigation system"
       ],
-      img: "/img/Drip-36.jpg",
-      modelImg: "/img/Model-22.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-36.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-22.png",
       pdf: true
     },
     {
@@ -366,8 +366,8 @@ export default function DripLateralFittings() {
         "Easy to install and remove without any special tools.",
         "Helps in efficient water distribution across crop rows."
       ],
-      img: "/img/Drip-37.jpg",
-      modelImg: "/img/Model-23.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-37.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-23.png",
       pdf: true
     },
     {
@@ -381,8 +381,8 @@ export default function DripLateralFittings() {
         "Ensures efficient water management and prevents wastage.",
         "Made from durable, UV-resistant material for long life."
       ],
-      img: "/img/Drip-38.jpg",
-      modelImg: "/img/Model-24.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-38.jpg",
+      modelImg: "https://d170mw2nhcb1v0.cloudfront.net/img/Model-24.png",
       pdf: false // No PDF button for this one in the source
     }
   ];
@@ -390,9 +390,9 @@ export default function DripLateralFittings() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <PageHeader
+      <PageHeader 
         title="Drip Lateral Fittings"
-        backgroundImage="/img/drip-head-17.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-17.png"
         breadcrumbs={breadcrumbs}
       />
 

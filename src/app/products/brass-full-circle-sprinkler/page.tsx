@@ -14,7 +14,7 @@ export default function BrassFullCircleSprinkler() {
   const products = [
     {
       title: '1/2" BRASS FULL CIRCLE SPRINKLER',
-      image: "/img/Spri-1.png",
+      image: "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-1.png",
       features: [
         "½” full circle sprinkler designed for wide and even water coverage.",
         "Equipped with a robust brass bearing assembly for enhanced durability.",
@@ -27,11 +27,11 @@ export default function BrassFullCircleSprinkler() {
         "Ensures efficient water utilization with uniform droplet distribution."
       ],
       application: "Ideal for agricultural use, particularly in center pivot systems, crop cooling, and frost protection applications. Designed to ensure uniform water distribution for efficient irrigation.",
-      tableImage: "/img/full-table-1.png"
+      tableImage: "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-1.png"
     },
     {
       title: '3/4" BRASS FULL CIRCLE SPRINKLER',
-      image: "/img/Spri-2.png",
+      image: "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-2.png",
       features: [
         "¾” full circle brass sprinkler designed for wide and efficient coverage.",
         "Durable brass and stainless steel bearing assembly for long-lasting performance.",
@@ -44,11 +44,11 @@ export default function BrassFullCircleSprinkler() {
         "Suitable for high-performance irrigation in large agricultural and landscape areas."
       ],
       application: "Perfectly suited for agriculture, horticulture, golf courses, and field crops like wheat and vegetables. Ideal for both solid-set and portable irrigation systems ensuring uniform water distribution.",
-      tableImage: "/img/full-table-2.png"
+      tableImage: "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-2.png"
     },
     {
       title: '3/4" BRASS FULL CIRCLE SPRINKLER (VIDHI ECO)',
-      image: "/img/Spri-3.png",
+      image: "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-3.png",
       features: [
         "¾” full circle brass sprinkler designed for wide and efficient coverage.",
         "Durable brass and stainless steel bearing assembly for long-lasting performance.",
@@ -61,11 +61,11 @@ export default function BrassFullCircleSprinkler() {
         "Suitable for high-performance irrigation in large agricultural and landscape areas."
       ],
       application: "Perfectly suited for agriculture, horticulture, golf courses, and field crops like wheat and vegetables. Ideal for both solid-set and portable irrigation systems ensuring uniform water distribution.",
-      tableImage: "/img/full-table-3.png"
+      tableImage: "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-3.png"
     },
     {
       title: '1" BRASS FULL CIRCLE SPRINKLER',
-      image: "/img/Spri-4.png",
+      image: "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-4.png",
       features: [
         "1” full circle metal sprinkler engineered for maximum water distribution.",
         "Equipped with a durable brass bearing assembly for smooth and long-lasting performance.",
@@ -78,11 +78,11 @@ export default function BrassFullCircleSprinkler() {
         "Suitable for heavy-duty agricultural and landscape watering applications."
       ],
       application: "Highly efficient for agricultural fields, horticultural crops, lawns, and large landscape irrigation. Designed to provide uniform water coverage in both solid-set and portable irrigation systems.",
-      tableImage: "/img/full-table-4.png"
+      tableImage: "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-4.png"
     },
     {
       title: '1¼" BRASS FULL CIRCLE SPRINKLER',
-      image: "/img/Spri-5.png",
+      image: "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-5.png",
       features: [
         "1¼ full circle metal sprinkler designed for wide and efficient water coverage.",
         "Fitted with a high-quality brass bearing assembly for smooth operation and durability.",
@@ -95,7 +95,7 @@ export default function BrassFullCircleSprinkler() {
         "Low maintenance design ensures long service life and operational efficiency."
       ],
       application: "Ideally suited for large-scale agricultural fields, plantations, and landscape irrigation. Ensures uniform water distribution in solid-set and portable irrigation systems for efficient crop growth.",
-      tableImage: "/img/full-table-5.png"
+      tableImage: "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-5.png"
     }
   ];
 
@@ -104,7 +104,7 @@ export default function BrassFullCircleSprinkler() {
       <Navbar />
       <PageHeader
         title="Brass Full Circle Sprinkler"
-        backgroundImage="/img/Spri-head-1.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-1.png"
         breadcrumbs={breadcrumbs}
       />
 

@@ -25,7 +25,7 @@ export default function FivePointFiveMmTube() {
       <Navbar />
       <PageHeader
         title="5.5 mm Spagetty/ distribution Pipes / Connecting Tube/ Micro Tube"
-        backgroundImage="/img/drip-head-11.png"
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-11.png"
         breadcrumbs={breadcrumbs}
       />
 
@@ -42,7 +42,7 @@ export default function FivePointFiveMmTube() {
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
                 <Image
-                  src="/img/Drip-12.jpg"
+                  src="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-12.jpg"
                   alt="5.5 mm Spagetty Tube"
                   width={600}
                   height={700}

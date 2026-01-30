@@ -9,7 +9,7 @@ const LegacyLeaderPage = () => {
       badge: "First Generation — The Visionary",
       name: "Late Shri Dhirendar Kumar Jain (D.K. Jain)",
       title: "Founder – Engineer, Architect & Precision Expert",
-      img: "/img/dada-ji.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/dada-ji.png",
       points: [
         "Pioneer in OEM and white-label production for irrigation brands.",
         "Known for unmatched mastery in flow discharge, emitter accuracy, and sprinkler performance.",
@@ -24,7 +24,7 @@ const LegacyLeaderPage = () => {
       badge: "Second Generation — Expansion Leader",
       name: "Mr. Vineet Jain",
       title: "Driving Growth, Modernization & Global Markets",
-      img: "/img/vineet-jain.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/vineet-jain.png",
       points: [
         "Joining in 1995 — propelled Vidhi into technological upgrades",
         "Introduced plastic & brass sprinkler manufacturing",
@@ -40,7 +40,7 @@ const LegacyLeaderPage = () => {
       badge: "Third Generation — Future-Ready Vision",
       name: "Mr. Vibhor Jain",
       title: "Innovation, Global Strategy & Next-Gen Precision",
-      img: "/img/vibhor-jain.png",
+      img: "https://d170mw2nhcb1v0.cloudfront.net/img/vibhor-jain.png",
       points: [
         "Started on the factory floor — learned every technical detail hands-on",
         "Led African market expansion — major success in Kenya (2024)",
@@ -129,7 +129,7 @@ const LegacyLeaderPage = () => {
       </section>
 
       <section className="py-32 bg-[#8B4513] text-white text-center mt-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('/img/design-5.png')] bg-repeat bg-center"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('https://d170mw2nhcb1v0.cloudfront.net/img/design-5.png')] bg-repeat bg-center"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-5xl font-bold mb-12 text-white font-heading">🌎 Leadership Philosophy</h2>
           <p className="text-3xl max-w-4xl mx-auto leading-relaxed font-light mb-12 italic">
