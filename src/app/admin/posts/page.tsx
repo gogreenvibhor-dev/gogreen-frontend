@@ -138,7 +138,7 @@ export default function AdminPostsPage() {
                       View
                     </Link>
                     <Link
-                      href={`/admin/posts/${post.id}/edit`}
+                      href={`/admin/posts/${post.slug}/edit`}
                       className="text-indigo-600 hover:text-indigo-900"
                     >
                       Edit

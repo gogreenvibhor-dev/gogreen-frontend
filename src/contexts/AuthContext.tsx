@@ -1,7 +1,7 @@
 'use client';
 
 import { User, UserRole } from '@/types/auth';
-import axios from 'axios';
+import axiosInstance from '@/lib/axios';
 import { createContext, ReactNode, useContext, useEffect, useState, useRef } from 'react';
 
 interface AuthContextType {
@@ -117,16 +117,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Start a new auth check
     authCheckPromise = (async () => {
       try {
-        const response = await axios.get('/api/admin/auth/me');
+        const response = await axiosInstance.get('/auth/me');
         const userData = response.data;
         
         // Cache the result
         setCachedAuth(userData);
         
         return userData;
-      } catch (error) {
+      } catch (error: any) {
         // 401 is expected when not authenticated, don't log it as an error
-        if (axios.isAxiosError(error) && error.response?.status !== 401) {
+        if (error.response?.status !== 401) {
           console.error('Auth check failed:', error);
         }
         
@@ -152,7 +152,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axios.post('/api/admin/auth/login', { email, password });
+      const response = await axiosInstance.post('/auth/login', { email, password });
       const userData = response.data.user;
       setUser(userData);
       
@@ -165,7 +165,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async () => {
     try {
-      await axios.post('/api/admin/auth/logout');
+      await axiosInstance.post('/auth/logout');
     } finally {
       setUser(null);
       

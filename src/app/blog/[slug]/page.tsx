@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
@@ -15,6 +16,8 @@ interface Post {
   title: string;
   slug: string;
   content: any;
+  coverImage?: string;
+  seoKeywords?: string[];
   published: boolean;
   publishedAt: string | null;
   createdAt: string;
@@ -34,6 +37,54 @@ async function getPost(slug: string): Promise<Post | null> {
   }
 }
 
+// Generate metadata for SEO
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    };
+  }
+
+  // Extract text from content for description
+  const extractText = (content: any): string => {
+    if (!content || !content.content) return '';
+    let text = '';
+    for (const node of content.content) {
+      if (node.type === 'paragraph' && node.content) {
+        for (const child of node.content) {
+          if (child.text) text += child.text + ' ';
+        }
+      }
+    }
+    return text.slice(0, 160).trim();
+  };
+
+  const description = extractText(post.content);
+  const keywords = Array.isArray(post.seoKeywords) ? post.seoKeywords.join(', ') : 'irrigation, agriculture, farming, drip irrigation, sprinkler systems';
+
+  return {
+    title: `${post.title} | Vidhi Go Green`,
+    description: description || post.title,
+    keywords: keywords,
+    openGraph: {
+      title: post.title,
+      description: description || post.title,
+      images: post.coverImage ? [post.coverImage] : [],
+      type: 'article',
+      publishedTime: post.publishedAt || undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: description || post.title,
+      images: post.coverImage ? [post.coverImage] : [],
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const post = await getPost(slug);
@@ -42,8 +93,56 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     notFound();
   }
 
+  // Extract description for structured data
+  const extractText = (content: any): string => {
+    if (!content || !content.content) return '';
+    let text = '';
+    for (const node of content.content) {
+      if (node.type === 'paragraph' && node.content) {
+        for (const child of node.content) {
+          if (child.text) text += child.text + ' ';
+        }
+      }
+    }
+    return text.slice(0, 160).trim();
+  };
+
+  const description = extractText(post.content);
+  const keywords = Array.isArray(post.seoKeywords) ? post.seoKeywords : [];
+
+  // Structured data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: description || post.title,
+    image: post.coverImage || '',
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
+    author: {
+      '@type': 'Organization',
+      name: 'Vidhi Go Green',
+      url: 'https://vidhienterprises.com'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Vidhi Go Green',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://vidhienterprises.com/logo.png'
+      }
+    },
+    keywords: keywords.join(', '),
+  };
+
   return (
     <main className="min-h-screen bg-[#f6fff7]">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Navbar />
       
       {/* Hero Section */}

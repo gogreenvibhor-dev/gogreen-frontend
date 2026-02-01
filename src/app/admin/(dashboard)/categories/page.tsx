@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useAuth } from '@/contexts/AuthContext';
 import { UserRole } from '@/types/auth';
 import { useCategories } from '@/hooks/useCategories';
 import { useQueryClient } from '@tanstack/react-query';
+import { generateSlug } from '@/lib/slug';
 
 interface ICategory {
   id: string;
@@ -27,6 +28,7 @@ export default function CategoriesAdmin() {
   const { data: categories = [], isLoading: loading, error } = useCategories();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [uploadingImage, setUploadingImage] = useState(false);
+  const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     slug: '',
@@ -34,6 +36,16 @@ export default function CategoriesAdmin() {
     displayOrder: '0',
     image: ''
   });
+
+  // Auto-generate slug from name when name changes (unless slug was manually edited)
+  useEffect(() => {
+    if (!slugManuallyEdited && formData.name) {
+      setFormData(prev => ({
+        ...prev,
+        slug: generateSlug(formData.name)
+      }));
+    }
+  }, [formData.name, slugManuallyEdited]);
 
 
 
@@ -96,6 +108,7 @@ export default function CategoriesAdmin() {
 
   const handleEdit = (category: ICategory) => {
     setEditingId(category.id);
+    setSlugManuallyEdited(true); // Preserve existing slug when editing
     setFormData({
       name: category.name,
       slug: category.slug,
@@ -107,6 +120,7 @@ export default function CategoriesAdmin() {
 
   const handleCancelEdit = () => {
     setEditingId(null);
+    setSlugManuallyEdited(false);
     setFormData({
       name: '',
       slug: '',
@@ -175,7 +189,10 @@ export default function CategoriesAdmin() {
               placeholder="Slug (e.g., drip-irrigation)"
               className="border p-2 rounded"
               value={formData.slug}
-              onChange={e => setFormData({ ...formData, slug: e.target.value })}
+              onChange={e => {
+                setSlugManuallyEdited(true);
+                setFormData({ ...formData, slug: e.target.value });
+              }}
               required
             />
             <input

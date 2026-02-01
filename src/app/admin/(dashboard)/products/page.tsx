@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { useAuth } from '@/contexts/AuthContext';
 import { UserRole } from '@/types/auth';
+import { generateSlug } from '@/lib/slug';
 
 interface ICategory {
   id: string;
@@ -53,6 +54,7 @@ export default function ProductsAdmin() {
   const [filterSubcategoryId, setFilterSubcategoryId] = useState<string>('');
   const [uploadingPdf, setUploadingPdf] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
+  const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [formData, setFormData] = useState({
     categoryId: '',
     subcategoryId: '',
@@ -68,6 +70,16 @@ export default function ProductsAdmin() {
     displayOrder: '0',
     isFeatured: false
   });
+
+  // Auto-generate slug from name when name changes
+  useEffect(() => {
+    if (!slugManuallyEdited && formData.name) {
+      setFormData(prev => ({
+        ...prev,
+        slug: generateSlug(formData.name)
+      }));
+    }
+  }, [formData.name, slugManuallyEdited]);
 
   useEffect(() => {
     fetchCategories();
@@ -157,6 +169,7 @@ export default function ProductsAdmin() {
 
   const handleEdit = (product: IProduct) => {
     setEditingId(product.id);
+    setSlugManuallyEdited(true);
     const subcat = subcategories.find(s => s.id === product.subcategoryId);
     const categoryId = subcat?.categoryId || '';
     
@@ -184,6 +197,7 @@ export default function ProductsAdmin() {
 
   const handleCancelEdit = () => {
     setEditingId(null);
+    setSlugManuallyEdited(false);
     setFilteredSubcategories([]);
     setFormData({
       categoryId: '',
@@ -384,7 +398,10 @@ export default function ProductsAdmin() {
               placeholder="Slug (e.g., product-name)"
               className="border p-2 rounded"
               value={formData.slug}
-              onChange={e => setFormData({ ...formData, slug: e.target.value })}
+              onChange={e => {
+                setSlugManuallyEdited(true);
+                setFormData({ ...formData, slug: e.target.value });
+              }}
               required
             />
             <input

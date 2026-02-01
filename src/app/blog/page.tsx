@@ -11,6 +11,8 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://loc
 export const dynamic = 'force-dynamic';
 
 interface Post {
+  coverImage: string;
+  seoKeywords?: string[];
   id: number;
   title: string;
   slug: string;
@@ -93,7 +95,7 @@ const BlogPage = async () => {
                 <div key={post.id} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image
-                      src=""
+                      src={post.coverImage || 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80'}
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"

@@ -1,9 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import axiosInstance from './axios';
 import { ProductSpecification, TableData, ChartData } from '@/types/specification';
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
-const API_URL = `${API_BASE_URL}/api`;
 
 export class SpecificationAPI {
   /**
@@ -13,13 +10,11 @@ export class SpecificationAPI {
     productId: string,
     includeInactive = false
   ): Promise<ProductSpecification[]> {
-    const url = `${API_URL}/specifications/product/${productId}${
+    const url = `/specifications/product/${productId}${
       includeInactive ? '?includeInactive=true' : ''
     }`;
 
-    const response = await axios.get(url, {
-      withCredentials: true,
-    });
+    const response = await axiosInstance.get(url);
 
     return response.data.data;
   }
@@ -28,9 +23,7 @@ export class SpecificationAPI {
    * Get a single specification by ID
    */
   static async getById(id: string): Promise<ProductSpecification> {
-    const response = await axios.get(`${API_URL}/specifications/${id}`, {
-      withCredentials: true,
-    });
+    const response = await axiosInstance.get(`/specifications/${id}`);
 
     return response.data.data;
   }
@@ -45,14 +38,12 @@ export class SpecificationAPI {
     content: TableData | ChartData,
     displayOrder?: string
   ): Promise<ProductSpecification> {
-    const response = await axios.post(`${API_URL}/specifications`, {
+    const response = await axiosInstance.post(`/specifications`, {
       productId,
       title,
       type,
       content,
       displayOrder: displayOrder || '0',
-    }, {
-      withCredentials: true,
     });
 
     return response.data.data;
@@ -71,9 +62,7 @@ export class SpecificationAPI {
       isActive?: boolean;
     }
   ): Promise<ProductSpecification> {
-    const response = await axios.put(`${API_URL}/specifications/${id}`, updates, {
-      withCredentials: true,
-    });
+    const response = await axiosInstance.put(`/specifications/${id}`, updates);
 
     return response.data.data;
   }
@@ -82,18 +71,14 @@ export class SpecificationAPI {
    * Delete a specification
    */
   static async delete(id: string): Promise<void> {
-    await axios.delete(`${API_URL}/specifications/${id}`, {
-      withCredentials: true,
-    });
+    await axiosInstance.delete(`/specifications/${id}`);
   }
 
   /**
    * Toggle active/inactive status
    */
   static async toggleActive(id: string): Promise<ProductSpecification> {
-    const response = await axios.patch(`${API_URL}/specifications/${id}/toggle-active`, {}, {
-      withCredentials: true,
-    });
+    const response = await axiosInstance.patch(`/specifications/${id}/toggle-active`, {});
 
     return response.data.data;
   }

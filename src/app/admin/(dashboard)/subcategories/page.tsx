@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '@/contexts/AuthContext';
 import { UserRole } from '@/types/auth';
+import { generateSlug } from '@/lib/slug';
 
 interface ICategory {
   id: string;
@@ -34,6 +35,7 @@ export default function SubcategoriesAdmin() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [filterCategoryId, setFilterCategoryId] = useState<string>('');
   const [uploadingImage, setUploadingImage] = useState(false);
+  const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [formData, setFormData] = useState({
     categoryId: '',
     name: '',
@@ -42,6 +44,16 @@ export default function SubcategoriesAdmin() {
     displayOrder: '0',
     image: ''
   });
+
+  // Auto-generate slug from name when name changes
+  useEffect(() => {
+    if (!slugManuallyEdited && formData.name) {
+      setFormData(prev => ({
+        ...prev,
+        slug: generateSlug(formData.name)
+      }));
+    }
+  }, [formData.name, slugManuallyEdited]);
 
   useEffect(() => {
     fetchCategories();
@@ -139,6 +151,7 @@ export default function SubcategoriesAdmin() {
 
   const handleEdit = (subcategory: ISubcategory) => {
     setEditingId(subcategory.id);
+    setSlugManuallyEdited(true);
     setFormData({
       categoryId: subcategory.categoryId,
       name: subcategory.name,
@@ -151,6 +164,7 @@ export default function SubcategoriesAdmin() {
 
   const handleCancelEdit = () => {
     setEditingId(null);
+    setSlugManuallyEdited(false);
     setFormData({
       categoryId: '',
       name: '',
@@ -242,7 +256,10 @@ export default function SubcategoriesAdmin() {
               placeholder="Slug (e.g., inline-drippers)"
               className="border p-2 rounded"
               value={formData.slug}
-              onChange={e => setFormData({ ...formData, slug: e.target.value })}
+              onChange={e => {
+                setSlugManuallyEdited(true);
+                setFormData({ ...formData, slug: e.target.value });
+              }}
               required
             />
             <input
