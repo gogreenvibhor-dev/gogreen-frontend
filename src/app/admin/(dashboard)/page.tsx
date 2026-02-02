@@ -4,6 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { AdminOnly, EditorOrAdmin } from '@/components/RoleBasedComponent';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 import { BarChart, Users, Eye, Globe, Smartphone, UserCheck, UserX, Shield } from 'lucide-react';
 
 interface AnalyticsData {
@@ -232,12 +233,12 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-gray-800">System Users</h2>
-            <a 
+            <Link 
               href="/admin/users" 
               className="text-sm text-blue-600 hover:text-blue-700 font-medium"
             >
               Manage Users →
-            </a>
+            </Link>
           </div>
           
           {usersLoading ? (
@@ -342,12 +343,12 @@ export default function AdminDashboard() {
                 </table>
                 {users.length > 5 && (
                   <div className="mt-4 text-center">
-                    <a 
+                    <Link 
                       href="/admin/users" 
                       className="text-sm text-blue-600 hover:text-blue-700 font-medium"
                     >
                       View all {users.length} users →
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>

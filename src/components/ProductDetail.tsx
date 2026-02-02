@@ -81,13 +81,13 @@ const ProductDetail = ({ product }: { product: ProductData }) => {
 
           {product.pdf && (
              <div className="mt-16 text-center">
-               <a 
+               <Link
                  href={`/${product.pdf}`} 
                  target="_blank" 
                  className="inline-block border-2 border-primary text-primary font-bold py-3 px-8 rounded hover:bg-primary hover:text-white transition"
                >
                  View PDF
-               </a>
+               </Link>
              </div>
           )}
         </div>

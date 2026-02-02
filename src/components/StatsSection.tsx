@@ -53,18 +53,18 @@ const StatsSection = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="space-y-4"
+              className="flex flex-col items-center justify-center space-y-4 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
             >
               <motion.h3
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 + 0.3, duration: 0.5, type: "spring" }}
-                className="text-3xl lg:text-4xl font-bold"
+                className="text-3xl lg:text-4xl font-bold text-center !text-white"
               >
                 {stat.label}
               </motion.h3>
-              <p className="text-lg font-medium text-white/80">{stat.value}</p>
+              <p className="text-lg font-medium text-white/80 text-center">{stat.value}</p>
             </motion.div>
           ))}
         </motion.div>

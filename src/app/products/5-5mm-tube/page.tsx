@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import Link from "next/dist/client/link";
 
 export default function FivePointFiveMmTube() {
   const breadcrumbs = [
@@ -72,13 +73,13 @@ export default function FivePointFiveMmTube() {
               </div>
 
               <div className="mt-8">
-                <a 
+                <Link
                   href="/pdf/AM pdf.pdf" 
                   target="_blank" 
                   className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
                 >
                   <i className="fa fa-file-pdf mr-3"></i> View PDF
-                </a>
+                </Link>
               </div>
             </div>
           </div>

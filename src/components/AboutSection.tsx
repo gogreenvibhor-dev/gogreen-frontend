@@ -42,7 +42,7 @@ const AboutSection = () => {
               whileInView={{ scale: 1, opacity: 0.2 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-7xl lg:text-9xl font-bold text-primary mb-[-40px]"
+              className="text-7xl lg:text-9xl font-bold text-primary"
             >
               40+
             </motion.h1>

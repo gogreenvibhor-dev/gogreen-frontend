@@ -1,6 +1,6 @@
 import React from 'react';
 import axiosInstance from './axios';
-import { ProductSpecification, TableData, ChartData } from '@/types/specification';
+import { ProductSpecification, TableData, ImageData } from '@/types/specification';
 
 export class SpecificationAPI {
   /**
@@ -34,8 +34,8 @@ export class SpecificationAPI {
   static async create(
     productId: string,
     title: string,
-    type: 'grid' | 'matrix' | 'chart',
-    content: TableData | ChartData,
+    type: 'grid' | 'matrix' | 'image',
+    content: TableData | ImageData,
     displayOrder?: string
   ): Promise<ProductSpecification> {
     const response = await axiosInstance.post(`/specifications`, {
@@ -56,8 +56,8 @@ export class SpecificationAPI {
     id: string,
     updates: {
       title?: string;
-      type?: 'grid' | 'matrix' | 'chart';
-      content?: TableData | ChartData;
+      type?: 'grid' | 'matrix' | 'image';
+      content?: TableData | ImageData;
       displayOrder?: string;
       isActive?: boolean;
     }

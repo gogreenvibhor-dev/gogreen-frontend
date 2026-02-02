@@ -127,11 +127,11 @@ const CompanyProfilePage = () => {
           <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
             {/* Placeholder for floating bubbles effect if needed */}
           </div>
-          <div className="container mx-auto px-4 text-center relative z-10 animate-fadeInUp">
-            <h1 className="text-6xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl font-heading" itemProp="name">
+          <div className="container mx-auto px-4 text-center relative z-0 animate-fadeInUp">
+            <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6 drop-shadow-2xl font-heading" itemProp="name">
               Vidhi Enterprises - Leading Drip Irrigation Manufacturer Since 1983
             </h1>
-            <p className="text-xl lg:text-3xl font-light text-white/95 mb-10 tracking-widest" itemProp="slogan">
+            <p className="text-xl lg:text-2xl font-light text-white/95 mb-10 tracking-widest" itemProp="slogan">
               "INNOVATING PRECISION IRRIGATION & SUSTAINABLE WATER MANAGEMENT SINCE 1983"
             </p>
             <div className="text-lg lg:text-2xl max-w-5xl mx-auto text-white/90 leading-relaxed" itemProp="description">
@@ -160,8 +160,8 @@ const CompanyProfilePage = () => {
                 { icon: "fa-snowflake", title: "Inline & Online Emitters", desc: "Precision water distribution emitters" },
                 { icon: "fa-water", title: "Sprinklers & Rainguns", desc: "Efficient sprinkler irrigation systems" },
                 { icon: "fa-filter", title: "Filters (Screen, Disc, Hydrocyclone)", desc: "Advanced irrigation filtration systems" },
-                { icon: "fa-pipe", title: "HDPE Pipes & Fittings", desc: "Durable HDPE pipe solutions" },
-                { icon: "fa-valve", title: "Valves & Control Devices", desc: "Reliable irrigation control systems" },
+                { icon: "fa-grip-lines", title: "HDPE Pipes & Fittings", desc: "Durable HDPE pipe solutions" },
+                { icon: "fa-sliders-h", title: "Valves & Control Devices", desc: "Reliable irrigation control systems" },
                 { icon: "fa-tools", title: "Micro-Irrigation Tools & Accessories", desc: "Complete micro-irrigation accessories" },
               ].map((item, i) => (
                 <article key={i} className="bg-white p-10 rounded-[28px] shadow-xl text-center group hover:-translate-y-4 hover:shadow-2xl transition-all duration-500 border border-blue-50" itemProp="itemListElement" itemScope itemType="https://schema.org/Product">

@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter, useParams } from 'next/navigation';
-import { TableData, TableCell, ProductSpecification } from '@/types/specification';
+import { TableData, TableCell, ProductSpecification, ImageData } from '@/types/specification';
 import { SpecificationTable } from '@/components/SpecificationTable';
+import Image from 'next/image';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 const API_URL = `${API_BASE_URL}/api`;
@@ -21,8 +22,9 @@ export default function ProductSpecificationsPage() {
 
   // Form state
   const [title, setTitle] = useState('');
-  const [type, setType] = useState<'grid' | 'matrix' | 'chart'>('grid');
+  const [type, setType] = useState<'grid' | 'matrix' | 'image'>('grid');
   const [displayOrder, setDisplayOrder] = useState('0');
+  const [description, setDescription] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
 
   // Table builder state
@@ -34,6 +36,11 @@ export default function ProductSpecificationsPage() {
     headers: [],
     rows: [],
   });
+
+  // Image upload state
+  const [imageUrl, setImageUrl] = useState<string>('');
+  const [imageAltText, setImageAltText] = useState<string>('');
+  const [uploadingImage, setUploadingImage] = useState(false);
 
   useEffect(() => {
     fetchSpecifications();
@@ -110,9 +117,27 @@ export default function ProductSpecificationsPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!title || tableData.headers.length === 0 || tableData.rows.length === 0) {
-      alert('Please fill in all required fields and create the table structure');
-      return;
+    let content: TableData | ImageData;
+
+    if (type === 'image') {
+      // Validate and prepare image data
+      if (!title || !imageUrl.trim()) {
+        alert('Please fill in all required fields for the image specification');
+        return;
+      }
+
+      content = {
+        imageUrl: imageUrl.trim(),
+        altText: imageAltText.trim() || title,
+        description: description || undefined,
+      };
+    } else {
+      // Validate table data
+      if (!title || tableData.headers.length === 0 || tableData.rows.length === 0) {
+        alert('Please fill in all required fields and create the table structure');
+        return;
+      }
+      content = { ...tableData, description };
     }
 
     try {
@@ -126,7 +151,7 @@ export default function ProductSpecificationsPage() {
         productId,
         title,
         type,
-        content: tableData,
+        content,
         displayOrder,
       }, {
         withCredentials: true,
@@ -138,6 +163,9 @@ export default function ProductSpecificationsPage() {
       setDisplayOrder('0');
       setEditingId(null);
       setTableData({ headers: [], rows: [] });
+      setImageUrl('');
+      setImageAltText('');
+      setDescription('');
       fetchSpecifications();
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Failed to save specification');
@@ -175,20 +203,29 @@ export default function ProductSpecificationsPage() {
   const editSpecification = (spec: ProductSpecification) => {
     setEditingId(spec.id);
     setTitle(spec.title);
-    setType(spec.type);
+    setType(spec.type as 'grid' | 'matrix' | 'image');
     setDisplayOrder(spec.displayOrder || '0');
-    setTableData(spec.content as TableData);
     
-    // Set dimensions based on content
-    if (spec.content && typeof spec.content === 'object') {
-      const content = spec.content as TableData;
-      if (content.headers && content.headers.length > 0) {
-        setHeaderRows(content.headers.length);
-        setHeaderCols(content.headers[0].length);
-      }
-      if (content.rows && content.rows.length > 0) {
-        setBodyRows(content.rows.length);
-        setBodyCols(content.rows[0].length);
+    if (spec.type === 'image') {
+      const imageContent = spec.content as ImageData;
+      setImageUrl(imageContent.imageUrl || '');
+      setImageAltText(imageContent.altText || '');
+      setDescription(imageContent.description || '');
+    } else {
+      setTableData(spec.content as TableData);
+      setDescription((spec.content as TableData).description || '');
+      
+      // Set dimensions based on content
+      if (spec.content && typeof spec.content === 'object') {
+        const content = spec.content as TableData;
+        if (content.headers && content.headers.length > 0) {
+          setHeaderRows(content.headers.length);
+          setHeaderCols(content.headers[0].length);
+        }
+        if (content.rows && content.rows.length > 0) {
+          setBodyRows(content.rows.length);
+          setBodyCols(content.rows[0].length);
+        }
       }
     }
     
@@ -217,7 +254,10 @@ export default function ProductSpecificationsPage() {
             if (!showForm) {
               setEditingId(null);
               setTitle('');
+              setDescription('');
               setTableData({ headers: [], rows: [] });
+              setImageUrl('');
+              setImageAltText('');
             }
           }}
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium"
@@ -263,10 +303,118 @@ export default function ProductSpecificationsPage() {
                 >
                   <option value="grid">Grid Table</option>
                   <option value="matrix">Matrix Table</option>
-                  <option value="chart">Chart</option>
+                  <option value="image">Image</option>
                 </select>
               </div>
             </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {type === 'image' ? 'Image' : 'Table'} Description (optional)
+              </label>
+              <textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                rows={3}
+                placeholder={type === 'image' 
+                  ? "Add image caption or description"
+                  : "Add table description or features (one per line)\nExample:\n• Flow Rate: 2-4 LPH\n• Working Pressure: 1.0-3.0 Bar\n• Material: PE (Polyethylene)"}
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                {type === 'image' 
+                  ? 'Add a caption or description for the image.'
+                  : 'Add one feature or detail per line. Each line will appear as a bullet point below the table title.'}
+              </p>
+            </div>
+
+            {type === 'image' && (
+              <div className="border border-gray-300 rounded-lg p-4 mb-4">
+                <h3 className="text-lg font-semibold mb-3">Specification Image</h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Upload Image
+                    </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={async (e) => {
+                        if (!e.target.files || e.target.files.length === 0) return;
+                        
+                        const file = e.target.files[0];
+                        const uploadData = new FormData();
+                        uploadData.append('file', file);
+                        
+                        setUploadingImage(true);
+                        try {
+                          const res = await axios.post(`${API_URL}/upload`, uploadData, {
+                            headers: { 'Content-Type': 'multipart/form-data' },
+                            withCredentials: true
+                          });
+                          setImageUrl(res.data.url);
+                        } catch (error) {
+                          console.error('Image upload failed:', error);
+                          alert('Failed to upload image');
+                        } finally {
+                          setUploadingImage(false);
+                        }
+                      }}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      disabled={uploadingImage}
+                    />
+                    {uploadingImage && (
+                      <p className="text-sm text-blue-600 mt-2">Uploading image...</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Or Enter Image URL
+                    </label>
+                    <input
+                      type="text"
+                      value={imageUrl}
+                      onChange={(e) => setImageUrl(e.target.value)}
+                      placeholder="https://example.com/image.jpg"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Alt Text (optional)
+                    </label>
+                    <input
+                      type="text"
+                      value={imageAltText}
+                      onChange={(e) => setImageAltText(e.target.value)}
+                      placeholder="Description of the image for accessibility"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  {imageUrl && (
+                    <div className="mt-4">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Image Preview
+                      </label>
+                      <div className="border border-gray-300 rounded-lg p-2 bg-gray-50">
+                        <Image
+                          src={imageUrl}
+                          alt={imageAltText || title || 'Specification image'}
+                          width={400}
+                          height={300}
+                          className="max-w-full h-auto rounded"
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             {(type === 'grid' || type === 'matrix') && (
               <div className="border border-gray-300 rounded-lg p-4 mb-4">
@@ -396,6 +544,27 @@ export default function ProductSpecificationsPage() {
                                   placeholder={`R${rowIdx + 1}-${colIdx + 1}`}
                                   className="px-2 py-1 border rounded text-sm"
                                 />
+                                <div className="flex gap-1 items-center">
+                                  <input
+                                    type="color"
+                                    value={cell.backgroundColor || '#ffffff'}
+                                    onChange={(e) =>
+                                      updateCell('rows', rowIdx, colIdx, 'backgroundColor', e.target.value)
+                                    }
+                                    className="w-8 h-6 border rounded cursor-pointer"
+                                    title="Cell Background Color"
+                                  />
+                                  {cell.backgroundColor && cell.backgroundColor !== '#ffffff' && (
+                                    <button
+                                      type="button"
+                                      onClick={() => updateCell('rows', rowIdx, colIdx, 'backgroundColor', '#ffffff')}
+                                      className="text-xs text-red-500 hover:text-red-700"
+                                      title="Clear color"
+                                    >
+                                      ✕
+                                    </button>
+                                  )}
+                                </div>
                                 {type === 'matrix' && (
                                   <div className="flex gap-1">
                                     <input
@@ -501,12 +670,11 @@ export default function ProductSpecificationsPage() {
               </div>
 
               {/* Preview */}
-              {(spec.type === 'grid' || spec.type === 'matrix') && (
-                <SpecificationTable
-                  title={spec.title}
-                  data={spec.content as TableData}
-                />
-              )}
+              <SpecificationTable
+                title={spec.title}
+                data={spec.content as TableData | ImageData}
+                type={spec.type as 'grid' | 'matrix' | 'image'}
+              />
             </div>
           ))
         )}

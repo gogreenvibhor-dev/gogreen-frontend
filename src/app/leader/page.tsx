@@ -19,26 +19,26 @@ export default function Leader() {
               <span className="fa fa-phone-alt me-2"></span>
               <span>+012 345 6789</span>
             </div>
-            <div className="h-100 d-inline-flex align-items-center">
+            <Link href="mailto:info@vidhienterprises.com" className="h-100 d-inline-flex align-items-center hover:text-primary transition-colors">
               <span className="far fa-envelope me-2"></span>
-              <span>info@example.com</span>
-            </div>
+              <span>info@vidhienterprises.com</span>
+            </Link>
           </div>
           <div className="col-lg-5 px-5 text-end">
             <div className="h-100 d-inline-flex align-items-center mx-n2">
               <span>Follow Us:</span>
-              <a className="btn btn-link text-light" href="">
+              <Link className="btn btn-link text-light" href="">
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a className="btn btn-link text-light" href="">
+              </Link>
+              <Link className="btn btn-link text-light" href="">
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a className="btn btn-link text-light" href="">
+              </Link>
+              <Link className="btn btn-link text-light" href="">
                 <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a className="btn btn-link text-light" href="">
+              </Link>
+              <Link className="btn btn-link text-light" href="">
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Leader() {
             <Link href="/" className="nav-item nav-link active">Home</Link>
             <Link href="/products" className="nav-item nav-link">Products</Link>
             <div className="nav-item dropdown">
-              <a href="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Who we are</a>
+              <Link href="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Who we are</Link>
               <div className="dropdown-menu bg-light m-0">
                 <Link href="/about" className="dropdown-item">About Us</Link>
                 <Link href="/founder" className="dropdown-item">Founder</Link>
@@ -228,32 +228,34 @@ export default function Leader() {
           <div className="row g-5">
             <div className="col-lg-3 col-md-6 me-3">
               <Image
-                src= "https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png"
-                style={{ width: '220px', height: '220px', marginLeft: '-15px' }} 
+                src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png"
+                width={220}
+                height={220}
+                style={{ marginLeft: '-15px' }} 
                 alt="Vidhi Enterprises Logo"
               />
               <div className="d-flex pt-2">
-                <a className="btn btn-square btn-outline-light rounded-circle me-2" href="https://www.google.com/">
+                <Link className="btn btn-square btn-outline-light rounded-circle me-2" href="https://www.google.com/">
                   <i className="fab fa-twitter"></i>
-                </a>
-                <a className="btn btn-square btn-outline-light rounded-circle me-2" href="">
+                </Link>
+                <Link className="btn btn-square btn-outline-light rounded-circle me-2" href="">
                   <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="btn btn-square btn-outline-light rounded-circle me-2" href="">
+                </Link>
+                <Link className="btn btn-square btn-outline-light rounded-circle me-2" href="">
                   <i className="fab fa-youtube"></i>
-                </a>
-                <a className="btn btn-square btn-outline-light rounded-circle me-2" href="">
+                </Link>
+                <Link className="btn btn-square btn-outline-light rounded-circle me-2" href="">
                   <i className="fab fa-linkedin-in"></i>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-2 col-md-5 me-3">
               <h4 className="text-white mb-2">Quick Links</h4>
-              <a className="btn btn-link" href="/about">About Us</a>
-              <a className="btn btn-link" href="/contact">Contact Us</a>
-              <a className="btn btn-link" href="/products">Our Products</a>
-              <a className="btn btn-link" href="/history">History</a>
-              <a className="btn btn-link" href="/quote">Support</a>
+              <Link className="btn btn-link" href="/about">About Us</Link>
+              <Link className="btn btn-link" href="/contact">Contact Us</Link>
+              <Link className="btn btn-link" href="/products">Our Products</Link>
+              <Link className="btn btn-link" href="/history">History</Link>
+              <Link className="btn btn-link" href="/quote">Support</Link>
             </div>
             <div className="col-lg-3 col-md-8 me-5">
               <h4 className="text-white mb-2">For more information</h4>
@@ -278,7 +280,7 @@ export default function Leader() {
               </p>
               <p className="mb-2">
                 <i className="fa fa-envelope me-3"></i>
-                info@vidhienterprises.com
+                <Link href="mailto:info@vidhienterprises.com" className="hover:text-primary transition-colors">info@vidhienterprises.com</Link>
               </p>
             </div>
           </div>
@@ -290,10 +292,10 @@ export default function Leader() {
         <div className="container">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a className="border-bottom" href="#">Vidhi Enterprises</a>, All Right Reserved.
+              &copy; <Link className="border-bottom" href="#">Vidhi Enterprises</Link>, All Right Reserved.
             </div>
             <div className="col-md-6 text-center text-md-end">
-              Designed By <a className="border-bottom">Vijay and Rohit</a>
+              Designed By <Link className="border-bottom" href={""}>Vijay and Rohit</Link>
             </div>
           </div>
         </div>

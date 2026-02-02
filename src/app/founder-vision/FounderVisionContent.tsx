@@ -52,7 +52,7 @@ export default function FounderVision() {
               Late Shri Dhirendar Kumar Jain (Pipewale Bauji)
             </p>
             <p className={styles.founderSubtitle}>
-              Engineer. Architect. Visionary.
+              Engineer, Architect, Visionary.
             </p>
           </div>
           <div className={styles.photoPlaceholder}>
@@ -72,23 +72,23 @@ export default function FounderVision() {
         <div className="container mx-auto px-4 max-w-[1400px]">
           <p>
             Vidhi Enterprises stands on the foundation laid by Late Shri
-            Dhirendar Kumar Jain, affectionately known as Pipewale Bauji, whose
-            remarkable journey continues to guide our purpose, values, and
-            ambition.
+            Dhirendar Kumar Jain, affectionately known as Pipewale Bauji. His
+            journey continues to guide our purpose, values and ambition.
           </p>
           <p>
-            An engineer and architect by profession, he believed that precision,
-            discipline, and good design were not just principles for
-            buildings—but for businesses, products, and life itself.
+            An engineer and architect by profession, he believed precision,
+            discipline and thoughtful design were essential not only for
+            buildings, but for businesses, products and life itself.
           </p>
           <p>
-            In the early 1980s, with no capital, no workforce, and no industry
-            connections, he started everything from his home, working tirelessly
-            with just one helper.
+            In the early 1980s, with no capital, no workforce and no industry
+            backing, he began operations from his home, working tirelessly with
+            just one helper.
           </p>
           <p>
-            What began as a modest effort grew—brick by brick—into a brand known
-            for quality, integrity, and innovation in irrigation components.
+            What started as a modest effort steadily evolved into a respected
+            name in irrigation manufacturing, built on trust and technical
+            excellence.
           </p>
         </div>
       </section>
@@ -97,33 +97,33 @@ export default function FounderVision() {
         <div className="container mx-auto px-4 max-w-[1400px]">
           <h2 className={styles.sectionHeading}>A Vision Rooted in Purpose</h2>
           <p className={styles.subtitle}>
-            Shri D.K. Jain saw agriculture as the backbone of the nation and
-            understood that water-efficient irrigation would shape the future of
-            farming. His purpose was simple yet powerful:
+            Shri D.K. Jain viewed agriculture as the backbone of the nation and
+            understood that water-efficient irrigation would define the future of
+            farming. His purpose was clear:
           </p>
           <div className={styles.grid}>
             <div className={styles.visionItem} style={{ animationDelay: "0.2s" }}>
               <i className="fas fa-seedling"></i>
-              <h3>Make reliable irrigation components accessible</h3>
+              <h3>Make dependable irrigation components accessible</h3>
             </div>
             <div className={styles.visionItem} style={{ animationDelay: "0.4s" }}>
               <i className="fas fa-handshake"></i>
-              <h3>Support farmers with quality they can trust</h3>
+              <h3>Support farmers with products they can rely on</h3>
             </div>
             <div className={styles.visionItem} style={{ animationDelay: "0.6s" }}>
               <i className="fas fa-balance-scale"></i>
-              <h3>Build a company where ethics come before profit</h3>
+              <h3>Build a business where ethics come before profit</h3>
             </div>
             <div className={styles.visionItem} style={{ animationDelay: "0.8s" }}>
               <i className="fas fa-lightbulb"></i>
               <h3>
-                Innovate to reduce water wastage and increase productivity
+                Innovate to reduce water waste and improve productivity
               </h3>
             </div>
           </div>
           <p className={`${styles.subtitle} mt-10 text-center`}>
-            His vision was not only to manufacture products, but to empower
-            livelihoods.
+            For him, manufacturing was not just about output. It was about
+            empowering livelihoods.
           </p>
         </div>
       </section>
@@ -134,35 +134,34 @@ export default function FounderVision() {
             Engineering Excellence as a Philosophy
           </h2>
           <p className={styles.subtitle}>
-            Being an engineer and architect, he was meticulous about:
+            As an engineer and architect, he was deeply focused on:
           </p>
           <div className={styles.grid}>
             <div className={styles.visionItem}>
               <i className="fas fa-ruler-combined"></i>
-              <h3>Accuracy in design</h3>
+              <h3>Design accuracy</h3>
             </div>
             <div className={styles.visionItem}>
               <i className="fas fa-cogs"></i>
-              <h3>Consistency in production</h3>
+              <h3>Production consistency</h3>
             </div>
             <div className={styles.visionItem}>
               <i className="fas fa-hard-hat"></i>
-              <h3>Long-lasting materials</h3>
+              <h3>Use of durable materials</h3>
             </div>
             <div className={styles.visionItem}>
               <i className="fas fa-tools"></i>
-              <h3>Practical innovation</h3>
+              <h3>Practical, field-driven innovation</h3>
             </div>
             <div className={styles.visionItem}>
               <i className="fas fa-clipboard-check"></i>
-              <h3>Strong quality control</h3>
+              <h3>Strong quality control systems</h3>
             </div>
           </div>
           <p className={`${styles.subtitle} mt-10 text-center`}>
-            To him, every dripper, fitting, or pipe was not a product — it was a
-            responsibility. His engineering mindset shaped the culture of Vidhi
-            Enterprises: Work with precision. Deliver with honesty. Build with
-            purpose.
+            To him, every dripper, fitting or pipe carried responsibility. This
+            mindset shaped the culture of Vidhi Enterprises: "Work with precision,
+            deliver with honesty and build with purpose."
           </p>
         </div>
       </section>
@@ -173,25 +172,25 @@ export default function FounderVision() {
             From a Small Room to a Global Journey
           </h2>
           <p className={styles.subtitle}>
-            What began in one room with a single helper has today expanded into:
+            From a single room and one helper, Vidhi Enterprises has grown into:
           </p>
           <div className={styles.journeyTimeline}>
             <div className={styles.timelineLine}></div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineContent}>
-                <h3>A modern manufacturing setup</h3>
+                <h3>A modern manufacturing facility</h3>
               </div>
               <div className={styles.timelineDot}></div>
             </div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineDot}></div>
               <div className={styles.timelineContent}>
-                <h3>A strong workforce</h3>
+                <h3>A skilled and committed workforce</h3>
               </div>
             </div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineContent}>
-                <h3>Multiple product lines</h3>
+                <h3>Multiple irrigation product lines</h3>
               </div>
               <div className={styles.timelineDot}></div>
             </div>
@@ -204,16 +203,16 @@ export default function FounderVision() {
             <div className={styles.timelineItem}>
               <div className={styles.timelineContent}>
                 <h3>
-                  A growing export presence across the Middle East, Africa &
-                  Asia
+                  An expanding export footprint across the Middle East, Africa,
+                  and Asia
                 </h3>
               </div>
               <div className={styles.timelineDot}></div>
             </div>
           </div>
           <p className={`${styles.subtitle} mt-10 text-center`}>
-            This growth reflects the resilience, courage, and discipline he
-            instilled in the company.
+            This growth reflects the discipline, resilience, and values instilled
+            by the founder.
           </p>
         </div>
       </section>
@@ -228,23 +227,23 @@ export default function FounderVision() {
           </p>
           <div className={styles.valuesGrid}>
             <div className={styles.valueCard} style={{ animationDelay: "0.2s" }}>
-              <h3>Integrity first</h3>
+              <h3>Integrity above all</h3>
             </div>
             <div className={styles.valueCard} style={{ animationDelay: "0.4s" }}>
-              <h3>Build long-term relationships</h3>
+              <h3>Long-term relationships over short-term gains</h3>
             </div>
             <div className={styles.valueCard} style={{ animationDelay: "0.6s" }}>
-              <h3>Create value, not just products</h3>
+              <h3>Creating value, not just products</h3>
             </div>
             <div className={styles.valueCard} style={{ animationDelay: "0.8s" }}>
-              <h3>Work hard and stay grounded</h3>
+              <h3>Hard work with humility</h3>
             </div>
             <div className={styles.valueCard} style={{ animationDelay: "1s" }}>
-              <h3>Let quality speak louder than marketing</h3>
+              <h3>Letting quality speak louder than marketing</h3>
             </div>
           </div>
           <p className={`${styles.subtitle} mt-10 text-center`}>
-            These values remain the heart of Vidhi Enterprises.
+            These principles remain the heart of Vidhi Enterprises.
           </p>
         </div>
       </section>
@@ -252,20 +251,20 @@ export default function FounderVision() {
       <section className={`${styles.section} ${styles.promiseSection}`}>
         <div className="container mx-auto px-4 max-w-[1400px]">
           <h2 className={styles.sectionHeading}>
-            Looking Ahead — Continuing His Vision
+            Looking Ahead Continuing His Vision
           </h2>
           <p>
-            Today, the company is led with the same passion he carried — to
+            Today, Vidhi Enterprises moves forward with the same commitment to
             become a global benchmark in: Micro-irrigation components,
             Water-efficient technologies, Precision agricultural solutions,
-            Sustainable manufacturing.
+            Sustainable manufacturing practices.
           </p>
           <p>
-            His journey teaches us that great things are built with courage,
-            honesty, and a clear vision, no matter how small the beginning.
-            Vidhi Enterprises moves forward carrying his legacy — with pride,
-            with purpose, and with a promise to uphold his standards in
-            everything we do.
+            The journey of our founder reminds us that enduring success is built
+            with courage, honesty and clarity of vision, regardless of how small
+            the beginning was. Vidhi Enterprises continues ahead with pride, with
+            purpose and with an unwavering promise to uphold the standards on
+            which it was built.
           </p>
         </div>
       </section>

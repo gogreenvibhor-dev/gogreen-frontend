@@ -53,14 +53,14 @@ const FeatureCards = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-0"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4"
         >
           {features.map((f, i) => (
             <motion.div key={i} variants={itemVariants}>
               <motion.div
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
                 transition={{ duration: 0.3 }}
-                className="bg-white shadow-lg flex items-center h-full px-10 py-8 min-h-[180px]"
+                className="bg-[#fffdf5] shadow-lg rounded-2xl flex items-center h-full px-10 py-8 min-h-[180px]"
               >
                 <div className="flex w-full items-center">
                   <motion.div

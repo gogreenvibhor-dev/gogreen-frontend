@@ -137,7 +137,7 @@ export async function generateMetadata({
           alt: product.name,
         }
       ],
-      type: 'product',
+      type: 'website',
       siteName: 'GoGreen',
       locale: 'en_US',
     },

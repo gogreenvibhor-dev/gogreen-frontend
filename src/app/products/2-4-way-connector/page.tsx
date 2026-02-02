@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import Link from "next/dist/client/link";
 
 export default function TwoFourWayConnector() {
   const breadcrumbs = [
@@ -144,13 +145,13 @@ export default function TwoFourWayConnector() {
           </div>
 
           <div className="text-center mt-20">
-            <a 
+            <Link 
               href="https://d170mw2nhcb1v0.cloudfront.net/pdf/AM%20pdf.pdf" 
               target="_blank" 
               className="btn-primary-custom btn-ripple text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center shadow-xl transition"
             >
               <i className="fa fa-file-pdf mr-3"></i> View PDF
-            </a>
+            </Link>
           </div>
         </div>
       </section>

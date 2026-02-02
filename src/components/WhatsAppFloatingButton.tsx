@@ -1,3 +1,4 @@
+import Link from 'next/dist/client/link';
 import React from 'react';
 
 interface WhatsAppFloatingButtonProps {
@@ -16,7 +17,7 @@ const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({ phoneNu
   if (!cleanNumber) return null;
 
   return (
-    <a
+    <Link
       href={`https://wa.me/${cleanNumber}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -24,7 +25,7 @@ const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({ phoneNu
       aria-label="Chat on WhatsApp"
     >
       <i className="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
+    </Link>
   );
 };
 

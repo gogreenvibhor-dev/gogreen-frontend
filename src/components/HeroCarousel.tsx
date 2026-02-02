@@ -76,7 +76,7 @@ const HeroCarousel = () => {
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.4, 0, 0.2, 1] as [number, number, number, number] }}
                 className="max-w-4xl mx-auto"
               >
-                <h3 className="text-xl lg:text-5xl font-bold text-white mb-5 leading-tight drop-shadow-lg">
+                <h3 className="text-xl lg:text-5xl font-bold !text-white mb-5 leading-tight drop-shadow-lg">
                   {slides[current].text}
                 </h3>
               </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductSpecification, TableData } from '@/types/specification';
+import { ProductSpecification, TableData, ImageData } from '@/types/specification';
 import { SpecificationTable } from './SpecificationTable';
 
 interface Props {
@@ -30,14 +30,21 @@ export const ProductSpecifications: React.FC<Props> = ({ specifications, classNa
               key={spec.id}
               title={spec.title}
               data={spec.content as TableData}
+              type={spec.type}
             />
           );
         }
         
-        // TODO: Add chart rendering support when needed
-        // if (spec.type === 'chart') {
-        //   return <SpecificationChart key={spec.id} title={spec.title} data={spec.content as ChartData} />;
-        // }
+        if (spec.type === 'image') {
+          return (
+            <SpecificationTable
+              key={spec.id}
+              title={spec.title}
+              data={spec.content as ImageData}
+              type="image"
+            />
+          );
+        }
         
         return null;
       })}

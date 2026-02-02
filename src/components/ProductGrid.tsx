@@ -247,10 +247,10 @@ const ProductGrid = () => {
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
-                      className="w-20 h-20 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center p-4"
+                      className="w-24 h-24 rounded-full bg-white shadow-lg mx-auto mb-6 flex items-center justify-center p-3"
                     >
                       <Link href={p.link}>
-                        <Image src={p.icon} alt="Icon" width={60} height={60} className="w-full h-full object-contain" />
+                        <Image src={p.icon} alt="Icon" width={200} height={200} className="w-24 h-24 object-contain" />
                       </Link>
                     </motion.div>
                     <h4 className="text-2xl font-bold mb-4 text-heading group-hover:text-white transition-colors duration-300">{p.title}</h4>

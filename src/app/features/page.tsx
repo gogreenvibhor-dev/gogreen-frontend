@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
@@ -98,9 +99,9 @@ export default function Features() {
               <p className="text-gray-600 mb-8 text-lg">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
-              <a href="/about" className="btn-primary-custom btn-ripple py-3 px-8 text-white rounded font-bold shadow-md transition inline-block">
+              <Link href="/about" className="btn-primary-custom btn-ripple py-3 px-8 text-white rounded font-bold shadow-md transition inline-block">
                 Explore More
-              </a>
+              </Link>
             </div>
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 interface IContact {
-  _id: string;
+  id: string;
   name: string;
   email: string;
   phone?: string;
@@ -78,7 +78,7 @@ export default function ContactsAdmin() {
             ) : contacts.length === 0 ? (
               <tr><td colSpan={5} className="px-6 py-4 text-center">No contacts found.</td></tr>
             ) : contacts.map((contact) => (
-              <tr key={contact._id} className={contact.status === 'new' ? 'bg-blue-50' : ''}>
+              <tr key={contact.id} className={contact.status === 'new' ? 'bg-blue-50' : ''}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {new Date(contact.createdAt).toLocaleDateString()}
                 </td>
@@ -101,14 +101,14 @@ export default function ContactsAdmin() {
                   <div className="flex gap-2">
                     {contact.status === 'new' && (
                       <button
-                        onClick={() => handleStatusChange(contact._id, 'read')}
+                        onClick={() => handleStatusChange(contact.id, 'read')}
                         className="text-indigo-600 hover:text-indigo-900"
                       >
                         Mark as Read
                       </button>
                     )}
                     <button
-                      onClick={() => handleDelete(contact._id)}
+                      onClick={() => handleDelete(contact.id)}
                       className="text-red-600 hover:text-red-900"
                     >
                       Delete

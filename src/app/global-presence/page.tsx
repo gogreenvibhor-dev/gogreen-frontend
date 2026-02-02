@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import PageHeader from "@/components/PageHeader";
 import GlobalPresenceMap from "@/components/GlobalPresenceMap";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -83,14 +82,53 @@ const GlobalPresencePage = () => {
       
       <main className="min-h-screen bg-whitesmoke" itemScope itemType="https://schema.org/AboutPage">
         <Navbar />
-        <PageHeader 
-          title="Global Presence - Trusted Irrigation Exporter to 50+ Countries" 
-          backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/12.png"
-          breadcrumbs={[
-            { label: "Home", href: "/" },
-            { label: "Global Presence", active: true }
-          ]}
-        />
+        
+        {/* Header */}
+        <header className="relative bg-gradient-to-br from-[#1b4332] via-[#2d6a4f] to-[#40916c] text-white py-32 text-center overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Global Presence</h1>
+            <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+              Trusted Irrigation Components Across Continents
+            </p>
+          </div>
+        </header>
+
+        {/* Intro Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="space-y-6 text-lg text-[#1b4332] leading-relaxed text-center">
+              <p>
+                Vidhi Enterprises has evolved from a small workshop in India into a <strong>trusted manufacturer and exporter</strong> of drip and sprinkler irrigation components across international markets.
+              </p>
+              <p>
+                Today, our products are supplied through strong distributor networks and long-term partnerships across the <strong>Middle East, Africa and Asia</strong>. Our growth is driven by consistent quality, reliable performance and a deep understanding of global agricultural needs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Regions Section */}
+        <section className="py-16 bg-gradient-to-br from-[#e8f5e9] to-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1b4332] mb-8 font-heading">
+              We Supply High-Performance Irrigation Products To:
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto mb-8">
+              {["UAE", "Saudi Arabia", "Qatar", "Oman", "Kuwait", "Kenya", "Uganda", "Tanzania", "Nepal", "Sri Lanka"].map((country, i) => (
+                <span key={i} className="px-6 py-3 bg-white rounded-full shadow-md text-[#2d6a4f] font-semibold border border-green-100">
+                  {country}
+                </span>
+              ))}
+              <span className="px-6 py-3 bg-[#2d6a4f] rounded-full shadow-md text-white font-semibold">
+                and more...
+              </span>
+            </div>
+            <p className="text-lg text-[#2d6a4f] max-w-3xl mx-auto italic">
+              With every new market, we maintain the same commitment to consistently produce quality products, timely deliveries and irrigation solutions engineered for diverse farming conditions worldwide.
+            </p>
+          </div>
+        </section>
+
         <GlobalPresenceMap />
         <Footer />
       </main>

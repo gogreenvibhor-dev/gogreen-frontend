@@ -14,7 +14,6 @@
   --color-light: #f8fafc;
   --color-whitesmoke: #f5f5f5;
   --color-secondary: #525368;
-  --color-heading: #0F4229;
   
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -37,10 +36,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--color-heading);
-  font-weight: 700;
+/* All buttons should have pointer cursor */
+button,
+[role="button"],
+.btn {
+  cursor: pointer;
 }
 
 /* ========================================
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 @layer components {
   /* Button - Primary */
   .btn-primary-custom {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden cursor-pointer;
     @apply bg-gradient-to-br from-[#2ecc71] to-[#27ae60];
     @apply text-white font-bold py-3 px-8 rounded-lg;
     @apply shadow-lg transition-all duration-300 ease-in-out;

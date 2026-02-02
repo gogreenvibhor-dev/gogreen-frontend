@@ -46,12 +46,19 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/:path*`,
-      },
-    ];
+    return {
+      beforeFiles: [
+        // Don't rewrite /api/admin/* - let Next.js API routes handle them
+      ],
+      afterFiles: [],
+      fallback: [
+        // Only rewrite non-admin API routes to the backend
+        {
+          source: '/api/:path((?!admin).*)',
+          destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api'}/:path*`,
+        },
+      ],
+    };
   },
 };
 

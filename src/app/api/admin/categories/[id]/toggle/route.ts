@@ -16,6 +16,7 @@ export async function PATCH(
     }
 
     const body = await request.json();
+    console.log('📦 Request body:', body);
     
     const response = await axios.patch(`${NEXT_PUBLIC_BASE_URL}/api/categories/${id}/toggle`, body, {
       headers: {
@@ -23,6 +24,11 @@ export async function PATCH(
         'Cookie': cookieHeader,
       },
       validateStatus: () => true,
+    });
+
+    console.log('📨 Backend response:', {
+      status: response.status,
+      data: response.data
     });
 
     if (response.status !== 200) {

@@ -196,7 +196,7 @@ const Footer = () => {
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">
                 <i className="fa fa-envelope mr-4 text-primary"></i>
-                <span>info@vidhienterprises.com</span>
+                <Link href="mailto:info@vidhienterprises.com" className="hover:text-primary transition-colors">info@vidhienterprises.com</Link>
               </motion.li>
             </ul>
           </motion.div>

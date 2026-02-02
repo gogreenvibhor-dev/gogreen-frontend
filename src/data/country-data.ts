@@ -6,6 +6,7 @@ export interface CountryData {
   industriesServed?: string[];
   whyChoose?: string[];
   metaDescription?: string;
+  
   flagImage?: string;
 }
 
@@ -413,7 +414,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Saudi-Arabia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/SaudiArabia.png"
   },
   "senegal": {
     "title": "Senegal",

@@ -7,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 import axios from "axios";
+import Link from "next/dist/client/link";
 
 // ... (existing imports)
 
@@ -76,8 +77,8 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Email Us</h4>
-                  <p className="text-gray-400">info@vidhienterprises.com</p>
-                  <p className="text-gray-400 text-sm mt-1">For queries: vibhor@vidhienterprises.com</p>
+                  <Link href="mailto:info@vidhienterprises.com" className="text-gray-400 hover:text-primary transition-colors block">info@vidhienterprises.com</Link>
+                  <p className="text-gray-400 text-sm mt-1">For queries: <Link href="mailto:vibhor@vidhienterprises.com" className="hover:text-primary transition-colors">vibhor@vidhienterprises.com</Link></p>
                 </div>
               </div>
               
@@ -87,8 +88,8 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Call Us</h4>
-                  <p className="text-gray-400">Vineet Jain: +91-9891776189</p>
                   <p className="text-gray-400">Vibhor Jain: +91-8376007474</p>
+                  <p className="text-gray-400">Vineet Jain: +91-9891776189</p>
                 </div>
               </div>
             </div>
@@ -103,12 +104,12 @@ const ContactPage = () => {
                   <input type="text" name="lastName" required placeholder="Last Name" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 w-full">
                     <select 
                       name="countryCode" 
                       required 
                       defaultValue="+91"
-                      className="px-3 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      className="flex-shrink-0 w-24 px-2 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                     >
                       <option value="+93">🇦🇫 +93</option>
                       <option value="+355">🇦🇱 +355</option>
@@ -286,8 +287,8 @@ const ContactPage = () => {
                       className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" 
                     />
                   </div>
-                   <input type="email" name="email" required placeholder="Email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" />
                 </div>
+                <input type="email" name="email" required placeholder="Email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" />
                 <textarea rows={4} name="message" required placeholder="Your Message" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"></textarea>
                 <button 
                   disabled={status === "sending"}

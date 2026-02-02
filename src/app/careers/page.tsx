@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Careers at Vidhi Enterprises - Join Leading Irrigation Manufacturing Company",
@@ -52,6 +53,61 @@ const CareersPage = () => {
     "employmentType": "FULL_TIME"
   };
 
+  const whyWorkWithUs = [
+    { icon: "fa-history", title: "A Legacy of 40+ Years", desc: "Join an organization built on strong principles, consistent progress and a deep commitment to engineering quality. Our experience reflects stability, trust and long-term vision." },
+    { icon: "fa-graduation-cap", title: "A Learning-Focused Work Environment", desc: "From manufacturing and moulding to quality control, exports and operations — employees are encouraged to learn continuously, upgrade skills and grow within the organization." },
+    { icon: "fa-globe", title: "Exposure to Global Markets", desc: "Work with clients and partners across the Middle East, Africa and Asia, and gain practical exposure to international business standards and export-driven operations." },
+    { icon: "fa-handshake", title: "A Stable, Ethical and Value-Driven Workplace", desc: "Our work culture is rooted in discipline, integrity, mutual respect and fairness. We believe ethical practices create sustainable success for both employees and the company." },
+    { icon: "fa-cogs", title: "Innovation and Modern Manufacturing Practices", desc: "Get hands-on experience with advanced injection moulding, extrusion processes, tool room operations, die casting and modern quality testing facilities." },
+  ];
+
+  const jobCategories = [
+    { 
+      title: "Production & Operations", 
+      roles: [
+        "Machine Operators (Injection Moulding and Extrusion)",
+        "Production Supervisors",
+        "Quality Control Assistants",
+        "Tool Room Technicians",
+        "Assembly Line Workers"
+      ] 
+    },
+    { 
+      title: "Office & Management", 
+      roles: [
+        "Accounts Executive",
+        "Sales and Marketing Coordinator",
+        "Export Documentation Executive",
+        "Inventory & Store Management"
+      ] 
+    },
+    { 
+      title: "Field & Technical Roles", 
+      roles: [
+        "Service/Installation Technician",
+        "Field Support Engineer",
+        "Irrigation Product Trainer"
+      ] 
+    },
+    { 
+      title: "Internships", 
+      roles: [
+        "Engineering Intern (Mechanical or Plastic Technology)",
+        "Marketing and International Business Intern",
+        "Operations and Supply Chain Intern"
+      ] 
+    },
+  ];
+
+  const whatWeLookFor = [
+    "Strong commitment to quality and accuracy",
+    "Willingness to learn and grow",
+    "Discipline and sense of responsibility",
+    "Problem-solving mindset",
+    "Respect for values, ethics and teamwork",
+    "Technical curiosity, especially for manufacturing and production roles",
+  ];
+
   return (
     <>
       <script
@@ -62,83 +118,119 @@ const CareersPage = () => {
       <main className="min-h-screen bg-[#f8fafc]" itemScope itemType="https://schema.org/WebPage">
         <Navbar />
       
-      <header className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3b82f6] text-white py-32 text-center overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Careers at Vidhi Enterprises - Leading Irrigation Manufacturing Company</h1>
-          <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
-            Join a Legacy of Engineering Excellence in <strong>Agricultural Irrigation</strong> & <strong>Precision Manufacturing</strong>
-          </p>
-        </div>
-      </header>
-
-      <section className="py-24" aria-labelledby="why-work">
-        <div className="container mx-auto px-4">
-          <h2 id="why-work" className="text-4xl lg:text-5xl font-bold text-center text-[#1e40af] mb-12 font-heading relative after:content-[''] after:block after:w-32 after:h-1 after:bg-[#3b82f6] after:mx-auto after:mt-4">
-            Why Work With India's Trusted Irrigation Manufacturing Company?
-          </h2>
-          <p className="text-xl text-center text-gray-600 max-w-4xl mx-auto mb-20 leading-relaxed italic">
-            At <strong>Vidhi Enterprises</strong>, a premier <strong>irrigation manufacturing company</strong>, we believe people are the strength behind every milestone. For over 40 years, we've built a reputation for <strong>quality irrigation products</strong>, <strong>UV-stabilized irrigation components</strong>, and <strong>precision engineering</strong> — values our founder lived by.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: "fa-history", title: "1. A Legacy of 40+ Years in Irrigation Manufacturing", desc: "Be part of India's trusted irrigation manufacturing company built on engineering excellence and quality irrigation products." },
-              { icon: "fa-graduation-cap", title: "2. Learn Modern Irrigation Equipment Production", desc: "From injection moulding and production of drip irrigation systems to sprinkler manufacturing and quality testing — gain hands-on experience." },
-              { icon: "fa-globe", title: "3. Global Irrigation Markets Exposure", desc: "Work with irrigation accessories suppliers and agricultural sprinkler manufacturers serving Middle East, Africa, and Asia markets." },
-              { icon: "fa-shield-alt", title: "4. Stable Career in Agricultural Equipment Manufacturing", desc: "Built on trust with focus on UV-stabilized irrigation products and virgin raw material manufacturing processes." },
-              { icon: "fa-tools", title: "5. Advanced Irrigation Manufacturing Technology", desc: "Experience with injection moulding components, tool room operations, and production of chemical-resistant irrigation fittings." },
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-10 rounded-3xl shadow-xl border border-blue-50 hover:-translate-y-3 transition-all duration-500 group text-center">
-                <i className={`fas ${item.icon} text-5xl text-[#3b82f6] mb-6 animate-float`}></i>
-                <h3 className="text-xl font-bold text-[#1e40af] mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+        <header className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3b82f6] text-white py-32 text-center overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Careers</h1>
+            <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+              Join a Legacy of Engineering, Integrity and Growth
+            </p>
           </div>
-        </div>
-      </section>
+        </header>
 
-      <section className="py-24 bg-[#dbeafe]/30" aria-labelledby="job-opportunities">
-        <div className="container mx-auto px-4">
-          <h2 id="job-opportunities" className="text-4xl lg:text-5xl font-bold text-center text-[#1e40af] mb-16 font-heading">Current Opportunities at India's Leading Irrigation Manufacturing Company</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Production & Operations", roles: ["Machine Operators", "Production Supervisors", "Quality Control Assistants", "Tool Room Technicians", "Assembly Line Workers"] },
-              { title: "Office & Management", roles: ["Accounts Executive", "Marketing Coordinator", "Export Documentation", "Inventory & Store Management"] },
-              { title: "Field & Technical", roles: ["Service Technician", "Field Support Engineer", "Irrigation Trainer"] },
-              { title: "Internships", roles: ["Engineering Intern", "Marketing Intern", "Supply Chain Intern"] },
-            ].map((cat, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-t-4 border-[#3b82f6]">
-                <h3 className="text-2xl font-bold text-[#1e40af] mb-6 pb-2 border-b border-blue-100">{cat.title}</h3>
-                <ul className="space-y-4">
-                  {cat.roles.map((role, rIdx) => (
-                    <li key={rIdx} className="flex items-center text-gray-700">
-                      <span className="w-2 h-2 bg-[#3b82f6] rounded-full mr-3 shrink-0"></span>
-                      {role}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        {/* Intro Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="space-y-6 text-lg text-[#1b4332] leading-relaxed text-center">
+              <p>
+                At Vidhi Enterprises, people are at the heart of everything we build. For more than four decades, our growth has been driven by individuals who believe in <strong>precision, honesty, teamwork and long-term excellence</strong>. These are the same values on which the company was founded and continues to grow today.
+              </p>
+              <p>
+                We offer a workplace where you develop not only as a professional, but also as a responsible and skilled individual. Here, your work contributes to real-world engineering solutions and becomes part of a legacy that continues across generations.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-32 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-10 font-heading text-white">How to Apply</h2>
-          <p className="text-2xl font-light mb-12 max-w-2xl mx-auto">
-            Email your resume to:<br />
-            <strong className="text-3xl lg:text-4xl block mt-4 font-bold">hr@vidhienterprises.com</strong>
-          </p>
-          <a href="mailto:hr@vidhienterprises.com" className="inline-block bg-white text-[#1e40af] px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-110 hover:shadow-white/20 transition-all animate-pulse">
-            Send Your Resume
-          </a>
-        </div>
-      </section>
+        {/* Why Work With Us */}
+        <section className="py-24 bg-gradient-to-br from-[#e0f2fe] to-white" aria-labelledby="why-work">
+          <div className="container mx-auto px-4">
+            <h2 id="why-work" className="text-4xl lg:text-5xl font-bold text-center text-[#1e40af] mb-16 font-heading">
+              Why Work With Us?
+            </h2>
 
-      <Footer />
-    </main>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {whyWorkWithUs.map((item, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl shadow-lg border border-blue-50 hover:-translate-y-2 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#1e40af] to-[#3b82f6] rounded-2xl flex items-center justify-center mb-6">
+                    <i className={`fas ${item.icon} text-2xl text-white`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#1e40af] mb-4">{i + 1}. {item.title}</h3>
+                  <p className="text-[#2d6a4f] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Current Opportunities */}
+        <section className="py-24" aria-labelledby="job-opportunities">
+          <div className="container mx-auto px-4">
+            <h2 id="job-opportunities" className="text-4xl lg:text-5xl font-bold text-center text-[#1e40af] mb-6 font-heading">Current Opportunities</h2>
+            <p className="text-center text-[#2d6a4f] mb-16 italic">(Positions may be updated based on current requirements)</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {jobCategories.map((cat, i) => (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-t-4 border-[#3b82f6]">
+                  <h3 className="text-xl font-bold text-[#1e40af] mb-6 pb-2 border-b border-blue-100">{cat.title}</h3>
+                  <ul className="space-y-3">
+                    {cat.roles.map((role, rIdx) => (
+                      <li key={rIdx} className="flex items-start text-[#1b4332] text-sm">
+                        <span className="w-2 h-2 bg-[#1c9e1c] rounded-full mr-3 mt-1.5 shrink-0"></span>
+                        {role}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* What We Look For */}
+        <section className="py-24 bg-[#1e40af] text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 font-heading">What Do We Really Look For?</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {whatWeLookFor.map((item, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20 flex items-center gap-4">
+                  <span className="text-[#93c5fd] text-xl">✔</span>
+                  <p className="text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How to Apply */}
+        <section className="py-32 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white text-center">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-10 font-heading text-white">How Can You Apply?</h2>
+            <p className="text-xl font-light mb-8 max-w-2xl mx-auto">
+              Email your resume to:
+            </p>
+            <p className="text-3xl lg:text-4xl font-bold mb-8">careers@vidhienterprises.com</p>
+            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-12">
+              Our HR team will review applications and contact shortlisted candidates for the next stages of the selection process.
+            </p>
+            <Link href="mailto:careers@vidhienterprises.com" className="inline-block bg-white text-[#1e40af] px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-all">
+              Send Your Resume
+            </Link>
+          </div>
+        </section>
+
+        {/* Life at Vidhi */}
+        <section className="py-24 bg-gradient-to-br from-[#e0f2fe] to-white">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#1e40af] mb-8 font-heading">Life at Vidhi Enterprises</h2>
+            <p className="text-xl text-[#1b4332] leading-relaxed italic">
+              A workplace where you grow as both a professional and an individual gaining discipline, precision and strong values shaped by decades of experience and a legacy built since the 1980s.
+            </p>
+          </div>
+        </section>
+
+        <Footer />
+      </main>
     </>
   );
 };

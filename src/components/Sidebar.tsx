@@ -22,6 +22,7 @@ const Sidebar = () => {
     { label: 'Subcategories', href: '/admin/subcategories' },
     { label: 'Products', href: '/admin/products' },
     { label: 'Blog Posts', href: '/admin/posts' },
+    { label: 'YouTube Videos', href: '/admin/youtube-videos' },
     { label: 'Contacts', href: '/admin/contacts' },
   ];
 

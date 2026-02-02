@@ -11,14 +11,14 @@ export default function Header() {
               <span className="fa fa-phone-alt"></span>
               <span>+91-8376007474</span>
             </div>
-            <div className="flex items-center gap-2">
+            <Link href="mailto:info@vidhienterprises.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <span className="far fa-envelope"></span>
               <span>info@vidhienterprises.com</span>
-            </div>
+            </Link>
           </div>
           <div className="px-5 flex items-center gap-2">
             <span>Follow Us:</span>
-            <a 
+            <Link
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -26,8 +26,8 @@ export default function Header() {
               aria-label="Facebook"
             >
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a 
+            </Link>
+            <Link 
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -35,8 +35,8 @@ export default function Header() {
               aria-label="Twitter"
             >
               <i className="fab fa-twitter"></i>
-            </a>
-            <a 
+            </Link>
+            <Link 
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -44,8 +44,8 @@ export default function Header() {
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a 
+            </Link>
+            <Link 
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -53,8 +53,8 @@ export default function Header() {
               aria-label="Instagram"
             >
               <i className="fab fa-instagram"></i>
-            </a>
-            <a 
+            </Link>
+            <Link 
               className="text-light hover:text-primary transition-colors px-2" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function Header() {
               aria-label="YouTube"
             >
               <i className="fab fa-youtube"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

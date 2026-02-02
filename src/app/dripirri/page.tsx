@@ -45,7 +45,7 @@ const products = [
     links: [
       { name: "Y-Type Filter", url: "/Y-Type-filter" },
       { name: "T-Type Filter", url: "/T-Type-filter" },
-      { name: "How to Choose the Right Irrigation Filter", url: "/Right-irrri.filter" },
+      { name: "How to Choose the Right Irrigation Filter", url: "/products/Right-irrri.filter" },
     ],
   },
   {

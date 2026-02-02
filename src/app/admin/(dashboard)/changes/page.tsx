@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AdminOnly } from '@/components/RoleBasedComponent';
 import { UserRole } from '@/types/auth'; // Ensure this exists
+import Link from 'next/link';
 
 interface PendingChange {
   id: string;
@@ -150,7 +151,7 @@ export default function ChangesPage() {
                                       {selectedChange.changeData.pdfUrl && (
                                         <div className="mb-2 p-2 bg-blue-50 text-blue-800 text-xs rounded border border-blue-100 flex items-center justify-between">
                                             <span>📄 PDF Attachment Included</span>
-                                            <a href={selectedChange.changeData.pdfUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900">View PDF</a>
+                                            <Link href={selectedChange.changeData.pdfUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900">View PDF</Link>
                                         </div>
                                       )}
                                       <pre className="text-xs overflow-x-auto max-h-96">

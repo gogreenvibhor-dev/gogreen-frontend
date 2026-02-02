@@ -38,7 +38,7 @@ export default function Lebanon() {
             <div className="navbar-nav ms-auto p-4 p-lg-0 align-items-lg-center">
               <Link href="/" className="nav-item nav-link active"><b>Home</b></Link>
               <div className="nav-item dropdown">
-                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Products</b></a>
+                <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Products</b></Link>
                 <div className="dropdown-menu m-0 bg-light">
                   <Link href="/dripirri" className="dropdown-item"><b>Drip Irrigation</b></Link>
                   <Link href="/sprinkler" className="dropdown-item"><b>Sprinkler Irrigation</b></Link>
@@ -49,7 +49,7 @@ export default function Lebanon() {
                 </div>
               </div>
               <div className="nav-item dropdown">
-                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>About Us</b></a>
+                <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>About Us</b></Link>
                 <div className="dropdown-menu bg-light m-0">
                   <Link href="/company-profile" className="dropdown-item"><b>Company Profile</b></Link>
                   <Link href="/founder-vision" className="dropdown-item"><b>Founder's Vision</b></Link>

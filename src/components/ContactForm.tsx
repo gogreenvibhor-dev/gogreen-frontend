@@ -72,12 +72,12 @@ const ContactForm = () => {
               </div>
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Mobile No.</label>
-                <div className="flex gap-2">
+                <div className="flex gap-2 w-full">
                   <select 
                     name="countryCode" 
                     required 
                     defaultValue="+91"
-                    className="px-3 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-shrink-0 w-24 px-2 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     <option value="+93">🇦🇫 +93</option>
                     <option value="+355">🇦🇱 +355</option>
@@ -251,12 +251,12 @@ const ContactForm = () => {
                     required
                     pattern="[0-9]{7,15}"
                     title="Please enter a valid phone number (7-15 digits)"
-                    className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-1 min-w-0 px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                     placeholder="Mobile"
                   />
                 </div>
               </div>
-              <div>
+              <div className="md:col-span-2">
                 <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
                 <input 
                   type="email" 
