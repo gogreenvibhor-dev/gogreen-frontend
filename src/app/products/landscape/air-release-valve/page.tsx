@@ -62,7 +62,7 @@ export default function AirReleaseValve() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 ARV in Plastic
               </h1>
               <ul className="space-y-4">
@@ -99,7 +99,7 @@ export default function AirReleaseValve() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 ARV in Aluminum
               </h1>
               <ul className="space-y-4">

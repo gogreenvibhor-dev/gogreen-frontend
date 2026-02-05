@@ -115,7 +115,7 @@ const BlogPage = async () => {
                         })}
                       </p>
                     )}
-                    <Link href={`/blog/${post.slug}`} className="inline-block bg-success text-white px-8 py-3 rounded-full font-bold hover:bg-[#145a32] transition-colors shadow-md">
+                    <Link href={`/blog/${post.slug}`} className="inline-block bg-success text-green-900 px-8 py-3 rounded-full font-bold hover:bg-[#145a32] transition-colors shadow-md hover:text-white">
                       Read More
                     </Link>
                   </div>

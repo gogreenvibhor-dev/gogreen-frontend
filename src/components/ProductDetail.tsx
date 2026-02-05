@@ -20,12 +20,30 @@ const ProductDetail = ({ product }: { product: ProductData }) => {
         ]}
       />
 
+      <div className="container mx-auto px-4 mt-8">
+        <Link 
+          href={product.categoryLink}
+          className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors group"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-5 w-5 mr-2 transform group-hover:-translate-x-1 transition-transform" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to {product.category}
+        </Link>
+      </div>
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-primary font-bold uppercase tracking-wider mb-2">{product.category}</p>
             <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">{product.subCategory}</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-green-900">{product.subCategory}</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

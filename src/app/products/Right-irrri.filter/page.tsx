@@ -108,7 +108,7 @@ const FilterGuidePage = () => {
 
       <section className="py-24 bg-green-50 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 underline decoration-green-500 underline-offset-8">Consider Flow Rate and Micron Rating</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-green-900 mb-10 underline decoration-green-500 underline-offset-8">Consider Flow Rate and Micron Rating</h2>
           <div className="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-green-100">
             <p className="text-xl text-green-800 font-bold mb-8">💧 Choose a filter that matches your system&apos;s flow rate (m³/hr).</p>
             <p className="text-xl text-green-800 font-bold mb-6">🌿 Micron rating decides how fine the filtration is:</p>

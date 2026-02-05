@@ -21,7 +21,7 @@ export const ProductSpecifications: React.FC<Props> = ({ specifications, classNa
 
   return (
     <div className={`space-y-8 ${className}`}>
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Specifications</h2>
+      <h2 className="text-3xl font-bold text-green-900 mb-6">Technical Specifications</h2>
       
       {activeSpecs.map((spec) => {
         if (spec.type === 'grid' || spec.type === 'matrix') {

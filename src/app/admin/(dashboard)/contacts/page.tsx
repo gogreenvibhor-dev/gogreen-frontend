@@ -83,7 +83,7 @@ export default function ContactsAdmin() {
                   {new Date(contact.createdAt).toLocaleDateString()}
                 </td>
                 <td className="px-6 py-4">
-                  <div className="text-sm font-medium text-gray-900">{contact.name}</div>
+                  <div className="text-sm font-medium text-green-900">{contact.name}</div>
                   <div className="text-sm text-gray-500">{contact.email}</div>
                   <div className="text-sm text-gray-500">{contact.phone}</div>
                 </td>

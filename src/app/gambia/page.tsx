@@ -33,7 +33,7 @@ export default function Gambia() {
             <h6 className="text-xl font-bold text-primary mb-4">
               Welcome to our Gambia irrigation solutions page.
             </h6>
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary text-shadow-sm">
+            <h1 className="text-4xl lg:text-5xl font-bold text-green-900 text-shadow-sm">
               Nanga def! (Hello!)
             </h1>
           </div>
@@ -44,7 +44,7 @@ export default function Gambia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Introduction</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Vidhi Enterprises supplies affordable micro and drip irrigation systems to The Gambia’s farmers, community cooperatives, and NGO projects.
                   </p>
@@ -59,7 +59,7 @@ export default function Gambia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Market Insights</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     NGOs often use family drip kits for community gardens.
                   </p>
@@ -74,7 +74,7 @@ export default function Gambia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Products We Supply</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Drip kits</li>
                   <li>• Micro sprinklers</li>
                   <li>• Poly tubes & fittings</li>
@@ -88,7 +88,7 @@ export default function Gambia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Industries We Serve</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Smallholder farming</li>
                   <li>• Community gardens</li>
                   <li>• Agricultural NGOs</li>
@@ -100,7 +100,7 @@ export default function Gambia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Why Choose Vidhi Enterprises</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Budget-friendly irrigation systems</li>
                   <li>• Easy setup in rural villages</li>
                   <li>• Reliable supplier for West Africa</li>

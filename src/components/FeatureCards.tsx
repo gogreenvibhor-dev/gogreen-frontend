@@ -72,7 +72,7 @@ const FeatureCards = () => {
                   </motion.div>
                   <div className="pl-6">
                     <h4 className="text-primary font-bold mb-2 leading-tight">{f.title}</h4>
-                    <span className="text-secondary font-bold text-sm">{f.description}</span>
+                    <span className="text-green-900 font-bold text-sm">{f.description}</span>
                   </div>
                 </div>
               </motion.div>

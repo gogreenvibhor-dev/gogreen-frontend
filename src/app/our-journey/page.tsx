@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const JourneyPage = () => {
   const milestones = [
@@ -122,7 +124,13 @@ const JourneyPage = () => {
             {milestones.map((item, i) => (
               <div key={i} className={`relative flex items-center justify-between md:gap-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Content */}
-                <div className="w-full md:w-[45%] bg-white p-8 rounded-2xl shadow-xl border border-blue-50 hover:-translate-y-2 transition-all duration-500 group">
+                <motion.div 
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="w-full md:w-[45%] bg-white p-8 rounded-2xl shadow-xl border border-blue-50 hover:-translate-y-2 transition-all duration-500 group"
+                >
                   <div className="text-3xl font-bold text-[#0f4c75] mb-4 group-hover:scale-105 transition-transform origin-left">
                     {item.year}
                   </div>
@@ -135,7 +143,7 @@ const JourneyPage = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
 
                 {/* Center Dot */}
                 <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#4a90e2] border-4 border-white rounded-full shadow-lg z-10 hidden md:block"></div>

@@ -26,7 +26,7 @@ export default function Bolivia() {
             <h6 className="text-xl font-bold text-primary mb-4">
               Welcome to our Bolivia irrigation solutions page.
             </h6>
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary text-shadow-sm">
+            <h1 className="text-4xl lg:text-5xl font-bold text-green-900 text-shadow-sm">
               ¡Hola! (Hello!)
             </h1>
           </div>
@@ -37,7 +37,7 @@ export default function Bolivia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Introduction</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Vidhi Enterprises supports Bolivia’s agriculture by supplying easy-to-install drip systems that help farmers improve productivity across various agricultural landscapes, from the Andes to the lowlands.
                   </p>
@@ -52,7 +52,7 @@ export default function Bolivia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Market Insights</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Farmers in Bolivia prefer efficient and cost-effective irrigation materials that are easy to manage and help maximize crop yields.
                   </p>
@@ -67,7 +67,7 @@ export default function Bolivia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Products We Supply</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Low-pressure drip laterals (16mm)</li>
                   <li>• Online drippers (2–4 LPH)</li>
                   <li>• Microtubes & connectors</li>
@@ -82,7 +82,7 @@ export default function Bolivia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Industries We Serve</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Smallholder vegetable farmers</li>
                   <li>• Quinoa and crop diversification groups</li>
                   <li>• Fruit orchards in the valleys</li>
@@ -95,7 +95,7 @@ export default function Bolivia() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Why Choose Vidhi Enterprises</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Affordable, water-efficient irrigation systems</li>
                   <li>• Easy installation across different terrains</li>
                   <li>• Durable materials requiring low maintenance</li>

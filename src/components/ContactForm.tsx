@@ -47,7 +47,7 @@ const ContactForm = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-8 lg:p-12">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">Drop Us a Message!</h2>
+            <h2 className="text-4xl font-bold text-center text-green-900 mb-8">Drop Us a Message!</h2>
             
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

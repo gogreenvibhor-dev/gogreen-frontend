@@ -59,7 +59,7 @@ export default function AdminPostsPage() {
   return (
     <div className="max-w-7xl mx-auto p-8">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900">Manage Blog Posts</h1>
+        <h1 className="text-4xl font-bold text-green-900">Manage Blog Posts</h1>
         <Link
           href="/admin/posts/new"
           className="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-md"
@@ -110,7 +110,7 @@ export default function AdminPostsPage() {
               {posts.map((post) => (
                 <tr key={post.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{post.title}</div>
+                    <div className="text-sm font-medium text-green-900">{post.title}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-500">{post.slug}</div>

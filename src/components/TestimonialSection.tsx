@@ -29,7 +29,7 @@ const TestimonialSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
             <p className="text-primary font-bold text-xl uppercase tracking-widest mb-4">Testimonial</p>
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 font-heading">
+            <h2 className="text-4xl lg:text-6xl font-bold text-green-900 mb-8 font-heading">
               What Our Clients Say About Us!
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">

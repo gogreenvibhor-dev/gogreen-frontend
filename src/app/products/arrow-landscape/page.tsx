@@ -52,7 +52,7 @@ export default function ArrowLandscape() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 Pot Dripper/Arrow Dripper
               </h1>
               <ul className="space-y-4">
@@ -64,7 +64,7 @@ export default function ArrowLandscape() {
                 ))}
               </ul>
 
-              <h3 className="text-2xl font-bold text-secondary border-b-2 border-secondary pb-2 inline-block">
+              <h3 className="text-2xl font-bold text-green-900 border-b-2 border-secondary pb-2 inline-block">
                 Application
               </h3>
               <div className="bg-whitesmoke p-6 rounded-xl border-l-4 border-primary">

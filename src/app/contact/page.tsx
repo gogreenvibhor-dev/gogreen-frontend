@@ -67,7 +67,8 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Our Office</h4>
-                  <p className="text-gray-400">Factory Address: 485-A/7A. Ahinsa Compound, Dilshad Garden Industrial Area, G.T. Road, Shahadra, Delhi – 110095, India</p>
+                  <p className="text-gray-400 mb-2">Factory Address: 485-A/7A. Ahinsa Compound, Dilshad Garden Industrial Area, G.T. Road, Shahadra, Delhi – 110095, India</p>
+                  <p className="text-gray-400">Registered Address: 2553, Satghara, Dharampura, Inside Dariba Kalan, Chandni Chowk, Delhi-110006</p>
                 </div>
               </div>
               
@@ -97,7 +98,7 @@ const ContactPage = () => {
 
           {/* Form Section */}
           <div className="p-8 lg:p-12">
-             <h2 className="text-3xl font-bold mb-6 text-gray-900">Send Message</h2>
+             <h2 className="text-3xl font-bold mb-6 text-green-900">Send Message</h2>
              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <input type="text" name="firstName" required placeholder="First Name" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50" />

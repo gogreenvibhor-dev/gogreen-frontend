@@ -27,7 +27,7 @@ const TeamSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary font-bold text-xl uppercase tracking-wider mb-2">Our Team</p>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold text-green-900 leading-tight">
             Our Leadership
           </h2>
         </div>
@@ -54,7 +54,7 @@ const TeamSection = () => {
               </div>
 
               <div className="p-8 text-center bg-white border-t-4 border-primary relative z-20">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h4>
+                <h4 className="text-2xl font-bold text-green-900 mb-2">{member.name}</h4>
                 <p className="text-primary font-bold text-lg">{member.role}</p>
               </div>
             </div>

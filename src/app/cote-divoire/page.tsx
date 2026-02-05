@@ -26,7 +26,7 @@ export default function CoteDIvoire() {
             <h6 className="text-xl font-bold text-primary mb-4">
               Welcome to our Côte d'Ivoire irrigation solutions page.
             </h6>
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary text-shadow-sm">
+            <h1 className="text-4xl lg:text-5xl font-bold text-green-900 text-shadow-sm">
               Bonjour! (Hello!)
             </h1>
           </div>
@@ -37,7 +37,7 @@ export default function CoteDIvoire() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Introduction</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Vidhi Enterprises supplies reliable drip and sprinkler irrigation systems to Côte d'Ivoire’s expanding agricultural sector, including cocoa farms, vegetable growers, and fruit orchards.
                   </p>
@@ -52,7 +52,7 @@ export default function CoteDIvoire() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Market Insights</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Côte d'Ivoire is one of the world’s leading cocoa producers, and irrigation adoption is growing rapidly due to fluctuating rainfall.
                   </p>
@@ -67,7 +67,7 @@ export default function CoteDIvoire() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Products We Supply</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Drip laterals & drippers</li>
                   <li>• Mini & micro sprinklers</li>
                   <li>• Orchard irrigation systems</li>
@@ -81,7 +81,7 @@ export default function CoteDIvoire() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Industries We Serve</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Cocoa plantations</li>
                   <li>• Vegetable farms</li>
                   <li>• Fruit orchards</li>
@@ -94,7 +94,7 @@ export default function CoteDIvoire() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Why Choose Vidhi Enterprises</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• High-quality materials suited for tropical humidity</li>
                   <li>• Reliable supply for West African agriculture</li>
                   <li>• Cost-effective irrigation systems for all farm sizes</li>

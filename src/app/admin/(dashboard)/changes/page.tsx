@@ -95,7 +95,7 @@ export default function ChangesPage() {
                                     {new Date(change.createdAt).toLocaleDateString()}
                                 </span>
                             </div>
-                            <div className="mt-2 text-sm font-medium text-gray-900 capitalize">
+                            <div className="mt-2 text-sm font-medium text-green-900 capitalize">
                                 {change.resourceType}
                             </div>
                              <div className="mt-1 text-xs text-gray-500 truncate">
@@ -131,7 +131,7 @@ export default function ChangesPage() {
                        <div className="p-6 space-y-4">
                            <div>
                                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">Resource</h3>
-                               <p className="mt-1 text-lg font-medium text-gray-900 capitalize">{selectedChange.resourceType} {selectedChange.resourceId && `(ID: ${selectedChange.resourceId})`}</p>
+                               <p className="mt-1 text-lg font-medium text-green-900 capitalize">{selectedChange.resourceType} {selectedChange.resourceId && `(ID: ${selectedChange.resourceId})`}</p>
                            </div>
                            
                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

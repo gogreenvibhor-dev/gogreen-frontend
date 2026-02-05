@@ -363,7 +363,7 @@ export default function SubcategoriesAdmin() {
                 <tr><td colSpan={6} className="px-6 py-4 text-center">No subcategories found.</td></tr>
               ) : subcategories.map((subcat) => (
                 <tr key={subcat.id}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-900">
                     {getCategoryName(subcat.categoryId)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">{subcat.name}</td>

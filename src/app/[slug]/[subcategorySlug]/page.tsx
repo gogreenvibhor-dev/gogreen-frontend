@@ -128,7 +128,7 @@ export default async function SubcategoryPage({
         ) : (
           <>
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold text-green-900">
                 Products ({products.length})
               </h2>
             </div>
@@ -157,7 +157,7 @@ export default async function SubcategoryPage({
                   )}
                   
                   <div className="p-5">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-lg font-bold text-green-900 mb-2 group-hover:text-blue-600 transition-colors">
                       {product.name}
                     </h3>
                     

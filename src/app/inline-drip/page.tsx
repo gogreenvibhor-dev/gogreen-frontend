@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 export const metadata: Metadata = {
-  title: "Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC | Vidhi Enterprises",
+  title: "Cylindrical Dripline Emitting Pipe Inline Drip Tube PC & NON PC | Vidhi Enterprises",
   description: "High-quality UV-resistant inline drip tubes and cylindrical driplines for landscape irrigation. Available in PC and NON PC variants with discharge rates from 1-8 LPH.",
   keywords: "inline drip tube, cylindrical dripline, emitting pipe, landscape irrigation, drip irrigation systems",
 };
@@ -81,7 +81,7 @@ export default function InlineDrip() {
             <ol className="breadcrumb justify-content-center mb-0" style={{ fontWeight: 'bolder' }}>
               <li className="breadcrumb-item"><Link href="/">Home</Link></li>
               <li className="breadcrumb-item"><Link href="/landscape">Landscape Irrigation</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC</li>
+              <li className="breadcrumb-item active" aria-current="page">Cylindrical Dripline Emitting Pipe Inline Drip Tube PC & NON PC</li>
             </ol>
           </nav>
         </div>
@@ -106,7 +106,7 @@ export default function InlineDrip() {
               </div>
               
               <div className="col-md-6 mt-5">
-                <h2 className="Irrigation mt-5 text-success">Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC</h2>
+                <h2 className="Irrigation mt-5 text-success">Cylindrical Dripline Emitting Pipe Inline Drip Tube - PC & NON PC</h2>
                 <hr style={{ border: '3px solid darkgreen' }} />
                 <ul className="box" style={{ color: 'rgb(3, 3, 123)', textAlign: 'justify', fontSize: 'medium' }}>
                   <li className="mt-2">Maintains uniform irrigation even on uneven terrain or long lateral lengths.</li>

@@ -208,10 +208,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
               <p className="text-primary font-bold text-xl mb-4">Why Choose Vidhi Enterprises!</p>
-              <h2 id="why-choose-us" className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              <h2 id="why-choose-us" className="text-4xl lg:text-5xl font-bold mb-6 text-green-900 leading-tight">
                 Leading ISO-Certified Irrigation Manufacturer - Trusted Since 1983
               </h2>
-              <p className="text-secondary text-lg font-bold mb-8">
+              <p className="text-green-900 text-lg font-bold mb-8">
                 Every <strong>drip irrigation system</strong>, <strong>sprinkler</strong>, and <strong>HDPE pipe</strong> undergoes rigorous quality checks and is manufactured to meet ISO and international export standards, 
                 ensuring long-lasting performance trusted by farmers, distributors, and importers across 50+ countries worldwide.
               </p>
@@ -225,21 +225,21 @@ export default function Home() {
                 <div className="w-20 h-20 bg-whitesmoke rounded-full flex items-center justify-center mb-6">
                   <i className="fa fa-check text-primary text-3xl"></i>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900">100% Satisfaction</h4>
+                <h4 className="text-xl font-bold text-green-900">100% Satisfaction</h4>
               </div>
               
               <div className="bg-white p-10 rounded-2xl shadow-xl text-center flex flex-col items-center translate-y-0 md:translate-y-8">
                 <div className="w-20 h-20 bg-whitesmoke rounded-full flex items-center justify-center mb-6">
                   <i className="fa fa-users text-primary text-3xl"></i>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900">Dedicated Team</h4>
+                <h4 className="text-xl font-bold text-green-900">Dedicated Team</h4>
               </div>
               
               <div className="bg-white p-10 rounded-2xl shadow-xl text-center flex flex-col items-center col-span-1 md:col-span-2 md:w-1/2 md:mx-auto">
                 <div className="w-20 h-20 bg-whitesmoke rounded-full flex items-center justify-center mb-6">
                   <i className="fa fa-tools text-primary text-3xl"></i>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900">Modern Equipment</h4>
+                <h4 className="text-xl font-bold text-green-900">Modern Equipment</h4>
               </div>
             </div>
           </div>
@@ -247,6 +247,12 @@ export default function Home() {
       </section>
 
       <ProductGrid />
+      
+      <div className="container mx-auto px-4 text-center mt-20 mb-8">
+        <h2 className="text-4xl lg:text-5xl font-bold text-[#0f4c75] mb-4 font-heading">Our Global Presence</h2>
+        <p className="text-xl text-gray-600">Where You Can Find Us</p>
+      </div>
+
       <GlobalPresenceMap />
       <ContactForm />
       <Footer />

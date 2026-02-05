@@ -53,7 +53,7 @@ export default function FivePointFiveMmTube() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 5.5 mm Spagetty/ distribution Pipes / Connecting Tube/ Micro Tube
               </h1>
               <ul className="space-y-4">

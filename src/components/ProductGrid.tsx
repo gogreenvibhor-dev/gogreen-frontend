@@ -254,7 +254,7 @@ const ProductGrid = () => {
                       </Link>
                     </motion.div>
                     <h4 className="text-2xl font-bold mb-4 text-heading group-hover:text-white transition-colors duration-300">{p.title}</h4>
-                    <p className="mb-8 font-semibold leading-relaxed text-secondary group-hover:text-white/90 transition-colors duration-300">
+                    <p className="mb-8 font-semibold leading-relaxed text-green-900 group-hover:text-white/90 transition-colors duration-300">
                       {p.desc}
                     </p>
                     <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>

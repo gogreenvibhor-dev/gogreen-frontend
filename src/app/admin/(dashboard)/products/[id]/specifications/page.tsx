@@ -246,7 +246,7 @@ export default function ProductSpecificationsPage() {
           >
             ← Back to Products
           </button>
-          <h1 className="text-3xl font-bold text-gray-900">Product Specifications</h1>
+          <h1 className="text-3xl font-bold text-green-900">Product Specifications</h1>
         </div>
         <button
           onClick={() => {

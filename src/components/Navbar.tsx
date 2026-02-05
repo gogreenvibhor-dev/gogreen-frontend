@@ -142,7 +142,7 @@ const Navbar = () => {
                                 />
                               )}
                               <div>
-                                <div className="font-semibold text-gray-900">{product.name}</div>
+                                <div className="font-semibold text-green-900">{product.name}</div>
                                 {product.description && (
                                   <div className="text-sm text-gray-600 truncate max-w-md">
                                     {product.description}
@@ -250,6 +250,7 @@ const Navbar = () => {
                   <Link key="global-presence" href="/global-presence" className="dropdown-item"><b>Global Presence</b></Link>
                   <Link key="blog" href="/blog" className="dropdown-item"><b>Blog</b></Link>
                   <Link key="careers" href="/careers" className="dropdown-item"><b>Careers</b></Link>
+                  <Link key="privacy-policy" href="/privacy-policy" className="dropdown-item"><b>Privacy Policy</b></Link>
                 </div>
               </div>
 

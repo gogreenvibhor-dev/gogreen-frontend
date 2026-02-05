@@ -93,7 +93,7 @@ export default function Features() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slideUpFade delay-100">
               <p className="text-primary font-bold text-xl mb-2">Why Choosing Us!</p>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-green-900 mb-6 leading-tight">
                 Few Reasons Why People Choosing Us!
               </h1>
               <p className="text-gray-600 mb-8 text-lg">

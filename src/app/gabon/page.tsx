@@ -33,7 +33,7 @@ export default function Gabon() {
             <h6 className="text-xl font-bold text-primary mb-4">
               Welcome to our Gabon irrigation solutions page.
             </h6>
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary text-shadow-sm">
+            <h1 className="text-4xl lg:text-5xl font-bold text-green-900 text-shadow-sm">
               Bonjour! (Hello!)
             </h1>
           </div>
@@ -44,7 +44,7 @@ export default function Gabon() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Introduction</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Vidhi Enterprises supplies durable irrigation equipment to Gabon, supporting the country’s plantations, vegetable farms, and horticulture industries.
                   </p>
@@ -59,7 +59,7 @@ export default function Gabon() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Market Insights</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Plantation agriculture is expanding in Gabon, boosting demand for sprinklers and efficient drip systems.
                   </p>
@@ -74,7 +74,7 @@ export default function Gabon() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Products We Supply</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Drip irrigation systems</li>
                   <li>• Plantation sprinklers</li>
                   <li>• Mini sprinklers</li>
@@ -88,7 +88,7 @@ export default function Gabon() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Industries We Serve</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Plantations</li>
                   <li>• Vegetable growers</li>
                   <li>• Nurseries & landscaping</li>
@@ -100,7 +100,7 @@ export default function Gabon() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Why Choose Vidhi Enterprises</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Reliable performance in humid climates</li>
                   <li>• Long-lasting irrigation materials</li>
                   <li>• Strong export logistics across Central Africa</li>

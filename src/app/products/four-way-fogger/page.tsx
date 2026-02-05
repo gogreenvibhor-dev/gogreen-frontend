@@ -56,7 +56,7 @@ export default function FourWayFogger() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-4xl lg:text-5xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h1 className="text-4xl lg:text-5xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 4-Way Fogger
               </h1>
               <ul className="space-y-4">
@@ -75,7 +75,7 @@ export default function FourWayFogger() {
             <div className="hidden lg:block"></div> 
             
             <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h2 className="text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 Application
               </h2>
               <div className="bg-whitesmoke p-6 rounded-xl border-l-4 border-primary">

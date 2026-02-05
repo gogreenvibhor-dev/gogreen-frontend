@@ -56,7 +56,7 @@ export default function EcoAcrePro() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight uppercase">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight uppercase">
                 EcoAcre Pro
               </h1>
               
@@ -79,7 +79,7 @@ export default function EcoAcrePro() {
               </ul>
 
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-secondary border-b-2 border-secondary pb-2 inline-block">
+                <h3 className="text-2xl font-bold text-green-900 border-b-2 border-secondary pb-2 inline-block">
                   Application
                 </h3>
                 <ul className="space-y-2">

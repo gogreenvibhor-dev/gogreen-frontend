@@ -123,7 +123,7 @@ const CompanyProfilePage = () => {
         <Navbar />
 
         {/* Hero Section */}
-        <header className="relative h-[100vh] min-h-[700px] bg-gradient-to-br from-[#0f4c81]/95 to-[#00a0df]/90 flex items-center overflow-hidden" itemScope itemType="https://schema.org/Organization">
+        <header className="relative min-h-screen h-auto bg-gradient-to-br from-[#0f4c81]/95 to-[#00a0df]/90 flex items-center py-24" itemScope itemType="https://schema.org/Organization">
           <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
             {/* Placeholder for floating bubbles effect if needed */}
           </div>

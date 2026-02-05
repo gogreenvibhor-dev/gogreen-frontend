@@ -77,7 +77,7 @@ const SearchContent = () => {
                   </div>
                 )}
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-green-900 mb-2">
                     {product.name}
                   </h3>
                   {product.description && (

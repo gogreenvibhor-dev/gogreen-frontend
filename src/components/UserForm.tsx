@@ -135,7 +135,7 @@ export default function UserForm({ initialData, onSuccess, onCancel, isEditing =
               onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
               className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
             />
-            <label htmlFor="isActive" className="ml-2 block text-sm text-gray-900">
+            <label htmlFor="isActive" className="ml-2 block text-sm text-green-900">
               Active Account
             </label>
         </div>

@@ -17,7 +17,6 @@ const Sidebar = () => {
 
   const menuItems = [
     { label: 'Dashboard', href: '/admin', exact: true },
-    { label: 'Pages', href: '/admin/pages' },
     { label: 'Categories', href: '/admin/categories' },
     { label: 'Subcategories', href: '/admin/subcategories' },
     { label: 'Products', href: '/admin/products' },

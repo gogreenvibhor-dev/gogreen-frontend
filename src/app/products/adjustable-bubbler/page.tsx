@@ -54,7 +54,7 @@ export default function AdjustableBubbler() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 Adjustable Bubbler With Filter And Take (0-420 LPH)
               </h1>
               <ul className="space-y-4">
@@ -82,7 +82,7 @@ export default function AdjustableBubbler() {
             </div>
 
             <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h2 className="text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 Application
               </h2>
               <div className="bg-whitesmoke p-6 rounded-xl border-l-4 border-primary italic">

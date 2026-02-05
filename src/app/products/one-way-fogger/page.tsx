@@ -56,7 +56,7 @@ export default function OneWayFogger() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-4xl lg:text-5xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h1 className="text-4xl lg:text-5xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 1-Way-Fogger
               </h1>
               <ul className="space-y-4">
@@ -75,7 +75,7 @@ export default function OneWayFogger() {
             <div className="hidden lg:block"></div> {/* Placeholder for alignment matching original layout */}
             
             <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h2 className="text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 Application
               </h2>
               <p className="text-xl text-primary font-semibold leading-relaxed">

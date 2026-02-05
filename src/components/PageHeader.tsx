@@ -34,11 +34,11 @@ const PageHeader = ({ title, backgroundImage, breadcrumbs }: PageHeaderProps) =>
             {breadcrumbs.map((crumb, i) => (
               <li key={i} className="flex items-center">
                 {crumb.href ? (
-                  <Link href={crumb.href} className="hover:text-secondary transition">
+                  <Link href={crumb.href} className="hover:text-green-900 transition">
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className="text-secondary">{crumb.label}</span>
+                  <span className="text-green-900">{crumb.label}</span>
                 )}
                 {i < breadcrumbs.length - 1 && (
                   <i className="fa fa-chevron-right mx-2 text-[10px] opacity-50"></i>

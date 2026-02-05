@@ -14,7 +14,7 @@
   --color-light: #f8fafc;
   --color-whitesmoke: #f5f5f5;
   --color-secondary: #525368;
-  
+
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-playfair-display), serif;
@@ -80,7 +80,7 @@ button,
   }
 
   .nav-link {
-    @apply px-4 py-2 text-dark hover:text-primary transition-colors duration-200;
+    @apply px-4 py-2 text-green-900 hover:text-primary transition-colors duration-200;
   }
 
   /* Product Card */
@@ -100,7 +100,8 @@ button,
     content: "";
     @apply fixed top-0 left-0 w-full h-full -z-10;
     @apply pointer-events-none opacity-5;
-    background: url("https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png") center center no-repeat;
+    background: url("https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png")
+      center center no-repeat;
     background-size: 500px;
   }
 
@@ -119,7 +120,7 @@ button,
   }
 
   .allPaths:hover {
-    fill: #348E38 !important;
+    fill: #348e38 !important;
     stroke: var(--color-accent) !important;
   }
 
@@ -130,7 +131,7 @@ button,
 
   /* Dropdown */
   .dropdown-item {
-    @apply block px-4 py-2 hover:bg-white transition-colors text-dark;
+    @apply block px-4 py-2 hover:bg-white transition-colors text-green-900;
   }
 }
 
@@ -146,7 +147,7 @@ button,
 }
 
 #name::after {
-  content: '';
+  content: "";
   @apply absolute -bottom-2 left-1/2 -translate-x-1/2;
   border: 8px solid transparent;
   border-top-color: var(--color-dark);

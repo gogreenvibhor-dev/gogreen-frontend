@@ -70,7 +70,7 @@ export default function TwoFourWayConnector() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-4xl lg:text-5xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h1 className="text-4xl lg:text-5xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 2-Way Connector
               </h1>
               <ul className="space-y-4">
@@ -106,7 +106,7 @@ export default function TwoFourWayConnector() {
                 </div>
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block">
+              <h1 className="text-4xl lg:text-5xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block">
                 4-Way Connector
               </h1>
               <ul className="space-y-4">

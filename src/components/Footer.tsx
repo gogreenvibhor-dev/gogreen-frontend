@@ -82,9 +82,9 @@ const Footer = () => {
             <Image 
               src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" 
               alt="Logo" 
-              width={150}
-              height={60}
-              className="h-16 w-auto brightness-0 invert" 
+              width={225}
+              height={90}
+              className="h-24 w-auto brightness-0 invert" 
             />
             <p className="text-gray-400">
               Engineering Smart Irrigation Solutions for a Greener Tomorrow. Trusted manufacturer of Drip, Sprinkler & Micro Irrigation Products.
@@ -160,6 +160,7 @@ const Footer = () => {
                 { href: "/products", label: "Our Products" },
                 { href: "/blog", label: "Blog" },
                 { href: "/contact", label: "Contact Us" },
+                { href: "/privacy-policy", label: "Privacy Policy" },
               ].map((link, i) => (
                 <motion.li key={i} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                   <Link href={link.href} className="hover:text-white transition">

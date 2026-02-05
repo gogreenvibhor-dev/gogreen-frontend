@@ -26,7 +26,7 @@ export default function Burundi() {
             <h6 className="text-xl font-bold text-primary mb-4">
               Welcome to our Burundi irrigation solutions page.
             </h6>
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary text-shadow-sm">
+            <h1 className="text-4xl lg:text-5xl font-bold text-green-900 text-shadow-sm">
               Bwakeye! (Hello!)
             </h1>
           </div>
@@ -37,7 +37,7 @@ export default function Burundi() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Introduction</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Vidhi Enterprises supplies robust, high-performance irrigation systems to Burundi’s agricultural sector, supporting smallholder farmers in improving productivity for coffee, tea, and food crops.
                   </p>
@@ -52,7 +52,7 @@ export default function Burundi() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Market Insights</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <div className="space-y-4 text-lg text-secondary font-bold text-justify">
+                <div className="space-y-4 text-lg text-green-900 font-bold text-justify">
                   <p>
                     Agriculture is the backbone of Burundi’s economy, driving demand for affordable and durable irrigation solutions suitable for small-scale farming.
                   </p>
@@ -67,7 +67,7 @@ export default function Burundi() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Products We Supply</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Drip irrigation kits for small plots</li>
                   <li>• Sprinklers for coffee and tea plantations</li>
                   <li>• Rain guns for larger fields</li>
@@ -82,7 +82,7 @@ export default function Burundi() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Industries We Serve</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Coffee and tea cooperatives</li>
                   <li>• Vegetable and fruit farmers</li>
                   <li>• Rice growers (in marshlands)</li>
@@ -95,7 +95,7 @@ export default function Burundi() {
               <div>
                 <h2 className="text-3xl font-bold text-primary text-center mb-4">Why Choose Vidhi Enterprises</h2>
                 <div className="h-1 w-full bg-primary mb-6"></div>
-                <ul className="space-y-2 text-lg text-secondary font-bold text-justify">
+                <ul className="space-y-2 text-lg text-green-900 font-bold text-justify">
                   <li>• Affordable solutions tailored for smallholders</li>
                   <li>• Durable equipment suited for hilly terrain</li>
                   <li>• Commitment to improving rural livelihoods</li>

@@ -303,7 +303,7 @@ export default async function ProductPage({
 
             {/* Product Information */}
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
                 {product.name}
               </h1>
 
@@ -321,7 +321,7 @@ export default async function ProductPage({
 
               {features.length > 0 && (
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Features</h3>
+                  <h3 className="text-2xl font-bold text-green-900 mb-4">Key Features</h3>
                   <ul className="space-y-4">
                     {features.map((feature, i) => (
                       <li key={i} className="flex items-start text-primary font-medium text-lg leading-relaxed">
@@ -344,7 +344,7 @@ export default async function ProductPage({
           {/* Full Description */}
           {product.description && (
             <div className="max-w-4xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Description</h2>
+              <h2 className="text-3xl font-bold text-green-900 mb-6">Product Description</h2>
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                 {product.description}
               </div>
@@ -355,7 +355,7 @@ export default async function ProductPage({
           {/* Specifications */}
           {product.specifications && product.specifications.length > 0 && (
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Product Specifications</h2>
+              <h2 className="text-3xl font-bold text-green-900 mb-8 text-center">Product Specifications</h2>
               <ProductSpecifications specifications={product.specifications} />
             </div>
           )}

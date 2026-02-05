@@ -35,7 +35,7 @@ export default function CylindricalDripline() {
     <main className="min-h-screen">
       <Navbar />
       <PageHeader
-        title="Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC"
+        title="Cylindrical Dripline Emitting Pipe Inline Drip Tube - PC & NON PC"
         backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-2.png"
         breadcrumbs={breadcrumbs}
       />
@@ -63,8 +63,8 @@ export default function CylindricalDripline() {
             </div>
 
             <div className="space-y-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight">
-                Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC
+              <h1 className="text-3xl lg:text-4xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight">
+                Cylindrical Dripline Emitting Pipe Inline Drip Tube - PC & NON PC
               </h1>
               <ul className="space-y-4">
                 {features.map((feature, i) => (
@@ -75,7 +75,7 @@ export default function CylindricalDripline() {
                 ))}
               </ul>
 
-              <h3 className="text-2xl font-bold text-secondary border-b-2 border-secondary pb-2 inline-block">
+              <h3 className="text-2xl font-bold text-green-900 border-b-2 border-secondary pb-2 inline-block">
                 Application
               </h3>
               <div className="bg-whitesmoke p-6 rounded-xl border-l-4 border-primary">

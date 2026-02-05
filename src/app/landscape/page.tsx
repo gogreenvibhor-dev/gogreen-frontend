@@ -9,20 +9,20 @@ const products = [
     title: "Brown Drip Tubing",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
-      { name: "Plain Lateral/ Polytubes", url: "/plain-drip" },
-      { name: "Cylindrical Dripline/ Emitting Pipe/ Inline Drip Tube - PC & NON PC", url: "/inline-drip" },
+      { name: "Plain Lateral Polytubes", url: "/plain-drip" },
+      { name: "Cylindrical Dripline Emitting Pipe Inline Drip Tube PC NON PC", url: "/inline-drip" },
     ],
   },
   {
     title: "Emitting Devices",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
     links: [
-      { name: "Online Emitters PC", url: "/online-landscape" },
+      { name: "Online Emitters PC Dripper", url: "/online-landscape" },
       { name: "Online Emitters NPC TurboKey Drippers", url: "/online-turbokey-lands" },
-      { name: "2-Way / 4-Way Connector", url: "/2-way-landscape" },
-      { name: "Pot Dripper/Arrow Dripper", url: "/arrow-landscape" },
+      { name: "2-Way 4-Way Connector", url: "/2-way-landscape" },
+      { name: "Pot Dripper Arrow Dripper", url: "/arrow-landscape" },
       { name: "Anti Bug Cup", url: "/anti-bug-landscape" },
-      { name: "6 mm Spagetty Pipe / Distributor Pipe", url: "/6mm-landscape" },
+      { name: "6 mm Spagetty Pipe Distributor Pipe", url: "/6mm-landscape" },
     ],
   },
   {

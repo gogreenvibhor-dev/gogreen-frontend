@@ -45,7 +45,7 @@ export default function YouTubeVideosSection() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-primary font-bold uppercase tracking-wider mb-2">Watch Our Story</p>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <h2 id="company-videos" className="text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 id="company-videos" className="text-4xl lg:text-5xl font-bold text-green-900">
             Latest Videos from Vidhi Enterprises
           </h2>
         </div>

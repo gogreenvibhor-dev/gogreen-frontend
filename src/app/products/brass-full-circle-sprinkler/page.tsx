@@ -132,7 +132,7 @@ export default function BrassFullCircleSprinkler() {
               </div>
 
               <div className="space-y-8">
-                <h3 className="text-3xl lg:text-3xl font-bold text-secondary border-b-4 border-secondary pb-4 inline-block leading-tight uppercase">
+                <h3 className="text-3xl lg:text-3xl font-bold text-green-900 border-b-4 border-secondary pb-4 inline-block leading-tight uppercase">
                   {product.title}
                 </h3>
                 <ul className="space-y-4">
@@ -145,7 +145,7 @@ export default function BrassFullCircleSprinkler() {
                 </ul>
 
                 <div>
-                  <h4 className="text-2xl font-bold text-secondary border-b-2 border-secondary pb-2 inline-block mb-4">
+                  <h4 className="text-2xl font-bold text-green-900 border-b-2 border-secondary pb-2 inline-block mb-4">
                     Application
                   </h4>
                   <p className="text-lg text-primary font-medium leading-relaxed">
