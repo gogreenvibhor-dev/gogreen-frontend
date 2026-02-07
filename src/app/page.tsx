@@ -4,11 +4,15 @@ import FeatureCards from "@/components/FeatureCards";
 import AboutSection from "@/components/AboutSection";
 import StatsSection from "@/components/StatsSection";
 import ProductGrid from "@/components/ProductGrid";
-import WorldMap from "@/components/WorldMap";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
+import LazyWorldMap from "@/components/LazyWorldMap";
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+
+// Lazy Popup - SSR: false removed (it renders null initially anyway)
+const PopupModal = dynamic(() => import("@/components/PopupModal"));
 
 export const metadata: Metadata = {
   title: "Vidhi Enterprises - Leading Drip Irrigation & Sprinkler System Manufacturer | ISO Certified",
@@ -80,7 +84,33 @@ export const metadata: Metadata = {
   }
 };
 
-export default function Home() {
+
+async function getCategories() {
+  try {
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
+    
+    // Check if we are in production build and URL is missing
+    if (!process.env.NEXT_PUBLIC_API_URL && process.env.NODE_ENV === 'production') {
+        return [];
+    }
+
+    const response = await fetch(`${backendUrl}/categories`, {
+      next: { revalidate: 3600 }, // Cache for 1 hour
+    });
+    
+    if (!response.ok) return [];
+    
+    const data = await response.json();
+    return Array.isArray(data) ? data : []; 
+  } catch (error) {
+    console.error('Failed to fetch categories:', error);
+    return [];
+  }
+}
+
+export default async function Home() {
+  const categories = await getCategories();
+
   // Structured Data for Organization and Website
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -193,7 +223,7 @@ export default function Home() {
       />
       
       <main className="min-h-screen" itemScope itemType="https://schema.org/WebPage">
-        <Navbar />
+        <Navbar initialCategories={categories} />
       <HeroCarousel />
       <FeatureCards />
       <AboutSection />
@@ -253,9 +283,10 @@ export default function Home() {
         <p className="text-xl text-gray-600">Where You Can Find Us</p>
       </div>
 
-      <WorldMap />
+      <LazyWorldMap />
       <ContactForm />
       <Footer />
+      <PopupModal />
     </main>
     </>
   );

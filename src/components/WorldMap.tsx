@@ -114,10 +114,10 @@ const COUNTRY_URL_MAPPING: Record<string, string> = {
 const countryPaths: CountryPath[] = worldMapData as CountryPath[];
 
 // Debug: Log which countries are being highlighted
-console.log('Total countries in JSON:', countryPaths.length);
-console.log('Countries to highlight:', HIGHLIGHTED_COUNTRIES.size);
-const matchedCountries = countryPaths.filter(c => HIGHLIGHTED_COUNTRIES.has(c.id)).map(c => c.id);
-console.log('Matched countries:', matchedCountries.length, matchedCountries);
+// console.log('Total countries in JSON:', countryPaths.length);
+// console.log('Countries to highlight:', HIGHLIGHTED_COUNTRIES.size);
+// const matchedCountries = countryPaths.filter(c => HIGHLIGHTED_COUNTRIES.has(c.id)).map(c => c.id);
+// console.log('Matched countries:', matchedCountries.length, matchedCountries);
 
 export default function WorldMap() {
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);

@@ -99,8 +99,8 @@ export const metadata: Metadata = {
 
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
-// Force dynamic rendering for the root layout
-export const dynamic = 'force-dynamic';
+// Enable static generation with revalidation (e.g., every hour)
+export const revalidate = 3600;
 
 async function getGlobalSettings() {
   try {
@@ -113,14 +113,21 @@ async function getGlobalSettings() {
       return null;
     }
     
-    const response = await axios.get(`${backendUrl}/settings`, {
+    // Use fetch for Next.js caching
+    const response = await fetch(`${backendUrl}/settings`, {
+      next: { revalidate: 3600 }, // Cache for 1 hour
       headers: {
-        'Cache-Control': 'no-store',
+        'Content-Type': 'application/json',
       },
     });
+
+    if (!response.ok) {
+        throw new Error(`Failed to fetch settings: ${response.status}`);
+    }
     
+    const data = await response.json();
     // API returns { success: true, data: { ... } }
-    return response.data.success ? response.data.data : null;
+    return data.success ? data.data : null;
   } catch (error) {
     // Silently return null on error - WhatsApp button just won't show
     console.error('Failed to fetch global settings:', error);

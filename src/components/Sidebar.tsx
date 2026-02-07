@@ -29,6 +29,7 @@ const Sidebar = () => {
     { label: 'Users', href: '/admin/users' },
     { label: 'Approvals', href: '/admin/changes' },
     { label: 'Settings', href: '/admin/settings' },
+    { label: 'Home Popups', href: '/admin/popups' },
   ];
 
   const isActive = (href: string, exact: boolean = false) => {

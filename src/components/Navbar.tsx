@@ -7,9 +7,14 @@ import { useRouter } from "next/navigation";
 
 import axios from "axios";
 
-const Navbar = () => {
+
+interface NavbarProps {
+  initialCategories?: any[];
+}
+
+const Navbar = ({ initialCategories = [] }: NavbarProps) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [categories, setCategories] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>(initialCategories);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [showResults, setShowResults] = useState(false);
@@ -18,16 +23,19 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get('/api/categories');
-        setCategories(response.data);
-      } catch (error) {
-        console.error('Error fetching categories for navbar:', error);
-      }
-    };
-    fetchCategories();
-  }, []);
+    // Only fetch if no initial data provided
+    if (categories.length === 0) {
+      const fetchCategories = async () => {
+        try {
+          const response = await axios.get('/api/categories');
+          setCategories(response.data);
+        } catch (error) {
+          console.error('Error fetching categories for navbar:', error);
+        }
+      };
+      fetchCategories();
+    }
+  }, [categories.length]);
 
   // Handle click outside to close search results
   useEffect(() => {

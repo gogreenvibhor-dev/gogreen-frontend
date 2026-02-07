@@ -239,7 +239,7 @@ const ProductGrid = () => {
                   <motion.div
                     initial={{ backgroundColor: "rgb(255, 255, 255)" }}
                     whileHover={{
-                      backgroundColor: "rgb(28, 158, 28)",
+                      backgroundColor: "rgb(240, 253, 244)", // very light green instead of deep green
                       transition: { duration: 0.4 },
                     }}
                     className="p-8 flex flex-col items-center flex-grow"
@@ -253,14 +253,14 @@ const ProductGrid = () => {
                         <Image src={p.icon} alt="Icon" width={200} height={200} className="w-24 h-24 object-contain" />
                       </Link>
                     </motion.div>
-                    <h4 className="text-2xl font-bold mb-4 text-heading group-hover:text-white transition-colors duration-300">{p.title}</h4>
-                    <p className="mb-8 font-semibold leading-relaxed text-green-900 group-hover:text-white/90 transition-colors duration-300">
+                    <h4 className="text-2xl font-bold mb-4 text-heading transition-colors duration-300">{p.title}</h4>
+                    <p className="mb-8 font-semibold leading-relaxed text-green-900 transition-colors duration-300">
                       {p.desc}
                     </p>
                     <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                       <Link 
                         href={p.link} 
-                        className="inline-flex items-center text-primary font-bold group-hover:text-white transition-all duration-300 gap-2"
+                        className="inline-flex items-center text-primary font-bold transition-all duration-300 gap-2"
                       >
                         <i className="fa fa-plus"></i>
                         <span>Read More</span>
