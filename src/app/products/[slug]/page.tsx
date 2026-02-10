@@ -8,6 +8,8 @@ import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ProductSpecifications } from "@/components/ProductSpecifications";
+import ProductImageGallery from "@/components/ProductImageGallery";
+import ShareButton from "@/components/ShareButton";
 import { Contact } from "lucide-react";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
@@ -24,6 +26,7 @@ interface Product {
   price?: string;
   sku?: string;
   images?: string[];
+  coverImage?: string;
   isActive: boolean;
   isFeatured: boolean;
   metaTitle?: string;
@@ -209,6 +212,9 @@ export default async function ProductPage({
     ? product.images[0] 
     : 'https://d170mw2nhcb1v0.cloudfront.net/img/default-product.png';
 
+  // Use coverImage for banner/header, fall back to mainImage
+  const bannerImage = product.coverImage || mainImage;
+
   // Generate JSON-LD structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
@@ -245,7 +251,7 @@ export default async function ProductPage({
       <Navbar />
       <PageHeader
         title={product.name}
-        backgroundImage={mainImage}
+        backgroundImage={bannerImage}
         breadcrumbs={breadcrumbs}
       />
 
@@ -271,35 +277,11 @@ export default async function ProductPage({
 
           {/* Product Details */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
-            {/* Product Image */}
-            <div className="relative group">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-whitesmoke">
-                <Image
-                  src={mainImage}
-                  alt={product.name}
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition duration-500"
-                />
-              </div>
-
-              {/* Additional Images */}
-              {product.images && product.images.length > 1 && (
-                <div className="grid grid-cols-4 gap-4 mt-4">
-                  {product.images.slice(1, 5).map((img, idx) => (
-                    <div key={idx} className="rounded-lg overflow-hidden border-2 border-gray-200 hover:border-primary transition">
-                      <Image
-                        src={img}
-                        alt={`${product.name} - ${idx + 2}`}
-                        width={150}
-                        height={150}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* Product Images Gallery */}
+            <ProductImageGallery 
+              images={product.images || []} 
+              productName={product.name} 
+            />
 
             {/* Product Information */}
             <div className="space-y-8">
@@ -382,6 +364,14 @@ export default async function ProductPage({
                 Contact for Quote
               </Link>
           
+            </div>
+            
+            {/* Share Button */}
+            <div>
+              <ShareButton 
+                title={product.name} 
+                text={product.shortDescription || `Check out ${product.name} from GoGreen`} 
+              />
             </div>
           </div>
         </div>

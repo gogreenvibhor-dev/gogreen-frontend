@@ -30,6 +30,7 @@ interface IProduct {
   shortDescription?: string | null;
   price?: string | null;
   images?: string[] | null;
+  coverImage?: string | null;
   specifications?: any;
   features?: string[] | null;
   seoKeywords?: string[] | null;
@@ -61,6 +62,7 @@ export default function ProductsAdmin() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [filterSubcategoryId, setFilterSubcategoryId] = useState<string>('');
   const [uploadingPdf, setUploadingPdf] = useState(false);
+  const [uploadingCover, setUploadingCover] = useState(false);
   const [uploadingImage, setUploadingImage] = useState(false);
   const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [formData, setFormData] = useState({
@@ -72,6 +74,7 @@ export default function ProductsAdmin() {
     shortDescription: '',
     price: '',
     images: '',
+    coverImage: '',
     pdfUrl: '',
     features: '',
     seoKeywords: '',
@@ -207,6 +210,7 @@ export default function ProductsAdmin() {
       shortDescription: product.shortDescription || '',
       price: product.price || '',
       images: product.images?.join('\n') || '',
+      coverImage: product.coverImage || '',
       pdfUrl: product.pdfUrl || '',
       features: product.features?.join('\n') || '',
       seoKeywords: product.seoKeywords?.join('\n') || '',
@@ -229,6 +233,7 @@ export default function ProductsAdmin() {
       shortDescription: '',
       price: '',
       images: '',
+      coverImage: '',
       pdfUrl: '',
       features: '',
       seoKeywords: '',
@@ -246,7 +251,6 @@ export default function ProductsAdmin() {
     uploadData.append('file', file);
     
     setUploadingPdf(true);
-    setUploadingPdf(true);
     try {
       const res = await axiosInstance.post('/upload', uploadData, {
         headers: { 'Content-Type': 'multipart/form-data' },
@@ -257,6 +261,27 @@ export default function ProductsAdmin() {
       alert('Failed to upload PDF');
     } finally {
       setUploadingPdf(false);
+    }
+  };
+
+  const handleCoverUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files || e.target.files.length === 0) return;
+    
+    const file = e.target.files[0];
+    const uploadData = new FormData();
+    uploadData.append('file', file);
+    
+    setUploadingCover(true);
+    try {
+      const res = await axiosInstance.post('/upload', uploadData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+      setFormData(prev => ({ ...prev, coverImage: res.data.url }));
+    } catch (error) {
+      console.error('Cover image upload failed:', error);
+      alert('Failed to upload cover image');
+    } finally {
+      setUploadingCover(false);
     }
   };
 
@@ -328,6 +353,7 @@ export default function ProductsAdmin() {
         shortDescription: formData.shortDescription || undefined,
         price: formData.price || undefined,
         images: imagesArray.length > 0 ? imagesArray : undefined,
+        coverImage: formData.coverImage === '' ? null : (formData.coverImage || undefined),
         pdfUrl: formData.pdfUrl || undefined,
         features: featuresArray.length > 0 ? featuresArray : undefined,
         seoKeywords: seoKeywordsArray.length > 0 ? seoKeywordsArray : undefined,
@@ -527,6 +553,60 @@ export default function ProductsAdmin() {
             onChange={e => setFormData({ ...formData, description: e.target.value })}
           />
           <div className="border p-4 rounded bg-gray-50">
+             <label className="block text-sm font-medium text-gray-700 mb-2">Cover Image</label>
+             <div className="flex items-center gap-4">
+               <input 
+                 type="file" 
+                 accept="image/jpeg,image/jpg,image/png,image/gif,image/webp"
+                 onChange={handleCoverUpload}
+                 disabled={uploadingCover}
+                 className="block w-full text-sm text-gray-500
+                   file:mr-4 file:py-2 file:px-4
+                   file:rounded-full file:border-0
+                   file:text-sm file:font-semibold
+                   file:bg-purple-50 file:text-purple-700
+                   hover:file:bg-purple-100"
+               />
+               {uploadingCover && <span className="text-sm text-gray-500">Uploading...</span>}
+             </div>
+             
+             {formData.coverImage ? (
+               <div className="mt-2">
+                  <div className="relative w-32 h-32 mt-2 border rounded overflow-hidden group">
+                    <img 
+                      src={formData.coverImage} 
+                      alt="Cover" 
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                        type="button"
+                        onClick={() => setFormData({ ...formData, coverImage: '' })}
+                        className="absolute top-1 right-1 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center transition opacity-0 group-hover:opacity-100"
+                        title="Remove cover image"
+                    >
+                        ✕
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Image URL"
+                    className="border p-2 rounded w-full mt-2 text-xs text-gray-500"
+                    value={formData.coverImage}
+                    onChange={e => setFormData({ ...formData, coverImage: e.target.value })}
+                  />
+               </div>
+             ) : (
+                <input
+                    type="text"
+                    placeholder="Or enter Cover Image URL manually"
+                    className="border p-2 rounded w-full mt-2 text-sm"
+                    value={formData.coverImage}
+                    onChange={e => setFormData({ ...formData, coverImage: e.target.value })}
+                  />
+             )}
+          </div>
+
+          <div className="border p-4 rounded bg-gray-50">
             <label className="block text-sm font-medium text-gray-700 mb-2">Product Images</label>
             <div className="flex items-center gap-4 mb-2">
               <input 
@@ -648,6 +728,7 @@ export default function ProductsAdmin() {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cover</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Subcategory</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
@@ -660,11 +741,29 @@ export default function ProductsAdmin() {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {loading ? (
-                <tr><td colSpan={8} className="px-6 py-4 text-center">Loading...</td></tr>
+                <tr><td colSpan={9} className="px-6 py-4 text-center">Loading...</td></tr>
               ) : products.length === 0 ? (
-                <tr><td colSpan={8} className="px-6 py-4 text-center">No products found.</td></tr>
+                <tr><td colSpan={9} className="px-6 py-4 text-center">No products found.</td></tr>
               ) : products.map((product) => (
                 <tr key={product.id}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {product.coverImage ? (
+                      <div className="w-12 h-12 rounded overflow-hidden border">
+                        <img 
+                          src={product.coverImage} 
+                          alt={product.name} 
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 rounded border bg-gray-100 flex items-center justify-center text-gray-400 text-xs">
+                        No img
+                      </div>
+                    )}
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">{getCategoryName(product.subcategoryId)}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">{getSubcategoryName(product.subcategoryId)}</td>
                   <td className="px-6 py-4 whitespace-nowrap font-medium">{product.name}</td>

@@ -21,7 +21,7 @@ const HIGHLIGHTED_COUNTRIES = new Set([
   'United States', 'Mexico',
   
   // The Americas - Central America & Caribbean
-  'Guatemala', 'Belize', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Haiti', 'Dominican Republic', 'Guadeloupe',
+  'Guatemala', 'Belize', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Haiti', 'Guadeloupe',
   
   // The Americas - South America
   'Colombia', 'Venezuela', 'Guyana', 'Suriname', 'Ecuador', 'Peru', 'Brazil', 'Bolivia', 'Paraguay', 'Chile',
