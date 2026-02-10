@@ -27,7 +27,7 @@ const slides = [
   },
   {
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/C6.png",
-    text: "“Innovating precision irrigation since 1983”",
+    text: "“Innovating Precision Irrigation Since 1983”",
   },
   {
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/C9.png",

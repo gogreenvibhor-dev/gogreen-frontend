@@ -8,6 +8,7 @@ const products = [
   {
     title: "Brass Impact Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/sprinkler/brass-impact-sprinklers",
     links: [
       { name: "Brass Full Circle Sprinklers", url: "/full-circle" },
       { name: "Brass Part Circle Sprinklers", url: "/part-circle" },
@@ -16,6 +17,7 @@ const products = [
   {
     title: "Metal Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/sprinkler/metal-sprinklers",
     links: [
       { name: "Aluminium Sprinklers", url: "/aluminium-spri" },
     ],
@@ -23,6 +25,7 @@ const products = [
   {
     title: "Plastic Impact Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/sprinkler/plastic-impact-sprinklers",
     links: [
       { name: "Plastic Full Circle Sprinklers", url: "/plastci-full-circle" },
     ],
@@ -30,6 +33,7 @@ const products = [
   {
     title: "Sprinkler Accessories",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/sprinkler/sprinkler-accessories",
     links: [
       { name: "Service Saddles", url: "/service-saddles" },
       { name: "Mini Sprinkler Accessories", url: "/mini-sprinkler-accessories" },

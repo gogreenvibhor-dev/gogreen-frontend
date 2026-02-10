@@ -8,6 +8,7 @@ const products = [
   {
     title: "Drip Tubing & Fittings",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/economical/drip-tubing-fittings",
     links: [
       { name: "Low Thickness Plain Laterals", url: "/low-thickness-plain" },
       { name: "Thin Wall Drip Line Cylindrical", url: "/thinwall-dripline" },
@@ -18,6 +19,7 @@ const products = [
   {
     title: "Vidhi Rain Pipe & Fittings",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/economical/vidhi-rain-pipe-fittings",
     links: [
       { name: "Vidhi Rain Pipe", url: "/rain-pipe" },
       { name: "Vidhi Rain Pipe Fittings", url: "/rain-pipe-fittings" },
@@ -26,6 +28,7 @@ const products = [
   {
     title: "Lay Flat Pipes",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/economical/lay-flat-pipes",
     links: [
       { name: "Lay Flat Pipe", url: "/layflat-pipe" },
     ],
@@ -33,6 +36,7 @@ const products = [
   {
     title: "Eco Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/economical/eco-sprinklers",
     links: [
       { name: "Eco Rotating Sprinkler", url: "/eco-sprinkler" },
       { name: "Riser Pipes", url: "/riser-pipes-eco" },
@@ -41,6 +45,7 @@ const products = [
   {
     title: "EcoAcre Pro",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/economical/ecoacre-pro",
     links: [
       { name: "EcoAcre Pro", url: "/ecoacre-pro" },
     ],

@@ -8,6 +8,7 @@ const products = [
   {
     title: "Rain Silver Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/rainsprinkler/rain-silver-sprinklers",
     links: [
       { name: "1-1/4\" Rain Silver Sprinkler (25m Radius)", url: "/rain-silver" },
       { name: "1-1/4\" Rain Silver Sprinkler Stand", url: "/rainsilver-stand" },
@@ -16,6 +17,7 @@ const products = [
   {
     title: "Rain Gold Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/rainsprinkler/rain-gold-sprinklers",
     links: [
       { name: "1-1/2\" Rain Gold Sprinkler (30m Radius )", url: "/rain-gold" },
       { name: "1-1/2\" Rain Gold Sprinkler Stand", url: "/raingold-stand" },
@@ -24,6 +26,7 @@ const products = [
   {
     title: "Rain Violet Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/rainsprinkler/rain-violet-sprinklers",
     links: [
       { name: "2\" Rain Violet Sprinkler (35m Radius )", url: "/rain-violet" },
       { name: "2\" Rain Violet Sprinkler Stand", url: "/rainviolet-stand" },
@@ -32,6 +35,7 @@ const products = [
   {
     title: "Rain Diamond Sprinklers",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/icon/icon-4.png",
+    subcategoryUrl: "/rainsprinkler/rain-diamond-sprinklers",
     links: [
       { name: "1-1/2\" Rain Diamond Sprinkler", url: "/rain-diamond" },
       { name: "1-1/2\" Rain Diamond Sprinkler Stand", url: "/rain-diamond" },

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import GlobalPresenceMap from "@/components/GlobalPresenceMap";
+import LazyWorldMap from "@/components/LazyWorldMap";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
@@ -129,7 +129,7 @@ const GlobalPresencePage = () => {
           </div>
         </section>
 
-        <GlobalPresenceMap />
+        <LazyWorldMap />
         <Footer />
       </main>
     </>
