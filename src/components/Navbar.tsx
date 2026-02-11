@@ -24,6 +24,10 @@ const Navbar = ({ initialCategories = [] }: NavbarProps) => {
   const router = useRouter();
   const pathname = usePathname();
 
+  // Mobile dropdown states
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+
   // Clear loading state when path changes
   useEffect(() => {
     setIsNavigating(false);
@@ -113,7 +117,7 @@ const Navbar = ({ initialCategories = [] }: NavbarProps) => {
               src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png"
               width={120}
               height={100}
-              className="logo-img"
+              className="logo-img w-[100px] lg:w-[120px] h-auto"
               alt="Vidhi Enterprises Logo"
               priority
             />
@@ -209,82 +213,137 @@ const Navbar = ({ initialCategories = [] }: NavbarProps) => {
 
           {/* Navigation Links */}
           <div className={`${isNavOpen ? 'block' : 'hidden'} lg:flex w-full lg:w-auto items-center mt-4 lg:mt-0`}>
-            <div className="flex flex-col lg:flex-row items-center lg:space-x-4 w-full">
+            <div className="flex flex-col lg:flex-row items-stretch lg:items-center lg:space-x-4 w-full">
               
               {/* Mobile Search Bar */}
-              <div className="sm:hidden w-full px-4 mb-4">
+              <div className="lg:hidden w-full px-4 mb-4">
                 <form onSubmit={handleSearchSubmit} className="w-full">
-                  <div className="search-bar-rounded w-full relative flex items-center">
+                  <div className="search-bar-rounded w-full relative flex items-center bg-white shadow-sm">
                     <input 
                       type="search" 
-                      className="w-full bg-transparent py-3 pl-6 pr-12 text-base outline-none border-none focus:ring-0" 
+                      className="w-full bg-transparent py-2 pl-4 pr-10 text-sm outline-none border-none focus:ring-0" 
                       placeholder="Search products..." 
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                     />
                     <button 
                       type="submit"
-                      className="absolute right-2 top-0 w-12 h-12 flex items-center justify-center bg-primary text-white hover:bg-dark transition-colors rounded-full m-0.5"
+                      className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-primary text-white hover:bg-dark transition-colors rounded-full"
                     >
                       {isSearching ? (
-                        <i className="fa fa-spinner fa-spin"></i>
+                        <i className="fa fa-spinner fa-spin text-xs"></i>
                       ) : (
-                        <i className="fa fa-search"></i>
+                        <i className="fa fa-search text-xs"></i>
                       )}
                     </button>
                   </div>
                 </form>
               </div>
               
-              <Link href="/" className="nav-link text-lg"><b>Home</b></Link>
-              
+              <Link href="/" className="nav-link text-lg w-full lg:w-auto text-left lg:text-center block lg:inline-block"><b>Home</b></Link>
               <div className="relative group">
-                <button className="nav-link text-lg flex items-center">
-                  <b>Products</b> <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
+                <button 
+                  className="nav-link text-lg flex items-center justify-between w-full lg:w-auto"
+                  onClick={() => setIsProductsOpen(!isProductsOpen)}
+                >
+                  <b>Products</b> <i className={`fa fa-chevron-down ml-2 text-[10px] transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}></i>
                 </button>
-                <div className="lg:absolute left-0 mt-0 w-48 bg-light border-none rounded shadow-xl hidden group-hover:block z-50">
+                <div 
+                  className={`${isProductsOpen ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0 py-0'} lg:hidden overflow-hidden transition-all duration-300 ease-in-out w-full bg-white/50 rounded-lg mt-1 border-l-2 border-primary`}
+                >
+                   {/* Mobile Product Links */}
+                   <div className="pl-2">
+                     {categories.length > 0 ? (
+                      categories.map((cat) => (
+                        <a 
+                          key={cat._id} 
+                          href={`/${cat.slug}`} 
+                          onClick={(e) => handleCategoryClick(e, `/${cat.slug}`)}
+                          className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0"
+                        >
+                          {cat.name}
+                        </a>
+                      ))
+                    ) : (
+                      <>
+                        <a href="/dripirri" onClick={(e) => handleCategoryClick(e, '/dripirri')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Drip Irrigation</a>
+                        <a href="/sprinkler" onClick={(e) => handleCategoryClick(e, '/sprinkler')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Sprinkler Irrigation</a>
+                        <a href="/rainsprinkler" onClick={(e) => handleCategoryClick(e, '/rainsprinkler')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Rain Sprinkler</a>
+                        <a href="/landscape" onClick={(e) => handleCategoryClick(e, '/landscape')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Landscape Irrigation</a>
+                        <a href="/economical" onClick={(e) => handleCategoryClick(e, '/economical')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Economical Irrigation</a>
+                        <a href="/vidhi-kit" onClick={(e) => handleCategoryClick(e, '/vidhi-kit')} className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Vidhi Kit</a>
+                      </>
+                    )}
+                   </div>
+                </div>
+                {/* Desktop Product Dropdown (Hover) */}
+                <div className="hidden lg:group-hover:block lg:absolute left-0 mt-0 w-48 bg-white border border-green-100 rounded-lg shadow-xl z-50 overflow-hidden transform transition-all duration-200 origin-top">
                   {categories.length > 0 ? (
                     categories.map((cat) => (
                       <a 
                         key={cat._id} 
                         href={`/${cat.slug}`} 
                         onClick={(e) => handleCategoryClick(e, `/${cat.slug}`)}
-                        className="dropdown-item cursor-pointer"
+                        className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"
                       >
                         <b>{cat.name}</b>
                       </a>
                     ))
-                  ) : [
-                      <a key="dripirri" href="/dripirri" onClick={(e) => handleCategoryClick(e, '/dripirri')} className="dropdown-item cursor-pointer"><b>Drip Irrigation</b></a>,
-                      <a key="sprinkler" href="/sprinkler" onClick={(e) => handleCategoryClick(e, '/sprinkler')} className="dropdown-item cursor-pointer"><b>Sprinkler Irrigation</b></a>,
-                      <a key="rainsprinkler" href="/rainsprinkler" onClick={(e) => handleCategoryClick(e, '/rainsprinkler')} className="dropdown-item cursor-pointer"><b>Rain Sprinkler</b></a>,
-                      <a key="landscape" href="/landscape" onClick={(e) => handleCategoryClick(e, '/landscape')} className="dropdown-item cursor-pointer"><b>Landscape Irrigation</b></a>,
-                      <a key="economical" href="/economical" onClick={(e) => handleCategoryClick(e, '/economical')} className="dropdown-item cursor-pointer"><b>Economical Irrigation</b></a>,
-                      <a key="vidhi-kit" href="/vidhi-kit" onClick={(e) => handleCategoryClick(e, '/vidhi-kit')} className="dropdown-item cursor-pointer"><b>Vidhi Kit</b></a>
-                  ]}
+                  ) : (
+                    <>
+                      <a href="/dripirri" onClick={(e) => handleCategoryClick(e, '/dripirri')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Drip Irrigation</b></a>
+                      <a href="/sprinkler" onClick={(e) => handleCategoryClick(e, '/sprinkler')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Sprinkler Irrigation</b></a>
+                      <a href="/rainsprinkler" onClick={(e) => handleCategoryClick(e, '/rainsprinkler')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Rain Sprinkler</b></a>
+                      <a href="/landscape" onClick={(e) => handleCategoryClick(e, '/landscape')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Landscape Irrigation</b></a>
+                      <a href="/economical" onClick={(e) => handleCategoryClick(e, '/economical')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Economical Irrigation</b></a>
+                      <a href="/vidhi-kit" onClick={(e) => handleCategoryClick(e, '/vidhi-kit')} className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Vidhi Kit</b></a>
+                    </>
+                  )}
                 </div>
               </div>
 
               <div className="relative group">
-                <button className="nav-link text-lg flex items-center">
-                  <b>About Us</b> <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
+                <button 
+                  className="nav-link text-lg flex items-center justify-between w-full lg:w-auto"
+                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                >
+                  <b>About Us</b> <i className={`fa fa-chevron-down ml-2 text-[10px] transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`}></i>
                 </button>
-                <div className="lg:absolute left-0 mt-0 w-56 bg-light border-none rounded shadow-xl hidden group-hover:block z-50">
-                  <Link key="company-profile" href="/company-profile" className="dropdown-item"><b>Company Profile</b></Link>
-                  <Link key="founder-vision" href="/founder-vision" className="dropdown-item"><b>Founder's Vision</b></Link>
-                  <Link key="our-journey" href="/our-journey" className="dropdown-item"><b>Our Journey</b></Link>
-                  <Link key="legacy-leader" href="/legacy-leader" className="dropdown-item"><b>Legacy & Leadership</b></Link>
-                  <Link key="manufacture" href="/manfacture" className="dropdown-item"><b>Manufacturing & Infra</b></Link>
-                  <Link key="quality-policy" href="/quality-policy" className="dropdown-item"><b>Quality Policy</b></Link>
-                  <Link key="sustainable" href="/sustainable" className="dropdown-item"><b>Sustainability</b></Link>
-                  <Link key="global-presence" href="/global-presence" className="dropdown-item"><b>Global Presence</b></Link>
-                  <Link key="blog" href="/blog" className="dropdown-item"><b>Blog</b></Link>
-                  <Link key="careers" href="/careers" className="dropdown-item"><b>Careers</b></Link>
-                  <Link key="privacy-policy" href="/privacy-policy" className="dropdown-item"><b>Privacy Policy</b></Link>
+                <div 
+                  className={`${isAboutOpen ? 'max-h-[600px] opacity-100 py-2' : 'max-h-0 opacity-0 py-0'} lg:hidden overflow-hidden transition-all duration-300 ease-in-out w-full bg-white/50 rounded-lg mt-1 border-l-2 border-primary`}
+                >
+                   {/* Mobile About Links */}
+                   <div className="pl-4">
+                    <Link href="/company-profile" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Company Profile</Link>
+                    <Link href="/founder-vision" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Founder's Vision</Link>
+                    <Link href="/our-journey" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Our Journey</Link>
+                    <Link href="/legacy-leader" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Legacy & Leadership</Link>
+                    <Link href="/manfacture" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Manufacturing & Infra</Link>
+                    <Link href="/quality-policy" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Quality Policy</Link>
+                    <Link href="/sustainable" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Sustainability</Link>
+                    <Link href="/global-presence" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Global Presence</Link>
+                    <Link href="/blog" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Blog</Link>
+                    <Link href="/careers" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Careers</Link>
+                    <Link href="/privacy-policy" className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0">Privacy Policy</Link>
+                   </div>
+                </div>
+                {/* Desktop About Dropdown (Hover) */}
+                <div className="hidden lg:group-hover:block lg:absolute left-0 mt-0 w-56 bg-white border border-green-100 rounded-lg shadow-xl z-50 overflow-hidden transform transition-all duration-200 origin-top">
+                  <Link href="/company-profile" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Company Profile</b></Link>
+                  <Link href="/founder-vision" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Founder's Vision</b></Link>
+                  <Link href="/our-journey" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Our Journey</b></Link>
+                  <Link href="/legacy-leader" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Legacy & Leadership</b></Link>
+                  <Link href="/manfacture" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Manufacturing & Infra</b></Link>
+                  <Link href="/quality-policy" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Quality Policy</b></Link>
+                  <Link href="/sustainable" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Sustainability</b></Link>
+                  <Link href="/global-presence" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Global Presence</b></Link>
+                  <Link href="/blog" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Blog</b></Link>
+                  <Link href="/careers" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Careers</b></Link>
+                  <Link href="/privacy-policy" className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"><b>Privacy Policy</b></Link>
                 </div>
               </div>
 
-              <Link href="/contact" className="nav-link text-lg"><b>Contact Us</b></Link>
+              <Link href="/contact" className="nav-link text-lg w-full lg:w-auto text-left lg:text-center block lg:inline-block"><b>Contact Us</b></Link>
 
               {/* Right Logo (Colored) */}
               <Link href="/" className="hidden lg:flex items-center ml-4">

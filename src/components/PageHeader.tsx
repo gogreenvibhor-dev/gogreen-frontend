@@ -16,7 +16,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, backgroundImage, breadcrumbs }: PageHeaderProps) => {
   return (
-    <div className="relative py-24 mb-12 overflow-hidden">
+    <div className="relative py-12 md:py-24 mb-6 md:mb-12 overflow-hidden">
       <Image
         src={backgroundImage}
         alt={title}
@@ -26,7 +26,7 @@ const PageHeader = ({ title, backgroundImage, breadcrumbs }: PageHeaderProps) =>
       />
       <div className="absolute inset-0 bg-primary/60"></div>
       <div className="container mx-auto px-4 relative z-10 text-center py-12">
-        <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 animate-slideDown">
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-6 animate-slideDown">
           {title}
         </h1>
         <nav className="flex justify-center">

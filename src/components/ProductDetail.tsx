@@ -56,8 +56,8 @@ const ProductDetail = ({ product }: { product: ProductData }) => {
               />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-success mb-6">{product.title}</h3>
-              <div className="w-full h-1 bg-primary mb-6"></div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-success mb-4 sm:mb-6">{product.title}</h3>
+              <div className="w-full h-1 bg-primary mb-4 sm:mb-6"></div>
               <ul className="space-y-4">
                 {product.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -73,8 +73,8 @@ const ProductDetail = ({ product }: { product: ProductData }) => {
             <div className="mt-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div className="lg:order-2">
-                   <h3 className="text-3xl font-bold text-success mb-6">Application</h3>
-                   <div className="w-full h-1 bg-primary mb-6"></div>
+                   <h3 className="text-2xl sm:text-3xl font-bold text-success mb-4 sm:mb-6">Application</h3>
+                   <div className="w-full h-1 bg-primary mb-4 sm:mb-6"></div>
                    {product.application.text && (
                      <p className="text-gray-700 font-medium text-lg leading-relaxed mb-8">
                        {product.application.text}

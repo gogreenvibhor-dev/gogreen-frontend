@@ -53,24 +53,24 @@ const FeatureCards = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4"
         >
           {features.map((f, i) => (
             <motion.div key={i} variants={itemVariants}>
               <motion.div
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
                 transition={{ duration: 0.3 }}
-                className="bg-[#fffdf5] shadow-lg rounded-2xl flex items-center h-full px-10 py-8 min-h-[180px]"
+                className="bg-[#fffdf5] shadow-lg rounded-2xl flex flex-col sm:flex-row items-center h-full px-6 py-6 sm:px-10 sm:py-8 min-h-[160px] sm:min-h-[180px] text-center sm:text-left"
               >
-                <div className="flex w-full items-center">
+                <div className="flex flex-col sm:flex-row w-full items-center">
                   <motion.div
                     whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                     transition={{ duration: 0.5 }}
-                    className="flex-shrink-0 w-24 h-24 rounded-full bg-light flex items-center justify-center"
+                    className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-light flex items-center justify-center mb-4 sm:mb-0"
                   >
-                    <Image src={f.icon} alt={f.title} width={80} height={80} className="w-16 h-16 object-contain" />
+                    <Image src={f.icon} alt={f.title} width={80} height={80} className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
                   </motion.div>
-                  <div className="pl-6">
+                  <div className="sm:pl-6">
                     <h4 className="text-primary font-bold mb-2 leading-tight">{f.title}</h4>
                     <span className="text-green-900 font-bold text-sm">{f.description}</span>
                   </div>

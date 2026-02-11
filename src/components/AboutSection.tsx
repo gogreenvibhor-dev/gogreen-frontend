@@ -42,11 +42,11 @@ const AboutSection = () => {
               whileInView={{ scale: 1, opacity: 0.2 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-7xl lg:text-9xl font-bold text-primary"
+              className="text-5xl sm:text-7xl lg:text-9xl font-bold text-primary"
             >
               40+
             </motion.h1>
-            <p className="text-3xl lg:text-4xl font-black text-primary mb-6 relative z-10">Years of making Every Drop Count</p>
+            <p className="text-xl sm:text-3xl lg:text-4xl font-black text-primary mb-6 relative z-10">Years of making Every Drop Count</p>
             <h5 className="text-2xl font-bold text-green-900 mb-6">&apos;We Make Every Drop Work Smarter&apos;</h5>
             <p className="text-lg text-primary font-semibold mb-6">
               &quot;Helping you water better, grow stronger &amp; make the most of every single drop&quot;
