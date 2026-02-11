@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import axios from 'axios';
 import axiosInstance from '@/lib/axios';
 import { useRouter } from 'next/navigation';
 import RichTextEditor from '@/components/RichTextEditor';
@@ -37,8 +38,8 @@ export default function CreatePostPage() {
     setUploadingImage(true);
     setUploadingImage(true);
     try {
-      const res = await axiosInstance.post('/upload', uploadData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      const res = await axios.post('/api/upload', uploadData, {
+        withCredentials: true
       });
       setCoverImage(res.data.url);
       alert('Image uploaded successfully!');

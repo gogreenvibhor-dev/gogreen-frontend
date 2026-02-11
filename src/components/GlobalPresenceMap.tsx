@@ -4814,7 +4814,7 @@ export default function GlobalPresenceMap() {
 
       {tooltip.show && (
         <div
-          className="fixed z-50 px-3 py-1.5 text-sm bg-gray-900 text-white rounded shadow-lg pointer-events-none"
+          className="fixed z-50 px-3 py-1.5 text-sm bg-green-900 text-white rounded shadow-lg pointer-events-none"
           style={{
             left: `${tooltip.x + 10}px`,
             top: `${tooltip.y + 10}px`,

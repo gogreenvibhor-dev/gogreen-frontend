@@ -19,7 +19,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://vidhienterprises.com'),
   title: {
-    default: "Vidhi Enterprises - Manufacturer and exporter of drip and sprinkler components",
+    default: "Vidhi Enterprises - Manufacturer and Exporter of Drip and Sprinkler Components",
     template: "%s | Vidhi Enterprises"
   },
   description: "Leading manufacturer & exporter of drip irrigation systems, sprinklers, HDPE pipes & micro-irrigation products. ISO-certified quality serving 50+ countries. Trusted agricultural irrigation solutions since 1983.",

@@ -10,7 +10,7 @@ const ManufacturingPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden bg-gray-900 mt-2">
+      <section className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden bg-green-900 mt-2">
         {/* Simplified Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a5f3d]/95 to-[#0e3d27]/98 z-10"></div>
         <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">

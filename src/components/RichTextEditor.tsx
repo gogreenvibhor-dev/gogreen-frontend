@@ -2,6 +2,7 @@
 'use client';
 
 import { useEditor, EditorContent } from '@tiptap/react';
+import axios from 'axios'; // Import axios directly for uploads to avoid instance default headers
 import axiosInstance from '@/lib/axios';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
@@ -40,11 +41,10 @@ const MenuBar = ({ editor }: { editor: any }) => {
         formData.append('file', file);
 
         try {
-          // Use configured axiosInstance which handles baseURL and credentials
-          const res = await axiosInstance.post('/upload', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
+          // Use direct axios call to avoid instance default headers (like Content-Type: application/json)
+          // which can break multipart/form-data uploads.
+          const res = await axios.post('/api/upload', formData, {
+            withCredentials: true
           });
           
           if (res.data.url) {
@@ -77,6 +77,7 @@ const MenuBar = ({ editor }: { editor: any }) => {
   return (
     <div className="border-b bg-gray-50 p-2 flex flex-wrap gap-1 sticky top-0 z-10">
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleBold().run()}
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('bold') ? 'bg-gray-200 text-blue-600' : ''}`}
@@ -84,6 +85,7 @@ const MenuBar = ({ editor }: { editor: any }) => {
         <Bold size={18} />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleItalic().run()}
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('italic') ? 'bg-gray-200 text-blue-600' : ''}`}
@@ -94,18 +96,21 @@ const MenuBar = ({ editor }: { editor: any }) => {
       <div className="w-px h-6 bg-gray-300 mx-1 self-center" />
 
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 1 }) ? 'bg-gray-200 text-blue-600' : ''}`}
       >
         <Heading1 size={18} />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 2 }) ? 'bg-gray-200 text-blue-600' : ''}`}
       >
         <Heading2 size={18} />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 3 }) ? 'bg-gray-200 text-blue-600' : ''}`}
       >
@@ -115,12 +120,14 @@ const MenuBar = ({ editor }: { editor: any }) => {
       <div className="w-px h-6 bg-gray-300 mx-1 self-center" />
 
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('bulletList') ? 'bg-gray-200 text-blue-600' : ''}`}
       >
         <List size={18} />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={`p-1.5 rounded hover:bg-gray-200 ${editor.isActive('orderedList') ? 'bg-gray-200 text-blue-600' : ''}`}
       >
@@ -129,16 +136,17 @@ const MenuBar = ({ editor }: { editor: any }) => {
 
       <div className="w-px h-6 bg-gray-300 mx-1 self-center" />
 
-      <button onClick={addImage} className="p-1.5 rounded hover:bg-gray-200">
+      <button type="button" onClick={addImage} className="p-1.5 rounded hover:bg-gray-200">
         <ImageIcon size={18} />
       </button>
-      <button onClick={addTable} className="p-1.5 rounded hover:bg-gray-200">
+      <button type="button" onClick={addTable} className="p-1.5 rounded hover:bg-gray-200">
         <TableIcon size={18} />
       </button>
 
       <div className="w-px h-6 bg-gray-300 mx-1 self-center" />
 
       <button
+        type="button"
         onClick={() => editor.chain().focus().undo().run()}
         disabled={!editor.can().chain().focus().undo().run()}
         className="p-1.5 rounded hover:bg-gray-200 disabled:opacity-50"
@@ -146,6 +154,7 @@ const MenuBar = ({ editor }: { editor: any }) => {
         <Undo size={18} />
       </button>
       <button
+        type="button"
         onClick={() => editor.chain().focus().redo().run()}
         disabled={!editor.can().chain().focus().redo().run()}
         className="p-1.5 rounded hover:bg-gray-200 disabled:opacity-50"

@@ -252,9 +252,8 @@ export default function ProductsAdmin() {
     
     setUploadingPdf(true);
     try {
-      const res = await axiosInstance.post('/upload', uploadData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const res = await axiosInstance.post('/upload', uploadData, { baseURL });
       setFormData(prev => ({ ...prev, pdfUrl: res.data.url }));
     } catch (error) {
       console.error('PDF upload failed:', error);
@@ -273,9 +272,8 @@ export default function ProductsAdmin() {
     
     setUploadingCover(true);
     try {
-      const res = await axiosInstance.post('/upload', uploadData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const res = await axiosInstance.post('/upload', uploadData, { baseURL });
       setFormData(prev => ({ ...prev, coverImage: res.data.url }));
     } catch (error) {
       console.error('Cover image upload failed:', error);
@@ -300,9 +298,8 @@ export default function ProductsAdmin() {
         const uploadData = new FormData();
         uploadData.append('file', file);
         
-        const res = await axiosInstance.post('/upload', uploadData, {
-          headers: { 'Content-Type': 'multipart/form-data' },
-        });
+        const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+        const res = await axiosInstance.post('/upload', uploadData, { baseURL });
         
         uploadedUrls.push(res.data.url);
       }

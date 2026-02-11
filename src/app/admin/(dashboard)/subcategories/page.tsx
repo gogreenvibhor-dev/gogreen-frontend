@@ -101,9 +101,8 @@ export default function SubcategoriesAdmin() {
     
     setUploadingImage(true);
     try {
-      const res = await axiosInstance.post('/upload', uploadData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const res = await axiosInstance.post('/upload', uploadData, { baseURL });
       setFormData(prev => ({ ...prev, image: res.data.url }));
       alert('Image uploaded successfully!');
     } catch (error) {

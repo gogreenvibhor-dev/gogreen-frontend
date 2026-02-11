@@ -256,7 +256,7 @@ const Navbar = ({ initialCategories = [] }: NavbarProps) => {
                      {categories.length > 0 ? (
                       categories.map((cat) => (
                         <a 
-                          key={cat._id} 
+                          key={cat.id} 
                           href={`/${cat.slug}`} 
                           onClick={(e) => handleCategoryClick(e, `/${cat.slug}`)}
                           className="block py-2 text-green-800 hover:text-primary transition-colors text-base border-b border-green-100 last:border-0"
@@ -281,7 +281,7 @@ const Navbar = ({ initialCategories = [] }: NavbarProps) => {
                   {categories.length > 0 ? (
                     categories.map((cat) => (
                       <a 
-                        key={cat._id} 
+                        key={cat.id} 
                         href={`/${cat.slug}`} 
                         onClick={(e) => handleCategoryClick(e, `/${cat.slug}`)}
                         className="block px-4 py-3 hover:bg-green-50 text-green-900 border-b border-gray-50 last:border-0 transition-colors"

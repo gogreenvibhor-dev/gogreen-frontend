@@ -54,7 +54,7 @@ const ContactPage = () => {
       <div className="container mx-auto px-4 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Contact Info */}
-          <div className="bg-gray-900 text-white p-12 flex flex-col justify-center">
+          <div className="bg-green-900 text-white p-12 flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
             <p className="mb-12 text-gray-400">
               We&apos;re here to help! Reach out to us for any inquiries about our products or services.
