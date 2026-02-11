@@ -12,7 +12,7 @@ interface IContact {
   createdAt: string;
 }
 
-import axios from 'axios';
+import axiosInstance from '@/lib/axios';
 
 // ... (existing imports and interface)
 
@@ -24,12 +24,10 @@ export default function ContactsAdmin() {
     fetchContacts();
   }, []);
 
-  // Check if env var is defined, otherwise fallback to localhost:3001
-  const API_URL = `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/api`;
-
   const fetchContacts = async () => {
     try {
-      const res = await axios.get(`${API_URL}/contact`, { withCredentials: true });
+      // Use relative path - goes through Next.js proxy -> Backend
+      const res = await axiosInstance.get('/contact');
       setContacts(res.data);
       setLoading(false);
     } catch (error) {
@@ -40,7 +38,7 @@ export default function ContactsAdmin() {
 
   const handleStatusChange = async (id: string, status: string) => {
     try {
-      await axios.patch(`${API_URL}/contact/${id}`, { status }, { withCredentials: true });
+      await axiosInstance.patch(`/contact/${id}`, { status });
       fetchContacts();
     } catch (error) {
       console.error('Error updating contact status:', error);
@@ -50,7 +48,7 @@ export default function ContactsAdmin() {
   const handleDelete = async (id: string) => {
     if (!confirm('Are you sure you want to delete this contact?')) return;
     try {
-      await axios.delete(`${API_URL}/contact/${id}`, { withCredentials: true });
+      await axiosInstance.delete(`/contact/${id}`);
       fetchContacts();
     } catch (error) {
       console.error('Error deleting contact:', error);
