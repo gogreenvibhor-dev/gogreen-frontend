@@ -51,7 +51,7 @@ const CategoryProductGrid: React.FC<CategoryProductGridProps> = ({ products }) =
       <section className="py-20 bg-whitesmoke">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-primary font-bold uppercase tracking-wider mb-2">Our Products</p>
+            <p className="text-primary font-bold uppercase tracking-wider mb-2 ">Our Products</p>
             <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
             <h2 className="text-4xl lg:text-5xl font-bold text-green-900">Products That We Offer For You</h2>
           </div>

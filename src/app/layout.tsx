@@ -113,24 +113,34 @@ async function getGlobalSettings() {
       return null;
     }
     
-    // Use fetch for Next.js caching
-    const response = await fetch(`${backendUrl}/settings`, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    // Use fetch for Next.js caching with a timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
 
-    if (!response.ok) {
-        throw new Error(`Failed to fetch settings: ${response.status}`);
+    try {
+      const response = await fetch(`${backendUrl}/settings`, {
+        next: { revalidate: 3600 }, // Cache for 1 hour
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+          throw new Error(`Failed to fetch settings: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      // API returns { success: true, data: { ... } }
+      return data.success ? data.data : null;
+    } catch (fetchError) {
+      clearTimeout(timeoutId);
+      throw fetchError;
     }
-    
-    const data = await response.json();
-    // API returns { success: true, data: { ... } }
-    return data.success ? data.data : null;
   } catch (error) {
     // Silently return null on error - WhatsApp button just won't show
-    console.error('Failed to fetch global settings:', error);
+    console.warn('Failed to fetch global settings (timeout or error):', error instanceof Error ? error.message : String(error));
     return null;
   }
 }
