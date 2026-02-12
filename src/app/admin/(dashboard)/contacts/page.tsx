@@ -6,6 +6,7 @@ interface IContact {
   id: string;
   name: string;
   email: string;
+  countryCode?: string;
   phone?: string;
   message: string;
   status: string;
@@ -13,8 +14,6 @@ interface IContact {
 }
 
 import axiosInstance from '@/lib/axios';
-
-// ... (existing imports and interface)
 
 export default function ContactsAdmin() {
   const [contacts, setContacts] = useState<IContact[]>([]);
@@ -83,7 +82,10 @@ export default function ContactsAdmin() {
                 <td className="px-6 py-4">
                   <div className="text-sm font-medium text-green-900">{contact.name}</div>
                   <div className="text-sm text-gray-500">{contact.email}</div>
-                  <div className="text-sm text-gray-500">{contact.phone}</div>
+                  <div className="text-sm text-gray-500">
+                    {contact.countryCode && <span className="mr-1">{contact.countryCode}</span>}
+                    {contact.phone}
+                  </div>
                 </td>
                 <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate">
                   {contact.message}
@@ -121,3 +123,4 @@ export default function ContactsAdmin() {
     </div>
   );
 }
+
