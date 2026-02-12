@@ -49,7 +49,7 @@ export default async function YouTubeVideosSection() {
     <section className="py-20 bg-white" aria-labelledby="company-videos">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-primary font-bold uppercase tracking-wider mb-2">Watch Our Story</p>
+          <p className="text-3xl lg:text-4xl font-bold uppercase tracking-wider mb-2 text-blue-900">Watch Our Story</p>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
           <h2 id="company-videos" className="text-4xl lg:text-5xl font-bold text-green-900">
             Latest Videos from Vidhi Enterprises
