@@ -5,9 +5,10 @@ import axios from 'axios';
 const axiosInstance = axios.create({
   baseURL: '/api',
   withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-  },
+  // Note: Do NOT set a default Content-Type header here.
+  // Axios automatically sets 'application/json' for plain objects
+  // and 'multipart/form-data' (with boundary) for FormData.
+  // Setting a default Content-Type breaks FormData uploads.
 });
 
 // Add response interceptor for better error handling
