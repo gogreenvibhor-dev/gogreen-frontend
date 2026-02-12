@@ -238,7 +238,7 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <p className="text-primary font-bold text-xl mb-4">Why Choose Vidhi Enterprises!</p>
+              <h1 className="text-3xl text-blue-900 font-bold lg:text-4xl mb-4 underline">Why Choose Vidhi Enterprises!</h1>
               <h2 id="why-choose-us" className="text-4xl lg:text-5xl font-bold mb-6 text-green-900 leading-tight">
                 Leading ISO-Certified Irrigation Manufacturer - Trusted Since 1983
               </h2>
@@ -261,7 +261,7 @@ export default async function Home() {
                 <h4 className="text-xl font-bold text-green-900">100% Satisfactions</h4>
               </div>
               
-              <div className="bg-white p-10 rounded-2xl shadow-xl text-center flex flex-col items-center translate-y-0 md:translate-y-8">
+              <div className="bg-white p-10 rounded-2xl shadow-xl text-center flex flex-col items-center translate-y-0">
                 <div className="w-20 h-20 bg-whitesmoke rounded-full flex items-center justify-center mb-6">
                   <i className="fa fa-users text-primary text-3xl"></i>
                 </div>
