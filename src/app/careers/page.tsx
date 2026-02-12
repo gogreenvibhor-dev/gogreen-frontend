@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -118,10 +119,18 @@ const CareersPage = () => {
       <main className="min-h-screen bg-[#f8fafc]" itemScope itemType="https://schema.org/WebPage">
         <Navbar />
       
-        <header className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3b82f6] text-white py-32 text-center overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Careers</h1>
-            <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+        <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+          <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/career.png"
+          alt="Career Background"
+          fill
+          className="object-cover"
+          priority
+          />
+          <div className="absolute inset-0 z-10"></div>
+          <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">Careers</h1>
+            <p className="text-xl lg:text-2xl font-light max-w-3xl mx-auto text-blue-900">
               Join a Legacy of Engineering, Integrity and Growth
             </p>
           </div>

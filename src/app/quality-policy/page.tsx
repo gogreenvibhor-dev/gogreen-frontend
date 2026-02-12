@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -73,10 +74,19 @@ const QualityPolicyPage = () => {
       <Navbar />
 
       {/* Header */}
-      <header className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3b82f6] text-white py-32 text-center overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Quality Policy</h1>
-          <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+      {/* Header */}
+      <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+        <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/qp.png"
+          alt="Quality Policy Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">Quality Policy</h1>
+          <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto text-blue-900">
             Precision is not a feature it is our identity.
           </p>
         </div>

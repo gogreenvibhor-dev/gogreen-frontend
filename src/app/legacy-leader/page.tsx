@@ -83,10 +83,18 @@ const LegacyLeaderPage = () => {
     <main className="min-h-screen bg-[#fdfbf5]">
       <Navbar />
       
-      <header className="bg-gradient-to-r from-[#166616] via-[#1c9e1c] to-[#7ed67e] text-white py-24 text-center relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Legacy & Leadership</h1>
-          <p className="text-xl lg:text-2xl font-light opacity-90 tracking-wide">
+      <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+         <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/ll.png"
+          alt="Legacy & Leadership Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">Legacy & Leadership</h1>
+          <p className="text-xl lg:text-2xl font-light tracking-wide text-blue-900">
             Three generations, one vision and endless commitment to quality.
           </p>
         </div>

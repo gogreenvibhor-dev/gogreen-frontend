@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
@@ -10,14 +10,26 @@ const PrivacyPolicy = () => {
   return (
     <main className="min-h-screen bg-whitesmoke">
       <Navbar />
-      <PageHeader 
-        title="Privacy Policy" 
-        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/Drip-header.png"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Privacy Policy", active: true }
-        ]}
-      />
+      <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden mb-16">
+        <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/pp.png"
+          alt="Privacy Policy Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">Privacy Policy</h1>
+           <nav className="flex justify-center">
+            <ol className="flex items-center space-x-2 bg-white/20 px-6 backdrop-blur-sm py-2 rounded-full font-bold">
+              <li><Link href="/" className="hover:text-primary transition text-green-900">Home</Link></li>
+              <li><i className="fa fa-chevron-right mx-2 text-[10px] text-green-900"></i></li>
+              <li className="text-green-700">Privacy Policy</li>
+            </ol>
+          </nav>
+        </div>
+      </header>
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">

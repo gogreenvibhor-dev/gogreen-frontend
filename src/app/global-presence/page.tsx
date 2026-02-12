@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import LazyWorldMap from "@/components/LazyWorldMap";
 import Footer from "@/components/Footer";
@@ -84,10 +85,18 @@ const GlobalPresencePage = () => {
         <Navbar />
         
         {/* Header */}
-        <header className="relative bg-gradient-to-br from-[#1b4332] via-[#2d6a4f] to-[#40916c] text-white py-32 text-center overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10 animate-fadeInUp">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading">Global Presence</h1>
-            <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+        <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+          <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/gp.png"
+          alt="Global Presence Background"
+          fill
+          className="object-cover"
+          priority
+          />
+          <div className="absolute inset-0 z-10"></div>
+          <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">Global Presence</h1>
+            <p className="text-xl lg:text-2xl font-light opacity-95 max-w-3xl mx-auto text-blue-900">
               Trusted Irrigation Components Across Continents
             </p>
           </div>

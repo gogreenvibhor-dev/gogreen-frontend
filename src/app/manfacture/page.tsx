@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -10,14 +11,21 @@ const ManufacturingPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden bg-green-900 mt-2">
+      <section className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+        <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/main.png"
+          alt="Manufacturing Background"
+          fill
+          className="object-cover"
+          priority
+        />
         {/* Simplified Background Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a5f3d]/95 to-[#0e3d27]/98 z-10"></div>
+        <div className="absolute inset-0 z-10"></div>
         <div className="container mx-auto px-4 relative z-20 animate-fadeInUp">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-[#b1e2b8] drop-shadow-lg">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading text-green-900 drop-shadow-lg">
             Manufacturing & Infrastructure
           </h1>
-          <p className="text-xl lg:text-3xl max-w-3xl mx-auto font-light tracking-wide opacity-90">
+          <p className="text-xl lg:text-3xl max-w-3xl mx-auto font-light tracking-wide text-blue-900">
             Precision Engineering • Cutting-Edge Technology • Global Quality Standards
           </p>
         </div>
@@ -26,7 +34,7 @@ const ManufacturingPage = () => {
       {/* Intro */}
       <section className="py-24 bg-[#f8fdfa]">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-2xl lg:text-3xl lg:leading-relaxed text-green-900 max-w-5xl mx-auto">
+          <p className="text-2xl lg:text-3xl lg:leading-relaxed text-green-600 max-w-5xl mx-auto">
             At <strong>Vidhi Enterprises</strong>, we operate one of New Delhi’s most advanced and fully integrated manufacturing facilities for irrigation components — delivering unmatched precision and reliability to farmers across India and the world.
           </p>
         </div>

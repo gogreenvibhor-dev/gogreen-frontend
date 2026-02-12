@@ -64,15 +64,22 @@ const BlogPage = async () => {
     <main className="min-h-screen bg-[#f6fff7]">
       <Navbar />
       
-      <header className="relative py-32 bg-[url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center bg-fixed">
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-        <div className="container mx-auto px-4 relative z-10 text-center text-white">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading animate-fadeIn">Blog</h1>
+      <header className="relative h-[45vh] min-h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+        <Image
+          src="https://d170mw2nhcb1v0.cloudfront.net/img/blogs.png"
+          alt="Blog Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20 text-center text-white">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 font-heading animate-fadeIn text-green-900 drop-shadow-lg">Blog</h1>
           <nav className="flex justify-center">
-            <ol className="flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full font-bold">
-              <li><Link href="/" className="hover:text-primary transition">Home</Link></li>
-              <li><i className="fa fa-chevron-right mx-2 text-[10px]"></i></li>
-              <li className="text-[#95d5b2]">Blog</li>
+            <ol className="flex items-center space-x-2 bg-white/20 px-6 backdrop-blur-sm py-2 rounded-full font-bold">
+              <li><Link href="/" className="hover:text-primary transition text-green-900">Home</Link></li>
+              <li><i className="fa fa-chevron-right mx-2 text-[10px] text-green-900"></i></li>
+              <li className="text-green-700">Blog</li>
             </ol>
           </nav>
         </div>
