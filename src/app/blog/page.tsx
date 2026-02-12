@@ -81,8 +81,8 @@ const BlogPage = async () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-success font-bold text-xl uppercase tracking-widest mb-2 underline">Vidhi Blogs</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#145a32] font-heading">Latest Blogs & Articles</h2>
+            <p className="text-green-900 font-bold text-xl uppercase tracking-widest mb-2 underline">Vidhi Blogs</p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-green-900 font-heading">Latest Blogs & Articles</h2>
           </div>
 
           {posts.length === 0 ? (
@@ -102,8 +102,8 @@ const BlogPage = async () => {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-[#145a32] mb-4 group-hover:text-success transition-colors">{post.title}</h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
+                    <h3 className="text-2xl font-bold text-green-900 mb-4 group-hover:text-success transition-colors">{post.title}</h3>
+                    <p className="text-green-900 mb-4 line-clamp-3">
                       {extractTextFromContent(post.content)}
                     </p>
                     {post.publishedAt && (

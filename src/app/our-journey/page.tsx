@@ -137,7 +137,7 @@ const JourneyPage = () => {
                   <h3 className="text-xl font-bold text-[#2c7da0] mb-6">{item.title}</h3>
                   <ul className="space-y-3">
                     {item.points.map((point, pIndex) => (
-                      <li key={pIndex} className="flex items-start text-gray-700 leading-relaxed">
+                      <li key={pIndex} className="flex items-start text-blue-900 leading-relaxed">
                         <span className="text-[#4a90e2] mr-2 mt-1 shrink-0 text-xs">▶</span>
                         {point}
                       </li>
@@ -160,7 +160,7 @@ const JourneyPage = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl lg:text-5xl font-bold text-center text-[#0f4c75] mb-8 font-heading">Today A Legacy Moving Forward</h2>
-          <p className="text-xl text-center text-gray-600 max-w-4xl mx-auto mb-12">
+          <p className="text-xl text-center text-green-900 max-w-4xl mx-auto mb-12">
             From a single helper and a hand moulding machine to a multi-generational global enterprise, the journey of Vidhi Enterprises has been shaped by:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -178,7 +178,7 @@ const JourneyPage = () => {
               </div>
             ))}
           </div>
-          <p className="text-xl text-center text-gray-600 max-w-4xl mx-auto">
+          <p className="text-xl text-center text-green-900 max-w-4xl mx-auto">
             Today, Vidhi Enterprises is a trusted global supplier of drip irrigation, sprinkler systems and micro-irrigation components, serving markets across the Middle East, Africa, and Asia.
           </p>
         </div>

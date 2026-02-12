@@ -86,7 +86,7 @@ const SustainabilityPage = () => {
       {/* Vision Section */}
       <section className="py-24">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-center">
+          <div className="space-y-6 text-lg text-green-900 leading-relaxed text-center">
             <p>
               At Vidhi Enterprises, sustainability is not a campaign or a trend instead, it is a <strong>responsibility</strong> shaped by our founder's vision and carried forward across generations.
             </p>
@@ -111,17 +111,17 @@ const SustainabilityPage = () => {
                     <i className={`fas ${pillar.icon} text-2xl text-white`}></i>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#2d6a4f] mb-4">{pillar.title}</h3>
-                    <p className="text-gray-700 mb-4">{pillar.intro}</p>
+                    <h3 className="text-2xl font-bold text-green-900 mb-4">{pillar.title}</h3>
+                    <p className="text-blue-900 mb-4">{pillar.intro}</p>
                     <ul className="space-y-2 mb-4">
                       {pillar.points.map((point, pIdx) => (
-                        <li key={pIdx} className="flex items-start text-gray-700">
+                        <li key={pIdx} className="flex items-start text-blue-900">
                           <span className="text-[#40916c] mr-3 mt-1">•</span>
                           {point}
                         </li>
                       ))}
                     </ul>
-                    <p className="text-[#1b4332] font-medium italic">{pillar.footer}</p>
+                    <p className="text-green-900 font-medium italic">{pillar.footer}</p>
                   </div>
                 </div>
               </div>

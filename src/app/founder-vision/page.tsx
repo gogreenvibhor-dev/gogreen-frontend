@@ -89,13 +89,13 @@ const FounderVisionPage = () => {
       {/* Intro Section */}
       <section className="py-20 bg-white" aria-labelledby="founder-story">
         <div className="container mx-auto px-4 max-w-4xl text-center space-y-8">
-          <p className="text-xl text-gray-700 leading-relaxed animate-fadeInUp">
+          <p className="text-xl text-blue-900 leading-relaxed animate-fadeInUp">
             Vidhi Enterprises stands on the foundation laid by Late Shri Dhirendar Kumar Jain, affectionately known as Pipewale Bauji. His journey continues to guide our purpose, values and ambition.
           </p>
-          <p className="text-xl text-gray-700 leading-relaxed animate-fadeInUp delay-100">
+          <p className="text-xl text-blue-900 leading-relaxed animate-fadeInUp delay-100">
             An engineer and architect by profession, he believed precision, discipline and thoughtful design were essential not only for buildings, but for businesses, products and life itself.
           </p>
-          <p className="text-xl text-gray-700 leading-relaxed animate-fadeInUp delay-200">
+          <p className="text-xl text-blue-900 leading-relaxed animate-fadeInUp delay-200">
             In the early 1980s, with no capital, no workforce and no industry backing, he began operations from his home, working tirelessly with just one helper. What started as a modest effort steadily evolved into a respected name in irrigation manufacturing, built on trust and technical excellence.
           </p>
         </div>
@@ -107,7 +107,7 @@ const FounderVisionPage = () => {
           <h2 id="vision-purpose" className="text-4xl lg:text-5xl font-bold text-center text-[#2d5a27] mb-16 font-heading relative after:content-[''] after:block after:w-32 after:h-1 after:bg-[#2d5a27] after:mx-auto after:mt-4">
             A Vision Rooted in Purpose
           </h2>
-          <p className="text-center text-xl text-gray-600 max-w-4xl mx-auto mb-12">
+          <p className="text-center text-xl text-blue-900 max-w-4xl mx-auto mb-12">
             Shri D.K. Jain viewed agriculture as the backbone of the nation and understood that water-efficient irrigation would define the future of farming. His purpose was clear:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -123,7 +123,7 @@ const FounderVisionPage = () => {
               </div>
             ))}
           </div>
-          <p className="mt-12 text-center text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="mt-12 text-center text-xl text-blue-900 max-w-4xl mx-auto">
             For him, manufacturing was not just about output. It was about empowering livelihoods.
           </p>
         </div>
@@ -135,7 +135,7 @@ const FounderVisionPage = () => {
           <h2 id="engineering-excellence" className="text-4xl lg:text-5xl font-bold text-center text-[#2d5a27] mb-16 font-heading">
             Engineering Excellence as a Philosophy
           </h2>
-          <p className="text-center text-xl text-gray-600 max-w-4xl mx-auto mb-12">
+          <p className="text-center text-xl text-blue-900 max-w-4xl mx-auto mb-12">
             As an engineer and architect, he was deeply focused on:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -152,7 +152,7 @@ const FounderVisionPage = () => {
               </div>
             ))}
           </div>
-          <p className="mt-16 text-center text-xl text-gray-600 max-w-4xl mx-auto italic">
+          <p className="mt-16 text-center text-xl text-blue-900 max-w-4xl mx-auto italic">
             To him, every dripper, fitting or pipe carried responsibility. This mindset shaped the culture of Vidhi Enterprises: "Work with precision, deliver with honesty and build with purpose."
           </p>
         </div>

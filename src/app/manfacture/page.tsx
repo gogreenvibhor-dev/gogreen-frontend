@@ -26,7 +26,7 @@ const ManufacturingPage = () => {
       {/* Intro */}
       <section className="py-24 bg-[#f8fdfa]">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-2xl lg:text-3xl lg:leading-relaxed text-gray-600 max-w-5xl mx-auto">
+          <p className="text-2xl lg:text-3xl lg:leading-relaxed text-green-900 max-w-5xl mx-auto">
             At <strong>Vidhi Enterprises</strong>, we operate one of New Delhi’s most advanced and fully integrated manufacturing facilities for irrigation components — delivering unmatched precision and reliability to farmers across India and the world.
           </p>
         </div>
@@ -71,7 +71,7 @@ const ManufacturingPage = () => {
                   <h3 className="text-3xl font-bold text-[#0e3d27] mb-8 font-heading">{unit.title}</h3>
                   <ul className="space-y-4 mb-8">
                     {unit.points.map((point, pIdx) => (
-                      <li key={pIdx} className="flex items-center text-xl text-gray-700">
+                      <li key={pIdx} className="flex items-center text-xl text-blue-900">
                         <span className="w-2 h-2 bg-[#9c7a3a] rounded-full mr-4 shrink-0"></span>
                         {point}
                       </li>
@@ -111,7 +111,7 @@ const ManufacturingPage = () => {
               >
                 <div className="w-[45%] bg-white p-8 rounded-2xl shadow-lg border border-green-50 hover:-translate-y-1 transition-transform duration-300">
                   <h5 className="text-xl font-bold text-[#0e3d27] mb-2">{step.title}</h5>
-                  <p className="text-gray-600">{step.desc}</p>
+                  <p className="text-blue-900">{step.desc}</p>
                 </div>
                 <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-[#9c7a3a] border-4 border-white rounded-full z-10"></div>
                 <div className="w-[45%]"></div>
@@ -136,7 +136,7 @@ const ManufacturingPage = () => {
                 className="bg-white p-6 rounded-xl shadow-md border-l-4 border-[#9c7a3a]"
               >
                 <h5 className="text-xl font-bold text-[#0e3d27] mb-1">{step.title}</h5>
-                <p className="text-gray-600">{step.desc}</p>
+                <p className="text-blue-900">{step.desc}</p>
               </motion.div>
             ))}
           </div>

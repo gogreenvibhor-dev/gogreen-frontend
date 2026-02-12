@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       {/* Blog Content */}
       <article className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
+        <div className="bg-white rounded-3xl shadow-xl text-blue-900 p-8 lg:p-12">
           <BlogPostViewer content={post.content} />
         </div>
         

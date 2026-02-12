@@ -96,7 +96,7 @@ const LegacyLeaderPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-4xl font-bold text-center text-[#1c9e1c] mb-12 font-heading">A Legacy Built on Precision & Integrity</h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-lg text-blue-900 leading-relaxed">
             <p>
               Vidhi Enterprises was founded on the vision, dedication and engineering excellence of Late Shri Dhirendar Kumar Jain (D.K. Jain) an engineer, architect and visionary whose passion for precision reshaped the manufacturing of micro-irrigation components in India.
             </p>
@@ -117,13 +117,13 @@ const LegacyLeaderPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {founderValues.map((value, i) => (
                 <div key={i} className="bg-white p-6 rounded-2xl shadow-lg border border-green-50 text-center hover:-translate-y-2 transition-all duration-300">
-                  <i className={`fas ${value.icon} text-3xl text-[#1c9e1c] mb-4`}></i>
-                  <h4 className="font-bold text-[#1c9e1c] mb-2">{value.title}</h4>
-                  <p className="text-sm text-gray-600">{value.desc}</p>
+                  <i className={`fas ${value.icon} text-3xl text-green-900 mb-4`}></i>
+                  <h4 className="font-bold text-green-900 mb-2">{value.title}</h4>
+                  <p className="text-sm text-blue-900">{value.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-center text-lg text-gray-700 mt-8">
+            <p className="text-center text-lg text-blue-900 mt-8">
               These values continue to define how Vidhi Enterprises operates every day.
             </p>
           </div>
@@ -148,18 +148,18 @@ const LegacyLeaderPage = () => {
                     <h2 className="text-3xl lg:text-4xl font-bold text-[#3d2b1f] font-heading">{gen.name}</h2>
                     <p className="text-lg text-[#1c9e1c] italic font-medium">{gen.title}</p>
                     {gen.email && (
-                      <a href={`mailto:${gen.email}`} className="text-gray-600 hover:text-[#1c9e1c] transition-colors inline-flex items-center mt-1 font-medium">
+                      <a href={`mailto:${gen.email}`} className="text-blue-900 hover:text-[#1c9e1c] transition-colors inline-flex items-center mt-1 font-medium">
                         <i className="fas fa-envelope mr-2"></i>{gen.email}
                       </a>
                     )}
                     
                     {gen.intro && (
-                      <p className="text-gray-700">{gen.intro}</p>
+                      <p className="text-blue-900">{gen.intro}</p>
                     )}
 
                     <ul className="space-y-3">
                       {gen.points.map((point, pIdx) => (
-                        <li key={pIdx} className="flex items-start text-gray-700 leading-relaxed">
+                        <li key={pIdx} className="flex items-start text-blue-900 leading-relaxed">
                           <span className="text-[#1c9e1c] mr-3 mt-1">✔</span>
                           {point}
                         </li>
@@ -167,11 +167,11 @@ const LegacyLeaderPage = () => {
                     </ul>
 
                     {gen.extraText && (
-                      <p className="text-gray-700">{gen.extraText}</p>
+                      <p className="text-blue-900">{gen.extraText}</p>
                     )}
 
                     {i === 0 && (
-                      <p className="text-gray-600 italic">His principles remain the heartbeat of Vidhi Enterprises.</p>
+                      <p className="text-blue-900 italic">His principles remain the heartbeat of Vidhi Enterprises.</p>
                     )}
 
                     <div className="bg-[#e8f5e9] p-8 rounded-2xl border-l-8 border-[#1c9e1c] shadow-inner mt-8">
@@ -222,7 +222,7 @@ const LegacyLeaderPage = () => {
       <section className="py-24 bg-gradient-to-br from-[#e8f5e9] to-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-[#1c9e1c] mb-8 font-heading">Moving Forward with Purpose</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-blue-900 max-w-3xl mx-auto mb-12">
             Vidhi Enterprises continues to progress through the combined strength of:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
@@ -239,7 +239,7 @@ const LegacyLeaderPage = () => {
               <h3 className="font-bold text-[#1c9e1c] text-lg">The Innovation & Energy of the Third Generation</h3>
             </div>
           </div>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto italic">
+          <p className="text-xl text-blue-900 max-w-4xl mx-auto italic">
             Together, they are shaping Vidhi Enterprises into a global benchmark in micro-irrigation technology, delivering dependable irrigation components trusted by farmers, contractors and industries worldwide.
           </p>
         </div>

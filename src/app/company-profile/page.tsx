@@ -171,7 +171,7 @@ const CompanyProfilePage = () => {
                 </article>
               ))}
             </div>
-            <p className="text-center text-xl mt-16 text-gray-600">
+            <p className="text-center text-xl mt-16 text-green-900">
               Each <strong>irrigation product</strong> is precision-engineered to deliver <strong>high water efficiency</strong>, extended field life, and consistent performance across agricultural, horticultural, greenhouse, and landscape irrigation applications.
             </p>
           </div>
@@ -181,7 +181,7 @@ const CompanyProfilePage = () => {
         <section className="py-24 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="export-capabilities">
           <div className="container mx-auto px-4">
             <h2 id="export-capabilities" className="text-5xl font-bold text-center text-[#0f4c81] mb-12 font-heading">Global Irrigation Export Capabilities - Serving 50+ Countries Worldwide</h2>
-            <p className="text-center text-xl text-gray-700 max-w-4xl mx-auto mb-16">
+            <p className="text-center text-xl text-green-900 max-w-4xl mx-auto mb-16">
               As a leading <strong>irrigation products exporter</strong>, we maintain a robust global supply network supported by dedicated export services, ISO-certified quality, and reliable delivery schedules to <strong>Middle East, Africa, Asia, and beyond</strong>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -199,7 +199,7 @@ const CompanyProfilePage = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-lg mt-12 text-gray-600">
+            <p className="text-center text-lg mt-12 text-green-900">
               Our <strong>drip irrigation systems</strong> and <strong>sprinkler products</strong> are successfully deployed across <strong>UAE, Qatar, Oman, Saudi Arabia, Kuwait, Kenya, Tanzania, Nigeria, Nepal, Bangladesh, and 40+ more countries</strong>, supporting sustainable agriculture in diverse climatic zones.
             </p>
           </div>
