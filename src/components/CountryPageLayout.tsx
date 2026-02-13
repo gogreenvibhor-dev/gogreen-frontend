@@ -19,7 +19,7 @@ interface CountryPageLayoutProps {
 
 export default function CountryPageLayout({
   countryName,
-  heroImage = "https://d170mw2nhcb1v0.cloudfront.net/img/head-eco.png", // Default hero image
+  heroImage = "https://d170mw2nhcb1v0.cloudfront.net/img/cci.png", // Default hero image
   flagSrc,
   welcomeMessage,
   greeting,
