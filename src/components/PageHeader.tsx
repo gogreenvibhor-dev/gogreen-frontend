@@ -16,7 +16,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, backgroundImage, breadcrumbs }: PageHeaderProps) => {
   return (
-    <div className="relative py-12 md:py-24 mb-6 md:mb-12 overflow-hidden">
+    <div className="relative py-16 md:py-24 mb-6 md:mb-12 overflow-hidden min-h-[250px] md:min-h-[350px] flex items-center justify-center">
       <Image
         src={backgroundImage}
         alt={title}
@@ -25,12 +25,12 @@ const PageHeader = ({ title, backgroundImage, breadcrumbs }: PageHeaderProps) =>
         priority
       />
       <div className="absolute inset-0 bg-primary/60"></div>
-      <div className="container mx-auto px-4 relative z-10 text-center py-12">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-6 animate-slideDown">
+      <div className="container mx-auto px-4 relative z-10 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 animate-slideDown leading-tight">
           {title}
         </h1>
-        <nav className="flex justify-center">
-          <ol className="flex items-center space-x-2 bg-white/90 px-6 py-2 rounded-full shadow-lg font-bold text-primary">
+        <nav className="flex max-w-full overflow-x-auto pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+          <ol className="flex items-center space-x-2 bg-white/90 px-4 py-2 md:px-6 md:py-2 rounded-full shadow-lg font-bold text-primary text-sm md:text-base whitespace-nowrap mx-auto">
             {breadcrumbs.map((crumb, i) => (
               <li key={i} className="flex items-center">
                 {crumb.href ? (

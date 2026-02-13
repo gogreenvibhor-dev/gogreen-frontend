@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/components/TanStackProvider";
 import axios from "axios";
+import Script from "next/script";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -165,12 +167,32 @@ export default async function RootLayout({
         <meta name="theme-color" content="#0f4c81" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
+
       <body
         className={`${inter.variable} ${playfairDisplay.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5T7R9GG3"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5T7R9GG3');
+          `}
+        </Script>
         <TanStackProvider>{children}</TanStackProvider>
         <WhatsAppFloatingButton phoneNumber={whatsappNumber} />
       </body>
+
     </html>
   );
 }
