@@ -295,7 +295,7 @@ export default async function ProductPage({
               )}
 
               {product.shortDescription && (
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-blue-900 text-lg leading-relaxed">
                   {product.shortDescription}
                 </p>
               )}
@@ -315,7 +315,7 @@ export default async function ProductPage({
               )}
 
               {product.sku && (
-                <div className="text-gray-600">
+                <div className="text-blue-900">
                   <span className="font-semibold">SKU:</span> {product.sku}
                 </div>
               )}
@@ -326,7 +326,7 @@ export default async function ProductPage({
           {product.description && (
             <div className="max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-green-900 mb-6">Product Description</h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <div className="prose prose-lg max-w-none text-blue-900 leading-relaxed">
                 {product.description}
               </div>
             </div>

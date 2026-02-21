@@ -85,7 +85,7 @@ const CategoryProductGrid: React.FC<CategoryProductGridProps> = ({ products }) =
                         <a 
                           href={link.url}
                           onClick={(e) => handleProductClick(e, link.url)}
-                          className="text-gray-700 font-semibold hover:text-primary hover:underline transition cursor-pointer"
+                          className="text-blue-900 font-semibold hover:text-primary hover:underline transition cursor-pointer"
                         >
                           {link.name}
                         </a>
