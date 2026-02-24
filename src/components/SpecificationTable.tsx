@@ -80,17 +80,17 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, type = 'grid'
   return (
     <div className={`w-full my-8 rounded-xl overflow-hidden shadow-lg ${className}`}>
       {/* Title Header */}
-      <div className="bg-white p-4 text-center text-xl font-bold uppercase tracking-wide" style={{ color: '#004AAD' }}>
+      <div className="bg-white p-4 text-center text-xl font-bold uppercase tracking-wide relative z-20" style={{ color: '#004AAD' }}>
         {title}
       </div>
 
       {/* Description */}
       {tableData.description && (
-        <div className="bg-gray-50 px-6 py-4 border-b-2 border-gray-300">
+        <div className="bg-gray-50 px-6 py-4 border-b-2 border-green-900 relative z-20">
           <div className="text-gray-700 text-sm space-y-1">
             {tableData.description.split('\n').filter(line => line.trim()).map((line, index) => (
               <div key={index} className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-900 mr-2">•</span>
                 <span>{line.trim()}</span>
               </div>
             ))}
@@ -98,9 +98,11 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, type = 'grid'
         </div>
       )}
 
-      <div className="overflow-x-auto border-4 border-gray-400">
-        <table className="w-full text-sm border-collapse">
-          {/* Dynamic Header Rendering */}
+      <div className="relative w-full">
+        {/* Table Container */}
+        <div className="overflow-x-auto border-4 border-gray-400">
+          <table className="w-full text-sm border-collapse relative z-0">
+            {/* Dynamic Header Rendering */}
           {tableData.headers && tableData.headers.length > 0 && (
             <thead className="text-white" style={{ backgroundColor: '#004AAD' }}>
               {tableData.headers.map((row, rowIndex) => (
@@ -151,7 +153,7 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, type = 'grid'
                         'text-center'
                       } ${cell.className || ''}`}
                       style={{
-                        color: cell.isHeader ? '#004AAD' : '#1F2937',
+                        color: cell.isHeader ? '#004AAD' : '#004AAD',
                         ...(cellStyle || {})
                       }}
                     >
@@ -162,7 +164,17 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, type = 'grid'
               </tr>
             ))}
           </tbody>
-        </table>
+          </table>
+        </div>
+
+        {/* Background Watermark Logo Overlay scaled strictly over the table */}
+        <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center opacity-[0.08] overflow-hidden">
+          <img 
+            src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" 
+            alt="Vidhi Logo Background"
+            className="w-[85%] h-[85%] md:w-[75%] md:h-[75%] object-contain"
+          />
+        </div>
       </div>
     </div>
   );
